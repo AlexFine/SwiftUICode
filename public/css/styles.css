@@ -104,8 +104,16 @@
   }
 }
 
+.badge {
+  margin:3pt;
+}
 
+.bottom-content {
+  position: absolute;
+  bottom: 0;
+  left: 5;
 
+}
 
 .code-block {
   background:rgba(200,200,200, 0.05) !important;
@@ -129,6 +137,77 @@ li {
   margin:8px;
 }
 
+
+
+/* content-skewed, content-skewed-right, content-skewed-item, shadow-lg */
+
+.content-skewed-hover {
+  -webkit-perspective: 0px;
+          perspective: 0px;
+  transition: 0.5s !important;
+  /* -webkit-transform-style: preserve-;
+          transform-style: preserve-3d; */
+}
+
+.card:hover .content-skewed-hover {
+  -webkit-perspective: 1500px;
+          perspective: 1500px;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+
+.content-skewed-right-hover {
+  -webkit-perspective-origin: center;
+          perspective-origin: center;
+          transition: 0.5s !important;
+}
+
+.card:hover .content-skewed-right-hover {
+  -webkit-perspective-origin: right center;
+          perspective-origin: right center;
+}
+
+.content-skewed-right-hover .content-skewed-item-hover {
+  -webkit-transform: rotateY(0deg) rotateX(0deg);
+          transform: rotateY(0deg) rotateX(0deg);
+  -webkit-backface-visibility: visible;
+          backface-visibility: visible;
+          transition: 0.5s !important;
+}
+
+.card:hover .content-skewed-right-hover .content-skewed-item-hover {
+  -webkit-transform: rotateY(30deg) rotateX(15deg);
+          transform: rotateY(30deg) rotateX(15deg);
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+
+.card:hover .shadow-lg-hover {
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;
+}
+
+.card:hover .shadow-lg-hover {
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+}
+
+.card:hover {
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+}
+
+.card .content-skewed-hover .content-skewed-right-hover .content-skewed-item-hover {
+
+  /* transition: -webkit-perspective 2s, -webkit-transform-style 2s, -webkit-perspective-origin 2s, -webkit-transform 2s; */
+}
+
+.card {
+  transition-duration: 0.5s !important;
+  box-shadow: 3rem 3rem -3rem -3rem rgba(0, 0, 0, 0.0);
+}
+
+
+
+
 code .key{color:#AA0C91}
 code .type{color:#5C2699}
 code .string{color:#C41A16}
@@ -150,7 +229,7 @@ code .enum{color:#60aab3};
   box-shadow: 0 0 7px 5px #ddd;
 }
 
-.code-classic {
+code .code-classic {
   color:rgba(40, 40, 40, 0.8);
 }
 

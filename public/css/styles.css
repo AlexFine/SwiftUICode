@@ -82,6 +82,11 @@
   font-weight:700 !important;
 }
 
+.strong {
+  color:black;
+
+}
+
 
 @media (min-width:500pt) {
   .table {
@@ -134,7 +139,7 @@
 }
 
 li {
-  margin:8px;
+  margin:12pt;
 }
 
 

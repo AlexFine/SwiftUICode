@@ -38,11 +38,11 @@
                       <div class="container">
                           <a class="navbar-brand" href="home.html">SwiftUI Library</a><button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><i data-feather="menu"></i></button>
                           <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                              <ul class="navbar-nav ml-auto">
-                                  <li class="nav-item"> <a href="https://general099748.typeform.com/to/sPnrIZDd" class="nav-link" target="_blank"> Add Package</a> </li>
-                                  <li class="nav-item"> <a href="https://general099748.typeform.com/to/nHoJx90F" class="nav-link" target="_blank"> Request Package</a> </li>
-                                  <li class="nav-item"> <a href="https://general099748.typeform.com/to/nHoJx90F" class="nav-link" target="_blank"> Share Feedback </a> </li>
-                              </ul>
+                            <ul class="navbar-nav ml-auto">
+                                <li class="nav-item"> <a href="https://general099748.typeform.com/to/sPnrIZDd" class="nav-link" target="_blank"> Add Package</a> </li>
+                                <li class="nav-item"> <a href="https://general099748.typeform.com/to/nHoJx90F" class="nav-link" target="_blank"> Request Package</a> </li>
+                                <li class="nav-item"> <a href="https://general099748.typeform.com/to/rFAcEjt5" class="nav-link" target="_blank"> Share Feedback </a> </li>
+                            </ul>
                           </div>
                       </div>
                   </nav>
@@ -99,17 +99,63 @@
 }</code></pre>
                   </div>
 
+                          <div class="instructions-block mt-5">
+                            <h2> Get Started </h2>
+                            <p class="lead"> <code class="inline-code">MultilineTextField</code>  requires a <code>text</code> state, and an <code>isActive</code> state.
+                              <br><br>
+                              The <code>text</code> state stores the user entered text. The <code>isActive</code> state stores whether the user is actively interacting with the textfield.
+                              <br><br>
+                              First add the state variables to your view.</p>
+                              <div class="code-block">
+                              <pre><code><span class="type">@State</span> <span class="key">var</span> <span class="pointer">text</span> = <span class="string">""</span>
+<span class="type">@State</span> <span class="key">var</span> <span class="pointer">isActive</span> = <span class="key" style="font-weight:700">false</span></code></pre></div>
+                              <br>
+                              <p class="lead" style="margin-bottom:18pt;">Second, add the textview.</p>
+                              <div class="code-block">
+                              <pre><code><span class="pointer">TextView</span>(
+  text: <span class="pointer">$text</span>,
+  isEditing: <span class="pointer">$isActive</span>
+)</code></pre></div>
+
+
+                          </div>
+
                           <hr>
 
-                          <h2> Get Started </h2>
+
+                          <div class="instructions-block mt-5">
+                            <h2> Customization </h2>
+                            <p class="lead"> <code class="inline-code">MultilineTextField</code>  supports a variety of custom inputs. All custom inputs are built into the struct initialization. </p>
+
+                            <p class="lead"> <b>Example:</b> Add a placeholder, add a bolder, and change the default height with the following code block: </p>
+                            <div class="code-block">
+          <pre><code class="swift language-swift"><span class="pointer">MultilineTextField</span>(
+    text: <span class="pointer">$text</span>,
+    isEditing: <span class="pointer">$isActive</span>,
+    placeholder: <span class="string">"Enter feedback ..."</span>,
+    hasBorder: <span class="key">false </span>,
+    minHeight: <span class="number">150 </span>
+)</code></pre>
+</div>
+                          <p class="lead"> The exhaustive input list is as follows: </p>
+
+                          </div>
 
                           <hr>
 
-                          <h2> Customization </h2>
 
-                          <hr>
+                          <div class="instructions-block mt-5">
+                            <h2> Community </h2>
+                            <p class="lead"> <code class="inline-code">MultilineTextField</code> is supported by an awesome Open Source community. </p> 
+                          </div>
 
-                          <h2> Community </h2>
+
+
+
+                          <!-- <h2> Customization </h2>
+                          <p class="lead"> <code class="inline-code">MultilineTextField</code> supports a variety of supplementary inputs designed for additional functionality.</p>
+                          <hr> -->
+
 
 
                           </div>

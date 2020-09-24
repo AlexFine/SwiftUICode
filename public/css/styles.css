@@ -122,10 +122,14 @@
 
 .code-block {
   background:rgba(200,200,200, 0.05) !important;
-  padding:15px;
+  padding-top:12pt;
+  padding-left:12pt;
+  padding-right:12pt;
+  padding-bottom:4pt;
   border-radius: 10px;
-  border: 1px solid rgba(200, 200, 200, 0.6)  !important;
+  border: 1pt solid rgba(200, 200, 200, 0.6)  !important;
   font-weight:400;
+  margin:5pt;
 }
 
 .inline-block {
@@ -197,7 +201,7 @@ li {
 }
 
 .card:hover {
-  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+  /* box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175); */
 }
 
 .card .content-skewed-hover .content-skewed-right-hover .content-skewed-item-hover {
@@ -207,7 +211,7 @@ li {
 
 .card {
   transition-duration: 0.5s !important;
-  box-shadow: 3rem 3rem -3rem -3rem rgba(0, 0, 0, 0.0);
+  /* box-shadow: 0 0 3rem rgba(0,0,0,0.17); */
 }
 
 
@@ -255,6 +259,20 @@ code .code-classic {
   overflow:hidden;
   display:block;
   padding-top:10pt;
+}
+
+.instructions-block {
+  padding:15pt;
+  padding-top:20pt;
+  padding-left:20pt;
+  border-radius: 10pt;
+}
+
+.instructions-block:hover {
+  -moz-box-shadow: 0 0 3px #ccc;
+  -webkit-box-shadow: 0 0 3px #ccc;
+  box-shadow: 0 0 2rem rgba(0,0,0,0.10);
+  /* border: 2px solid rgba(0,0,0,0.17); */
 }
 
 @media (max-width:768px) {

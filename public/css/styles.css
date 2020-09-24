@@ -136,8 +136,14 @@
   position: absolute;
   bottom: 0;
   left: 5;
-
 }
+
+@media (max-width:768px) {
+  .bottom-content {
+    position: relative !important;;
+  }
+}
+
 
 .code-block {
   background:rgba(200,200,200, 0.05) !important;
@@ -7038,6 +7044,7 @@ input[type=button].btn-block {
 }
 
 .card {
+  cursor: pointer;
   position: relative;
   display: -webkit-box;
   display: flex;

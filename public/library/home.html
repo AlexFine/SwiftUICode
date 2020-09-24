@@ -49,7 +49,7 @@
                                       <!-- <form class="page-header-signup">
                                           <div class="form-row justify-content-center">
                                               <div class="col-lg-6 col-md-8">
-                                                  <div class="form-group mr-0 mr-lg-2"><label class="sr-only" for="inputSearch">Mapkit, Slider, TextView...</label><input class="form-control form-control-solid rounded-pill" id="inputSearch" type="text" placeholder="Mapkit, Slider, TextView..." /></div>
+                                                  <div class="form-group mr-0 mr-lg-2"><label class="sr-only" for="inputSearch">Mapkit, Slider, MultilineTextField...</label><input class="form-control form-control-solid rounded-pill" id="inputSearch" type="text" placeholder="Mapkit, Slider, MultilineTextField..." /></div>
                                               </div>
                                               <div class="col-lg-3 col-md-4"><button class="btn btn-teal btn-block btn-marketing rounded-pill" type="submit">Search</button></div>
                                           </div>
@@ -149,7 +149,7 @@
                         </div>
 
 
-                        <!-- Textview -->
+                        <!-- MultilineTextField -->
                         <div class="card mb-10 z-1" onclick="document.location='multiline.html'">
 
                             <div class="card-body p-5">
@@ -158,19 +158,19 @@
                                       <div class="content-skewed-hover content-skewed-right-hover"><img class="img-fluid content-skewed-item-hover shadow-lg-hover rounded-lg bg-img-city" style="width:80%; margin-left:10%;" src="../assets/img/multiline.png" /></div>
                                     </div>
                                     <div class="col-lg-7 align-items-start" >
-                                      <h2>TextView</h2>
+                                      <h2>MultilineTextField</h2>
                                       <p class="lead text-gray-500 mb-0"> Add a multiline text field into your app. </p>
                                       <br>
                                       <div class="code-block">
                                       <pre><code class="swift language-swift"><span class="key">import</span> SwiftUI
-<span class="key">import</span> TextView
+<span class="key">import</span> MultilineTextField
 
 <span class="key">struct</span> <span class="pointer">ContentView</span>: <span class="type">View</span> {
   <span class="type">@State</span> <span class="key">var</span> <span class="pointer">text</span> = <span class="string">""</span>
   <span class="type">@State</span> <span class="key">var</span> <span class="pointer">isActive</span> = <span class="key" style="font-weight:700">false</span>
 
   <span class="key">var</span> body: <span class="key">some</span> <span class="type">View</span> {
-    <span class="pointer">TextView</span>(
+    <span class="pointer">MultilineTextField</span>(
       text: <span class="pointer">$text</span>,
       isEditing: <span class="pointer">$isActive</span>
     )

@@ -84,14 +84,14 @@
                             <br>
                             <div class="code-block">
                             <pre><code class="swift language-swift"><span class="key">import</span> SwiftUI
-<span class="key">import</span> TextView
+<span class="key">import</span> MultilineTextField
 
 <span class="key">struct</span> <span class="pointer">ContentView</span>: <span class="type">View</span> {
   <span class="type">@State</span> <span class="key">var</span> <span class="pointer">text</span> = <span class="string">""</span>
   <span class="type">@State</span> <span class="key">var</span> <span class="pointer">isActive</span> = <span class="key" style="font-weight:700">false</span>
 
   <span class="key">var</span> body: <span class="key">some</span> <span class="type">View</span> {
-    <span class="pointer">TextView</span>(
+    <span class="pointer">MultilineTextField</span>(
       text: <span class="pointer">$text</span>,
       isEditing: <span class="pointer">$isActive</span>
     )
@@ -110,9 +110,9 @@
                               <pre><code><span class="type">@State</span> <span class="key">var</span> <span class="pointer">text</span> = <span class="string">""</span>
 <span class="type">@State</span> <span class="key">var</span> <span class="pointer">isActive</span> = <span class="key" style="font-weight:700">false</span></code></pre></div>
                               <br>
-                              <p class="lead" style="margin-bottom:18pt;">Second, add the textview.</p>
+                              <p class="lead" style="margin-bottom:18pt;">Second, add the MultilineTextField.</p>
                               <div class="code-block">
-                              <pre><code><span class="pointer">TextView</span>(
+                              <pre><code><span class="pointer">MultilineTextField</span>(
   text: <span class="pointer">$text</span>,
   isEditing: <span class="pointer">$isActive</span>
 )</code></pre></div>

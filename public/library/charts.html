@@ -98,8 +98,8 @@
             style: <span class="enum">.tertiary</span>,
             curvedLines: <span class="key">false</span>,
             displayChartStats: <span class="key">true</span>,
-            alignment: <span class="enum">.leading</span>
         )
+        <span class="type">Spacer</span>()
     }
 }</code></pre>
                         </div>
@@ -166,9 +166,9 @@
         <span class="pointer">LineChart</span>(
             data: <span class="key">self</span>.<span class="enum">data</span>,
             title: <span class="string">"My Graph"</span>,
-            displayChartStats: <span class="key">true</span>,
-            alignment: .<span class="enum">leading</span>
+            displayChartStats: <span class="key">true</span>
         )
+        <span class="type">Spacer</span>()
     }
 }</code></pre>
                         </div>
@@ -183,19 +183,15 @@
                             <h2> Get Started </h2>
                             <p class="lead"> <code class="inline-code">LineChart</code> requires an array of doubles, denoted <code class="inline-code">data</code>, to serve as its input.
                               <br><br>
-                              The <code>text</code> state stores the user entered text. The <code>isActive</code> state stores whether the user is actively interacting with the textfield.
-                              <br><br>
-                              First add the state variables to your view.</p>
+                              First add the data variables to your view.</p>
                               <div class="code-block">
-                              <pre><code><span class="type">@State</span> <span class="key">var</span> <span class="pointer">text</span> = <span class="string">""</span>
-<span class="type">@State</span> <span class="key">var</span> <span class="pointer">isActive</span> = <span class="key" style="font-weight:700">false</span></code></pre></div>
+                                <pre><code><span class="type">@State</span> <span class="key">var</span> <span class="pointer">data</span> = [<span class="number">1</span>,<span class="number">3</span>,<span class="number">2</span>]</code></pre>
+                              </div>
                               <br>
-                              <p class="lead" style="margin-bottom:18pt;">Second, add the MultilineTextField.</p>
+                              <p class="lead" style="margin-bottom:18pt;">Second, add the <code class="inline-code">LineChart</code>.</p>
                               <div class="code-block">
-                              <pre><code><span class="pointer">MultilineTextField</span>(
-  text: <span class="pointer">$text</span>,
-  isEditing: <span class="pointer">$isActive</span>
-)</code></pre></div>
+                                <pre><code><span class="pointer">LineChart</span>(data: <span class="pointer">data</span>)</code></pre>
+                              </div>
 
 
                           </div>
@@ -205,21 +201,20 @@
 
                           <div class="instructions-block mt-5">
                             <h2> Customization </h2>
-                            <p class="lead"> <code class="inline-code">MultilineTextField</code>  supports a variety of custom inputs. All custom inputs are built into the struct initialization. </p>
+                            <p class="lead"> <code class="inline-code">LineChart</code>  supports a variety of custom inputs. All custom inputs are built into the struct initialization. </p>
 
-                            <p class="lead"> <b>Example:</b> Add a placeholder, add a bolder, and change the default height with the following code block: </p>
+                            <p class="lead"> <b>Example:</b> Add a title, display chart statistics, and change the style with the following code block: </p>
                             <div class="code-block">
-          <pre><code class="swift language-swift"><span class="pointer">MultilineTextField</span>(
-    text: <span class="pointer">$text</span>,
-    isEditing: <span class="pointer">$isActive</span>,
-    placeholder: <span class="string">"Enter feedback ..."</span>,
-    hasBorder: <span class="key">false </span>,
-    minHeight: <span class="number">150 </span>
+          <pre><code class="swift language-swift"><span class="pointer">LineChart</span>(
+    data: <span class="key">self</span>.<span class="enum">data</span>,
+    title: <span class="string">"My Graph"</span>,
+    style: .<span class="enum">tertiary</span>,
+    displayChartStats: <span class="key">true</span>
 )</code></pre>
 </div>
 
                           <div class="table-responsive">
-                            <p class="lead"> A mostly exhaustive input list, and their defaults, is as follows. Import the package and view the entire custom input list in XCode. </p>
+                            <p class="lead"> An exhaustive input list, and their defaults, is as follows. Import the package and view the entire custom input list in XCode. </p>
                             <table class="table table-borderless">
                               <thead>
                                 <tr>
@@ -229,113 +224,84 @@
                               </thead>
                               <tbody>
                                 <tr>
-                                  <td class="text-left fit"><code class="code-classic"> <span class="inline-block"> placeholder: <span class="type"> String? </span> = <span class="key"> nil</span> </span> </code></td>
+                                  <td class="text-left fit"><code class="code-classic"> <span class="inline-block"> title: <span class="type"> String? </span> = <span class="key"> nil</span> </span> </code></td>
                                   <td>
-                                    Add a placeholder to your textfield.
+                                    Add a title above your graph.
                                   </td>
                                 </tr>
                                 <tr>
-                                  <td class="text-left fit"><code class="code-classic"> <span class="inline-block"> hasBorder: <span class="type"> Bool </span> = <span class="key"> true</span> </span> </code></td>
+                                  <td class="text-left fit"><code class="code-classic"> <span class="inline-block"> subTitle: <span class="type"> String? </span> = <span class="key"> nil</span> </span> </code></td>
                                   <td>
-                                    Remove the border from the textfield. Use to either create your own custom border, or remove it altogether.
+                                    Add a subtitle below your title and above your graph.
                                   </td>
                                 </tr>
                                 <tr>
-                                  <td class="text-left fit"><code class="code-classic"> <span class="inline-block"> textAlignment: <span class="pointer"> <span class="key">Self</span>.TextAlignment </span> = <span class="enum"> .left </span> </span> </code></td>
+                                  <td class="text-left fit"><code class="code-classic"> <span class="inline-block"> style: <span class="pointer"> LineChartStyle? </span> = <span class="enum"> .primary </span> </span> </code></td>
                                   <td>
-                                    Text alignment.
+                                    <code class="inline-code"><span class="pointer">LineChartStyle</span></code> is an enum of different style choices. You can always create a custom style with <code class="inline-code"><span class="enum">.custom</span></code>
                                   </td>
                                 </tr>
                                 <tr>
-                                  <td class="text-left"><code class="code-classic"> <span class="inline-block"> placeholderAlignment: <span class="type"> Alignment </span> = <span class="enum"> .left </span> </span></td>
+                                  <td class="text-left"><code class="code-classic"> <span class="inline-block"> curvedLines: <span class="key"> Bool </span> = <span class="key"> true </span> </span></td>
                                   <td>
-                                    Placeholder text alignment.
+                                    Does your graph have curved or straight lines.
                                   </td>
                                 </tr>
                                 <tr>
-                                  <td class="text-left"><code class="code-classic"> <span class="inline-block"> textHorizontalPadding: <span class="type"> CGFloat </span> = <span class="number"> 10 </span> </span> </code></td>
+                                  <td class="text-left"><code class="code-classic"> <span class="inline-block"> cursorColor: <span class="type"> Color </span> = <span class="pointer"> Colors.IndicatorKnob </span> </span> </code></td>
                                   <td>
-                                    Horizontal text padding.
+                                    When a user clicks on the graph, what color is their cursor.
                                   </td>
                                 </tr>
                                 <tr>
-                                  <td class="text-left"><code class="code-classic"> <span class="inline-block"> textVerticalPadding: <span class="type"> CGFloat </span> = <span class="number"> 15 </span> </span> </code></td>
+                                  <td class="text-left"><code class="code-classic"> <span class="inline-block"> displayChartStats: <span class="key"> Bool </span> = <span class="number"> false </span> </span> </code></td>
                                   <td>
-                                    Vertical text padding.
+                                    Show text that reads the final data point, the current selected point (when applicable) and the percent change from the first data point.
                                   </td>
                                 </tr>
                                 <tr>
-                                  <td class="text-left"><code class="code-classic"> <span class="inline-block"> placeholderHorizontalPadding: <span class="type"> CGFloat </span> = <span class="number"> 15 </span> </span> </code></td>
+                                  <td class="text-left"><code class="code-classic"> <span class="inline-block"> width: <span class="type"> CGFloat </span> = <span class="number"> 360 </span> </span> </code></td>
                                   <td>
-                                    Horizontal placeholder padding.
+                                    Chart width.
                                   </td>
                                 </tr>
                                 <tr>
-                                  <td class="text-left"><code class="code-classic"> <span class="inline-block"> placeholderVerticalPadding: <span class="type"> CGFloat </span> = <span class="number"> 15 </span> </span></code></td>
+                                  <td class="text-left"><code class="code-classic"> <span class="inline-block"> height: <span class="type"> CGFloat </span> = <span class="number"> 420 </span> </span></code></td>
                                   <td>
-                                    Vertical placeholder padding.
+                                    Chart height.
                                   </td>
                                 </tr>
                                 <tr>
-                                  <td class="text-left"><code class="code-classic"> <span class="inline-block"> font: <span class="type"> UIFont </span> = <span class="enum"> Self.defaultFont </span> </span> </code></td>
+                                  <td class="text-left"><code class="code-classic"> <span class="inline-block"> titleFont: <span class="type"> Font </span> = .<span class="enum">system</span>(size: <span class="number">30</span>, weight: .<span class="enum">regular</span>, design: .<span class="enum">rounded</span>), </span> </code></td>
                                   <td>
-                                    Font.
+                                    Title font.
                                   </td>
                                 </tr>
                                 <tr>
-                                  <td class="text-left"><code class="code-classic"> <span class="inline-block"> textColor: <span class="type"> UIColor </span> = <span class="enum"> .label </span> </span> </code></td>
+                                  <td class="text-left"><code class="code-classic"> <span class="inline-block"> subtitleFont: <span class="type"> Font </span> = .<span class="enum">system</span>(size: <span class="number">14</span>, weight: .<span class="enum">light</span>, design: .<span class="enum">rounded</span>), </span> </code></td>
                                   <td>
-                                    Text color.
+                                    Sub-Title font.
                                   </td>
                                 </tr>
                                 <tr>
-                                  <td class="text-left"><code class="code-classic"> <span class="inline-block"> placeholderColor: <span class="type"> Color </span> = <span class="enum"> .init(.placeholderText) </span> </span> </code></td>
+                                  <td class="text-left"><code class="code-classic"> <span class="inline-block"> dataFont: <span class="type"> Font </span> = .<span class="enum">system</span>(size: <span class="number">16</span>, weight: .<span class="enum">bold</span>, design: .<span class="enum">monospaced</span>), </span> </code></td>
                                   <td>
-                                    Placeholder color.
+                                    Data font.
                                   </td>
                                 </tr>
                                 <tr>
-                                  <td class="text-left"><code class="code-classic"> <span class="inline-block"> backgroundColor: <span class="type"> UIColor </span> = <span class="enum"> .clear </span> </span> </code></td>
+                                  <td class="text-left"><code class="code-classic"> <span class="inline-block"> floatingPntNumberFormat: <span class="type"> String </span> = <span class="string"> "%.1f" </span> </span> </code></td>
                                   <td>
-                                    Background color.
+                                    A regular expression for how to format datapoint from the chart.
                                   </td>
                                 </tr>
                                 <tr>
-                                  <td class="text-left"><code class="code-classic"> <span class="inline-block"> contentType: <span class="pointer"> ContentType? </span> = <span class="key"> nil </span> </span> </code></td>
+                                  <td class="text-left"><code class="code-classic"> <span class="inline-block"> fullScreen: <span class="type"> Bool </span> = <span class="key"> false </span> </span> </code></td>
                                   <td>
-                                    NA.
+                                    Allow chart view to expand to the entire screen – including safe areas.
                                   </td>
                                 </tr>
-                                <tr>
-                                  <td class="text-left"><code class="code-classic"> <span class="inline-block"> autocorrection: <span class="pointer"> Autocorrection </span> = <span class="enum"> .default </span> </span> </code></td>
-                                  <td>
-                                    Custom autocorrection.
-                                  </td>
-                                </tr>
-                                <tr>
-                                  <td class="text-left"><code class="code-classic"> <span class="inline-block"> autocapitalization: <span class="pointer"> Autocapitalization </span> = <span class="enum"> .sentences </span> </span> </code></td>
-                                  <td>
-                                    Custom autocapitalization.
-                                  </td>
-                                </tr>
-                                <tr>
-                                  <td class="text-left"><code class="code-classic"> <span class="inline-block"> isEditable: <span class="type"> Bool </span> = <span class="key"> true </span> </span> </code></td>
-                                  <td>
-                                    Allow users to edit the textfield.
-                                  </td>
-                                </tr>
-                                <tr>
-                                  <td class="text-left"><code class="code-classic"> <span class="inline-block"> isSelectable: <span class="type"> Bool </span> = <span class="key"> true </span> </span> </code></td>
-                                  <td>
-                                    Allow users to select the textfield.
-                                  </td>
-                                </tr>
-                                <tr>
-                                  <td class="text-left"><code class="code-classic"> <span class="inline-block"> isScrollingEnabled: <span class="type"> Bool </span> = <span class="key"> true </span> </span> </code></td>
-                                  <td>
-                                    Can users scroll within the textfield when applicable.
-                                  </td>
-                                </tr>
+
                               </tbody>
                             </table>
                           </div>
@@ -347,18 +313,18 @@
 
                           <div class="instructions-block mt-5">
                             <h2> Community </h2>
-                            <p class="lead"> Meet the team behind <code class="inline-code">MultilineTextField</code>. </p>
+                            <p class="lead"> Meet the developers behind <code class="inline-code">LineChart</code>. </p>
                             <div class="row">
                               <div class="person text-center">
-                                <a href="https://github.com/MojtabaHs" style="text-decoration:none;" target="_blank">
-                                  <img class="mb-4 person-photo" src="../assets/img/seyed.jpg" style="width: 15rem;" />
-                                  <p class="lead microcopy"> Seyed Mojtaba Hosseini Zeidabadi </p>
+                                <a href="https://github.com/AppPear" style="text-decoration:none;" target="_blank">
+                                  <img class="mb-4 person-photo" src="../assets/img/GithubAppPear.jpg" style="width: 15rem;" />
+                                  <p class="lead microcopy"> Package Owner </p>
                                 </a>
                               </div>
                               <div class="person text-center">
-                                <a href="https://github.com/kenmueller" style="text-decoration:none;" target="_blank">
-                                  <img class="mb-4 person-photo" src="../assets/img/ken.png" style="width: 15rem;" />
-                                  <p class="lead microcopy"> Ken Mueller </p>
+                                <a href="https://github.com/AlexFine" style="text-decoration:none;" target="_blank">
+                                  <img class="mb-4 person-photo" src="../assets/img/faf.jpg" style="width: 15rem;" />
+                                  <p class="lead microcopy"> Key Contributor </p>
                                 </a>
                               </div>
 

@@ -101,6 +101,37 @@
   color:black;
 }
 
+.collapse {
+  cursor: default;
+}
+
+.back-btn {
+  font-weight: 700;
+  font-size:14pt;
+  color:rgba(80, 80, 80, 0.5);
+  cursor: pointer;
+  text-decoration: none !important;
+  background:white;
+  margin-left:10pt;
+}
+.back-btn:hover {
+  color:rgba(80, 80, 80, 0.9);
+  transition: 0.25s;
+}
+
+.next-btn {
+  font-weight: 700;
+  font-size:14pt;
+  color:rgba(80, 80, 80, 1.0);
+  cursor: pointer;
+  text-decoration: none !important;
+  background:white;
+  margin-right:10pt;
+}
+.next-btn:hover {
+  color:rgba(20, 20, 20, 1.0);
+  transition: 0.25s
+}
 
 
 /* @media (min-width:500pt) {
@@ -114,10 +145,15 @@
   margin-bottom:80pt;
 }
 
+.import-card {
+box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.0) !important;
+}
 
 .example-gif {
   margin: 10pt;
   box-shadow: 0 0 15pt rgba(80, 80, 80, 0.5) !important;
+  width:100%;
+  max-width: 200pt !important;
 }
 
 @media (max-width:576pt) {
@@ -269,8 +305,6 @@ li {
 }
 
 
-
-
 code .key{color:#AA0C91}
 code .type{color:#704d99}
 code .string{color:#C41A16}
@@ -338,14 +372,19 @@ code .code-classic {
 .instructions-block:hover {
   /* -moz-box-shadow: 0 0 3px #ccc;
   -webkit-box-shadow: 0 0 3px #ccc; */
-  box-shadow: 0 0 0.50rem rgba(0,0,0,0.10);
+  /* box-shadow: 0 0 0.50rem rgba(0,0,0,0.10); */
   /* border: 2px solid rgba(0,0,0,0.17); */
 }
+
 
 @media (max-width:768px) {
   .carousel {
     display: none !important;
   }
+}
+
+.new_html_code {
+  height:auto;
 }
 
 @media (min-width:769px) {
@@ -922,13 +961,13 @@ pre code {
 }
 @media (min-width: 992px) {
   .container {
-    max-width: 960px;
+    /* max-width: 960px; */
   }
 }
 @media (min-width: 1200px) {
   .container {
     min-width: 1140px;
-    width: calc(80% - 60pt);
+    width: 100%;
     max-width: 1280px;
   }
 }
@@ -959,8 +998,8 @@ pre code {
 @media (min-width: 1200px) {
   .container-xl, .container-lg, .container-md, .container-sm, .container {
     min-width: 1140px;
-    width: calc(80% - 60pt);
-    max-width: 1280px;
+    width: calc(100% - 60pt);
+    max-width: 1800px;
   }
 }
 .row {

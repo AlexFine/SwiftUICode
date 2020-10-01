@@ -110,6 +110,16 @@
   }
 } */
 
+.exampleBlock {
+  margin-bottom:80pt;
+}
+
+
+.example-gif {
+  margin: 10pt;
+  box-shadow: 0 0 15pt rgba(80, 80, 80, 0.5) !important;
+}
+
 @media (max-width:576pt) {
   .table {
     padding:10pt;
@@ -126,6 +136,17 @@
   .table-responsive {
     display:none !important;
   }
+}
+
+#textCopiedSuccessfully {
+  display: none;
+}
+
+.hide {
+  display: none;
+}
+.show {
+  display: visible !important;
 }
 
 .badge {
@@ -251,15 +272,16 @@ li {
 
 
 code .key{color:#AA0C91}
-code .type{color:#5C2699}
+code .type{color:#704d99}
 code .string{color:#C41A16}
 code .number{color:#1C00CF}
 code .comment{color:#007400}
 code .method{color:#2E0D6E}
 code .preprocessor{color:#643820}
 code .key{color:#AA0C91}
-code .pointer{color:#3F6E74}
-code .enum{color:#60aab3};
+/* code .pointer{color:#3F6E74} */
+code .pointer{color:#004d1a}
+code .enum{color:#197480};
 
 .inline-code {
   padding:8px;

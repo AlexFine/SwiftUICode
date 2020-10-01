@@ -51,57 +51,137 @@
                       <div class="container">
                         <div class="row">
                           <div class="col-lg-9">
-                            <h2> Multiline Text Field </h2>
+                            <h2> <code>LineChart</code> Examples </h2>
 
-                            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-                              <div class="carousel-inner">
-                                <div class="carousel-item active">
-                                  <div class="new_html_code">
-                                    <a href="../assets/img/MultilineTextFieldV1.png" target="_blank"><div class="content-skewed-hover content-skewed-right-hover"><img class="img-fluid content-skewed-item-hover shadow-lg-hover rounded-lg bg-img-city" style=" width:100%;" src="../assets/img/MultilineTextFieldV1.png" /></div></a>
-                                    <p class="lead"> Multiline Text Field in a production app </p>
-                                  </div>
+                            <div class="exampleBlock">
+
+                              <div class="row">
+                                <div class="col-md-4">
+                                  <img class="img-fluid rounded-lg bg-img-city example-gif"  src="../assets/img/appClip4.gif" />
                                 </div>
-                                <div class="carousel-item">
-                                  <div class="new_html_code">
-                                    <a href="../assets/img/MultilineTextFieldV2.png" target="_blank"><div class="content-skewed-hover content-skewed-right-hover"><img class="img-fluid content-skewed-item-hover shadow-lg-hover rounded-lg bg-img-city" style=" width:100%;" src="../assets/img/MultilineTextFieldV2.png" /></div></a>
-                                    <p class="lead"> Multiline Text Field in isolation </p>
-                                  </div>
+                                <div class="col-md-8">
+                                  <div class="code-block mt-3">
+                                  <pre><code class="swift language-swift"><span class="key">import</span> SwiftUI
+<span class="key">import</span> SwiftUICharts
 
+<span class="key">struct</span> <span class="pointer">ContentView</span>: <span class="type">View</span> {
+    <span class="key">var</span> body: <span class="key">some</span> <span class="type">View</span> {
+        <span class="pointer">LineChart</span>(data: [<span class="number">8</span>,<span class="number">32</span>,<span class="number">11</span>,<span class="number">23</span>,<span class="number">40</span>,<span class="number">28</span>,<span class="number">15</span>,<span class="number">20</span>,<span class="number">30</span>,<span class="number">25</span>])
+    }
+}</code></pre>
+                        </div>
                                 </div>
                               </div>
-                              <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                                <svg width="3em" height="3em" style="color:#737373;" viewBox="0 0 16 16" class="bi bi-arrow-left-circle-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                  <path fill-rule="evenodd" d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-4.5.5a.5.5 0 0 0 0-1H5.707l2.147-2.146a.5.5 0 1 0-.708-.708l-3 3a.5.5 0 0 0 0 .708l3 3a.5.5 0 0 0 .708-.708L5.707 8.5H11.5z"/>
-                                </svg>
-                              </a>
-                              <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                                <svg width="3em" height="3em" style="color:#737373;" viewBox="0 0 16 16" class="bi bi-arrow-right-circle-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                  <path fill-rule="evenodd" d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-11.5.5a.5.5 0 0 1 0-1h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5z"/>
-                                </svg>
-                              </a>
+                            </div>
+
+
+
+                            <div class="exampleBlock">
+
+                              <div class="row">
+                                <div class="col-md-4">
+                                  <img class="img-fluid rounded-lg bg-img-city example-gif"  src="../assets/img/appClip0.gif" />
+                                </div>
+                                <div class="col-md-8">
+                                  <div class="code-block mt-3">
+                                  <pre><code class="swift language-swift"><span class="key">import</span> SwiftUI
+<span class="key">import</span> SwiftUICharts
+
+<span class="key">struct</span> <span class="pointer">ContentView</span>: <span class="type">View</span> {
+    <span class="type">@State</span> <span class="key">var</span> <span class="pointer">data</span>:[<span class="type">Double</span>] = <span class="pointer">ExampleData.stockData</span>
+
+    <span class="key">var</span> body: <span class="key">some</span> <span class="type">View</span> {
+        <span class="pointer">LineChart</span>(
+            data: <span class="key">self</span>.<span class="enum">data</span>,
+            title: <span class="string">"AAPL"</span>,
+            subTitle: <span class="string">"Apple Computers"</span>,
+            style: <span class="enum">.tertiary</span>,
+            curvedLines: <span class="key">false</span>,
+            displayChartStats: <span class="key">true</span>,
+            alignment: <span class="enum">.leading</span>
+        )
+    }
+}</code></pre>
+                        </div>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="exampleBlock">
+                              <div class="row">
+                                <div class="col-md-4">
+                                  <img class="img-fluid rounded-lg bg-img-city example-gif"  src="../assets/img/appClip2.gif" />
+                                </div>
+                                <div class="col-md-8">
+                                  <div class="code-block mt-3">
+                                  <pre><code class="swift language-swift"><span class="key">import</span> SwiftUI
+<span class="key">import</span> SwiftUICharts
+
+<span class="key">struct</span> <span class="pointer">ContentView</span>: <span class="type">View</span> {
+    <span class="type">@State</span> <span class="key">var</span> <span class="pointer">data</span>:[<span class="type">Double</span>] = <span class="pointer">ExampleData.stockData</span>
+
+    <span class="key">var</span> body: <span class="key">some</span> <span class="type">View</span> {
+        <span class="pointer">LineChart</span>(
+            data: <span class="key">self</span>.<span class="enum">data</span>,
+            title: <span class="string">"My Dark Themed App"</span>,
+            subTitle: <span class="string">"Sleek. Simple."</span>,
+            style: .<span class="enum">custom</span>(
+                <span class="pointer">ChartStyle</span>(
+                    canvasBackgroundColor: <span class="pointer">Colors.NeonBlack</span>,
+                    lineGradient: <span class="pointer">GradientColor</span>(start: <span class="type">Color.white</span>, end: <span class="type">Color.white</span>),
+                    chartBackgroundGradient: <span class="pointer">GradientColor</span>(start: <span class="pointer">Colors.NeonBlack</span>, end: <span class="pointer">Colors.NeonBlack</span>),
+                    titleColor: <span class="pointer">Colors.NeonRed</span>,
+                    subtitleColor: <span class="type">Color.gray</span>
+                )
+            ),
+            cursorColor: <span class="type">Color.black</span>,
+            height: <span class="number">500</span>,
+            titleFont: .<span class="type">system</span>(size: <span class="number">14</span>, weight: .<span class="enum">light</span>, design: .<span class="enum">monospaced</span>),
+            titleFont: .<span class="type">system</span>(size: <span class="number">24</span>, weight: .<span class="enum">bold</span>, design: .<span class="enum">monospaced</span>),
+            alignment: .<span class="enum">fullScreen</span>
+        )
+    }
+}</code></pre>
+                        </div>
+                                </div>
+                              </div>
+                            </div>
+
+
+                            <div class="exampleBlock">
+
+                              <div class="row">
+                                <div class="col-md-4">
+                                  <img class="img-fluid rounded-lg bg-img-city example-gif"  src="../assets/img/appClip1.gif" />
+                                </div>
+                                <div class="col-md-8">
+                                  <div class="code-block mt-3">
+                                  <pre><code class="swift language-swift"><span class="key">import</span> SwiftUI
+<span class="key">import</span> SwiftUICharts
+
+<span class="key">struct</span> <span class="pointer">ContentView</span>: <span class="type">View</span> {
+    <span class="type">@State</span> <span class="key">var</span> <span class="pointer">data</span>:[<span class="type">Double</span>] = [<span class="number">8</span>,<span class="number">32</span>,<span class="number">11</span>,<span class="number">23</span>,<span class="number">40</span>,<span class="number">28</span>,<span class="number">15</span>,<span class="number">20</span>,<span class="number">30</span>,<span class="number">25</span>]
+
+    <span class="key">var</span> body: <span class="key">some</span> <span class="type">View</span> {
+        <span class="pointer">LineChart</span>(
+            data: <span class="key">self</span>.<span class="enum">data</span>,
+            title: <span class="string">"My Graph"</span>,
+            displayChartStats: <span class="key">true</span>,
+            alignment: .<span class="enum">leading</span>
+        )
+    }
+}</code></pre>
+                        </div>
+                                </div>
+                              </div>
                             </div>
 
                             <br>
-                            <div class="code-block">
-                            <pre><code class="swift language-swift"><span class="key">import</span> SwiftUI
-<span class="key">import</span> MultilineTextField
 
-<span class="key">struct</span> <span class="pointer">ContentView</span>: <span class="type">View</span> {
-  <span class="type">@State</span> <span class="key">var</span> <span class="pointer">text</span> = <span class="string">""</span>
-  <span class="type">@State</span> <span class="key">var</span> <span class="pointer">isActive</span> = <span class="key" style="font-weight:700">false</span>
-
-  <span class="key">var</span> body: <span class="key">some</span> <span class="type">View</span> {
-    <span class="pointer">MultilineTextField</span>(
-      text: <span class="pointer">$text</span>,
-      isEditing: <span class="pointer">$isActive</span>
-    )
-  }
-}</code></pre>
-                  </div>
 
                           <div class="instructions-block mt-5">
                             <h2> Get Started </h2>
-                            <p class="lead"> <code class="inline-code">MultilineTextField</code>  requires a <code>text</code> state, and an <code>isActive</code> state.
+                            <p class="lead"> <code class="inline-code">LineChart</code> requires an array of doubles, denoted <code class="inline-code">data</code>, to serve as its input.
                               <br><br>
                               The <code>text</code> state stores the user entered text. The <code>isActive</code> state stores whether the user is actively interacting with the textfield.
                               <br><br>
@@ -303,10 +383,10 @@
                               </div>
                               <div class="input-group">
 
-                                <input type="text" class="form-control code-font" aria-label="Input group example" aria-describedby="btnGroupAddon" value="https://github.com/AlexFine/MultilineTextField.git" readonly id="downloadURL">
+                                <input type="text" class="form-control code-font" aria-label="Input group example" aria-describedby="btnGroupAddon" value="https://github.com/SwiftUIPackages/ChartView.git" readonly id="downloadURL">
                                 <div class="input-group-prepend copy-button">
                                   <div class="input-group-text" id="btnGroupAddon" onclick="copyText('downloadURL')">
-                                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-clipboard" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <svg id="textCopy" width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-clipboard" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                                       <path fill-rule="evenodd" d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/>
                                       <path fill-rule="evenodd" d="M9.5 1h-3a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"/>
                                     </svg>

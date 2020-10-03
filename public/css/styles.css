@@ -221,6 +221,8 @@ box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.0) !important;
   padding-top:4pt;
   padding-bottom:4pt;
   border-radius: 5px;
+  overflow-x: scroll !important;
+  overflow: auto !important;
   /* font-weight:600; */
 }
 
@@ -237,6 +239,13 @@ li {
     width: 50%;
 }
 
+.table td {
+  max-width:200pt;
+}
+
+.parameter-description {
+  padding-top:15pt !important;
+}
 
 /* content-skewed, content-skewed-right, content-skewed-item, shadow-lg */
 
@@ -327,8 +336,18 @@ code .enum{color:#197480};
   box-shadow: 0 0 7px 5px #ddd;
 }
 
-code .code-classic {
-  color:rgba(40, 40, 40, 0.8);
+.code-classic {
+  color:rgba(40, 40, 40, 1.0) !important;
+  background:rgba(200,200,200, 0.55) !important;
+  height:30pt;
+  padding-top:3pt;
+  padding-left:6pt;
+  /* padding-right:0pt;
+  padding-bottom:0pt;  */
+  border: 5pt solid rgba(200,200,200, 0.0);
+  border-radius: 3pt;
+  font-weight:400;
+  /* margin:5pt; */
 }
 
 .copy-button {

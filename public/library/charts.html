@@ -185,7 +185,7 @@
                               <br><br>
                               First add the data variable to your view.</p>
                               <div class="code-block">
-                                <pre><code><span class="type">@State</span> <span class="key">var</span> <span class="pointer">data</span> = [<span class="number">1</span>,<span class="number">3</span>,<span class="number">2</span>]</code></pre>
+                                <pre><code><span class="key">var</span> <span class="pointer">data</span> = [<span class="number">1</span>,<span class="number">3</span>,<span class="number">2</span>]</code></pre>
                               </div>
                               <br>
                               <p class="lead" style="margin-bottom:18pt;">Second, add the <code class="inline-code">LineChart</code>.</p>
@@ -214,93 +214,285 @@
 </div>
 
                           <div class="table-responsive">
-                            <p class="lead"> An exhaustive input list, and their defaults, is as follows. Import the package and view the entire custom input list in XCode. </p>
+                            <p class="lead"> An exhaustive parameter list, and their defaults, is as follows. Import the package and view the entire custom input list in XCode. </p>
                             <table class="table table-borderless">
                               <thead>
                                 <tr>
-                                  <th scope="col">Input</th>
+                                  <th scope="col">Parameter</th>
                                   <th scope="col">Description</th>
                                 </tr>
                               </thead>
                               <tbody>
                                 <tr>
-                                  <td class="text-left fit"><code class="code-classic"> <span class="inline-block"> title: <span class="type"> String? </span> = <span class="key"> nil</span> </span> </code></td>
-                                  <td>
+                                  <td class="text-left">
+                                    <div class="code-classic">
+                                      <pre><code>title: <span class="type">String? </span> = <span class="key"> nil</span> </span> </code></pre>
+                                    </div>
+
+                                  </td>
+                                  <td class="parameter-description">
                                     Add a title above your graph.
                                   </td>
                                 </tr>
+
                                 <tr>
-                                  <td class="text-left fit"><code class="code-classic"> <span class="inline-block"> subTitle: <span class="type"> String? </span> = <span class="key"> nil</span> </span> </code></td>
-                                  <td>
+                                  <td class="text-left">
+                                    <div class="code-classic">
+                                      <pre><code>subtitle: <span class="type">String? </span> = <span class="key"> nil</span> </span> </code></pre>
+                                    </div>
+
+                                  </td>
+                                  <td class="parameter-description">
                                     Add a subtitle below your title and above your graph.
                                   </td>
                                 </tr>
+
                                 <tr>
-                                  <td class="text-left fit"><code class="code-classic"> <span class="inline-block"> style: <span class="pointer"> LineChartStyle? </span> = <span class="enum"> .primary </span> </span> </code></td>
-                                  <td>
-                                    <code class="inline-code"><span class="pointer">LineChartStyle</span></code> is an enum of different style choices. You can always create a custom style with <code class="inline-code"><span class="enum">.custom</span></code>
+                                  <td class="text-left">
+                                    <div class="code-classic">
+                                      <pre><code>style: <span class="pointer"> LineChartStyle </span> = <span class="enum"> .primary </span> </span> </code></pre>
+                                    </div>
+
+                                  </td>
+                                  <td class="parameter-description">
+                                    <code class="inline-code"><span class="pointer">LineChartStyle</span></code> is an enum of different default style choices. You can choose between <code><span class="enum">.primary</span></code>, <code><span class="enum">.secondary</span></code>, <code><span class="enum">.tertiary</span></code> or <code><span class="enum">.dark</span></code>.
                                   </td>
                                 </tr>
+
                                 <tr>
-                                  <td class="text-left"><code class="code-classic"> <span class="inline-block"> curvedLines: <span class="key"> Bool </span> = <span class="key"> true </span> </span></td>
-                                  <td>
+                                  <td class="text-left">
+                                    <div class="code-classic">
+                                      <pre><code>lineGradient: <span class="pointer"> GradientColor? </span> = <span class="key"> nil </span> </span> </code></pre>
+                                    </div>
+
+                                  </td>
+                                  <td class="parameter-description">
+                                    Change the gradient of the graph line.
+                                  </td>
+                                </tr>
+
+                                <tr>
+                                  <td class="text-left">
+                                    <div class="code-classic">
+                                      <pre><code>chartBackgroundGradient: <span class="pointer"> GradientColor? </span> = <span class="key"> nil </span> </span> </code></pre>
+                                    </div>
+
+                                  </td>
+                                  <td class="parameter-description">
+                                    Change the gradient that lies below the chart line.
+                                  </td>
+                                </tr>
+
+                                <tr>
+                                  <td class="text-left">
+                                    <div class="code-classic">
+                                      <pre><code>canvasBackgroundColor: <span class="type"> Color? </span> = <span class="key"> nil </span> </span> </code></pre>
+                                    </div>
+
+                                  </td>
+                                  <td class="parameter-description">
+                                    Change the canvas color that lies behind the frame (including the header text).
+                                  </td>
+                                </tr>
+
+                                <tr>
+                                  <td class="text-left">
+                                    <div class="code-classic">
+                                      <pre><code>titleColor: <span class="type"> Color? </span> = <span class="key"> nil </span> </span> </code></pre>
+                                    </div>
+
+                                  </td>
+                                  <td class="parameter-description">
+                                    Change the title color.
+                                  </td>
+                                </tr>
+
+                                <tr>
+                                  <td class="text-left">
+                                    <div class="code-classic">
+                                      <pre><code>subtitleColor: <span class="type"> Color? </span> = <span class="key"> nil </span> </span> </code></pre>
+                                    </div>
+
+                                  </td>
+                                  <td class="parameter-description">
+                                    Change the subtitle color.
+                                  </td>
+                                </tr>
+
+                                <tr>
+                                  <td class="text-left">
+                                    <div class="code-classic">
+                                      <pre><code>numberColor: <span class="type"> Color? </span> = <span class="key"> nil </span> </span> </code></pre>
+                                    </div>
+
+                                  </td>
+                                  <td class="parameter-description">
+                                    Change the color of the graph numbers.
+                                  </td>
+                                </tr>
+
+                                <tr>
+                                  <td class="text-left">
+                                    <div class="code-classic">
+                                      <pre><code>curvedLines: <span class="key">Bool </span> = <span class="key"> true </span> </code></pre>
+                                    </div>
+
+                                  </td>
+                                  <td class="parameter-description">
                                     Does your graph have curved or straight lines.
                                   </td>
                                 </tr>
+
                                 <tr>
-                                  <td class="text-left"><code class="code-classic"> <span class="inline-block"> cursorColor: <span class="type"> Color </span> = <span class="pointer"> Colors.IndicatorKnob </span> </span> </code></td>
-                                  <td>
-                                    When a user clicks on the graph, what color is their cursor.
+                                  <td class="text-left">
+                                    <div class="code-classic">
+                                      <pre><code>cursorColor: <span class="type"> Color </span> = <span class="pointer"> Colors.NeonPink </span> </span> </code></pre>
+                                    </div>
+
+                                  </td>
+                                  <td class="parameter-description">
+                                    When a user clicks on the graph, what color is their cursor. Uses the internal <code> <span class="pointer">Colors</span></code> struct which provides fast access to good colors.
                                   </td>
                                 </tr>
+
                                 <tr>
-                                  <td class="text-left"><code class="code-classic"> <span class="inline-block"> displayChartStats: <span class="key"> Bool </span> = <span class="number"> false </span> </span> </code></td>
-                                  <td>
+                                  <td class="text-left">
+                                    <div class="code-classic">
+                                      <pre><code>displayChartStats: <span class="key"> Bool </span> = <span class="number"> false </span> </span> </code></pre>
+                                    </div>
+
+                                  </td>
+                                  <td class="parameter-description">
                                     Show text that reads the final data point, the current selected point (when applicable) and the percent change from the first data point.
                                   </td>
                                 </tr>
+
                                 <tr>
-                                  <td class="text-left"><code class="code-classic"> <span class="inline-block"> width: <span class="type"> CGFloat </span> = <span class="number"> 360 </span> </span> </code></td>
-                                  <td>
-                                    Chart width.
+                                  <td class="text-left">
+                                    <div class="code-classic">
+                                      <pre><code>minWidth: <span class="type"> CGFloat </span> = <span class="number"> 0 </span> </span> </code></pre>
+                                    </div>
+
+                                  </td>
+                                  <td class="parameter-description">
+                                    Minimum chart width.
                                   </td>
                                 </tr>
+
                                 <tr>
-                                  <td class="text-left"><code class="code-classic"> <span class="inline-block"> height: <span class="type"> CGFloat </span> = <span class="number"> 420 </span> </span></code></td>
-                                  <td>
-                                    Chart height.
+                                  <td class="text-left">
+                                    <div class="code-classic">
+                                      <pre><code>minHeight: <span class="type"> CGFloat </span> = <span class="number"> 0 </span> </span> </code></pre>
+                                    </div>
+
+                                  </td>
+                                  <td class="parameter-description">
+                                    Minimum chart height.
                                   </td>
                                 </tr>
+
                                 <tr>
-                                  <td class="text-left"><code class="code-classic"> <span class="inline-block"> titleFont: <span class="type"> Font </span> = .<span class="enum">system</span>(size: <span class="number">30</span>, weight: .<span class="enum">regular</span>, design: .<span class="enum">rounded</span>), </span> </code></td>
-                                  <td>
+                                  <td class="text-left">
+                                    <div class="code-classic">
+                                      <pre><code>maxWidth: <span class="type"> CGFloat </span> = <span class="type"> .infinity </span> </span> </code></pre>
+                                    </div>
+
+                                  </td>
+                                  <td class="parameter-description">
+                                    Maximum chart width.
+                                  </td>
+                                </tr>
+
+                                <tr>
+                                  <td class="text-left">
+                                    <div class="code-classic">
+                                      <pre><code>maxHeight: <span class="type"> CGFloat </span> = <span class="type"> .infinity </span> </span> </code></pre>
+                                    </div>
+
+                                  </td>
+                                  <td class="parameter-description">
+                                    Maximum chart height.
+                                  </td>
+                                </tr>
+
+                                <tr>
+                                  <td class="text-left">
+                                    <div class="code-classic">
+                                      <pre><code>titleFont: <span class="type"> Font </span> = .<span class="type">system</span>(size: <span class="number">30</span>, weight: .<span class="type">regular</span>, design: .<span class="type">rounded</span>) </code></pre>
+                                    </div>
+
+                                  </td>
+                                  <td class="parameter-description">
                                     Title font.
                                   </td>
                                 </tr>
+
                                 <tr>
-                                  <td class="text-left"><code class="code-classic"> <span class="inline-block"> subtitleFont: <span class="type"> Font </span> = .<span class="enum">system</span>(size: <span class="number">14</span>, weight: .<span class="enum">light</span>, design: .<span class="enum">rounded</span>), </span> </code></td>
-                                  <td>
-                                    Sub-Title font.
+                                  <td class="text-left">
+                                    <div class="code-classic">
+                                      <pre><code>subtitleFont: <span class="type"> Font </span> = .<span class="type">system</span>(size: <span class="number">14</span>, weight: .<span class="type">light</span>, design: .<span class="type">rounded</span>) </code></pre>
+                                    </div>
+
+                                  </td>
+                                  <td class="parameter-description">
+                                    Subtitle font.
                                   </td>
                                 </tr>
+
                                 <tr>
-                                  <td class="text-left"><code class="code-classic"> <span class="inline-block"> dataFont: <span class="type"> Font </span> = .<span class="enum">system</span>(size: <span class="number">16</span>, weight: .<span class="enum">bold</span>, design: .<span class="enum">monospaced</span>), </span> </code></td>
-                                  <td>
+                                  <td class="text-left">
+                                    <div class="code-classic">
+                                      <pre><code>dataFont: <span class="type"> Font </span> = .<span class="type">system</span>(size: <span class="number">16</span>, weight: .<span class="type">bold</span>, design: .<span class="type">monospace</span>) </code></pre>
+                                    </div>
+
+                                  </td>
+                                  <td class="parameter-description">
                                     Data font.
                                   </td>
                                 </tr>
+
                                 <tr>
-                                  <td class="text-left"><code class="code-classic"> <span class="inline-block"> floatingPntNumberFormat: <span class="type"> String </span> = <span class="string"> "%.1f" </span> </span> </code></td>
-                                  <td>
-                                    A regular expression for how to format datapoint from the chart.
+                                  <td class="text-left">
+                                    <div class="code-classic">
+                                      <pre><code>fullScreen: <span class="type"> Bool </span> = <span class="key"> false </span> </code></pre>
+                                    </div>
+
                                   </td>
-                                </tr>
-                                <tr>
-                                  <td class="text-left"><code class="code-classic"> <span class="inline-block"> fullScreen: <span class="type"> Bool </span> = <span class="key"> false </span> </span> </code></td>
-                                  <td>
+                                  <td class="parameter-description">
                                     Allow chart view to expand to the entire screen – including safe areas.
                                   </td>
                                 </tr>
+
+                                <tr>
+                                  <td class="text-left">
+                                    <div class="code-classic">
+                                      <pre><code>floatingPointNumberFormat: <span class="type"> String </span> = <span class="string"> "%.1f" </span> </code></pre>
+                                    </div>
+
+                                  </td>
+                                  <td class="parameter-description">
+                                    A regular expression for how to format datapoints from the chart.
+                                  </td>
+                                </tr>
+
+
+
+
+                                <!-- <tr>
+
+                                <tr>
+                                  <td class="text-left"><code class="code-classic"> <span class="inline-block">  </span> </code></td>
+                                  <td>
+
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td class="text-left"><code class="code-classic"> <span class="inline-block">  </span> </code></td>
+                                  <td>
+
+                                  </td>
+                                </tr>
+                              -->
 
                               </tbody>
                             </table>

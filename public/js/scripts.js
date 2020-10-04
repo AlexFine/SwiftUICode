@@ -70,3 +70,15 @@ function copyText(id) {
   copyText.setSelectionRange(0, 99999)
   document.execCommand("copy");
 }
+
+
+var imageSources = ["../assets/img/demo1.gif", "../assets/img/demo0.gif", "../assets/img/demo2.gif", "../assets/img/demo4.gif"]
+
+var index = 0;
+setInterval (function(){
+  if (index === imageSources.length) {
+    index = 0;
+  }
+  document.getElementById("imgRotate").src = imageSources[index];
+  index++;
+} , 1000);

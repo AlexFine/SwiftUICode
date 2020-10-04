@@ -336,6 +336,10 @@ code .enum{color:#197480};
   box-shadow: 0 0 7px 5px #ddd;
 }
 
+.header {
+  font-weight:600;
+}
+
 .code-classic {
   color:rgba(40, 40, 40, 1.0) !important;
   background:rgba(200,200,200, 0.55) !important;
@@ -513,6 +517,7 @@ html {
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  scroll-behavior: smooth;
 }
 
 article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {

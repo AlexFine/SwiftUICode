@@ -74,8 +74,72 @@
                                   <img class="img-fluid rounded-lg bg-img-city example-gif" id="imgRotate" src="../assets/img/demo4.gif" />
                                 </div>
                                 <div class="col-md-8  mt-3">
+                                  <!-- <table class="table table-borderless">
+                                    <thead>
+                                      <th scope="col"> </th>
+                                      <th scope="col"> </th>
+                                      <th scope="col"> </th>
+                                      <th scope="col"> </th>
+                                      <th scope="col"> </th>
+                                      <th scope="col"> </th>
+                                      <th scope="col"> </th>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+                                        <td colspan="1">Mark</td>
+                                        <td  colspan="6">Otto</td>
+                                      </tr>
+                                      <tr>
+                                        <td>Mark</td>
+                                        <td colspan="6">Otto</td>
+                                      </tr>
+                                      <tr>
+                                        <td>Mark</td>
+                                        <td colspan="6">Otto</td>
+                                      </tr>
 
-                                  <p class="lead"> To start <a id="helpHeadingTwo" data-toggle="collapse" data-target="#helpCollapseTwo" aria-expanded="true" aria-controls="helpCollapseTwo" href="javascript:void(0);">Import <code>LineChart</code></a>. </p>
+                                    </tbody>
+                                  </table> -->
+
+                                  <ol class="instructions-list">
+
+                                    <li>
+                                      <div>
+                                        <p class="instructions-text">
+                                          <a id="helpHeadingTwo" data-toggle="collapse" data-target="#helpCollapseTwo" aria-expanded="true" aria-controls="helpCollapseTwo" href="javascript:void(0);">Install</a> & Import LineChart
+                                        </p>
+
+                                        <div class="code-classic">
+                                          <pre><code><span class="type">import</span><span class="pointer"> LineChart</span></code></pre>
+                                        </div>
+                                      </div>
+                                    </li>
+
+                                    <li>
+                                      <div>
+                                        <p class="instructions-text">
+                                          Add <code>LineChart</code> to your project
+                                        </p>
+
+                                        <div class="code-classic">
+                                          <pre><code><span class="pointer">LineChart</span>(data: [<span class="number">1</span>,<span class="number">3</span>,<span class="number">2</span>])</code></pre>
+                                        </div>
+                                      </div>
+                                    </li>
+
+                                    <li>
+                                      <div>
+                                        <p class="instructions-text">
+                                          <a href="#exampleSection">Start from an example</a> or <a href="#customizeSection"> customize </a> your chart.
+                                        </p>
+
+
+                                      </div>
+                                    </li>
+
+                                  </ol>
+
+                                  <!-- <p class="lead"> To start Import <code>LineChart</code>. </p>
 
                                     <p class="lead"> Then, add a data source to your view.</p>
                                     <div class="code-block">
@@ -88,7 +152,7 @@
                                     </div>
                                     <br>
                                     <p class="lead">Easy. Now your LineChart works.</p>
-                                    <p class="lead"> Next, <a href="#customizeSection">customize</a> your chart or <a href="#exampleSection">try an example</a>. </p>
+                                    <p class="lead"> Next, <a href="#customizeSection">customize</a> your chart or <a href="#exampleSection">try an example</a>. </p> -->
 
 
                                   <!-- <div class="code-block">
@@ -107,8 +171,137 @@
 
 
 
+
                           <hr>
 
+
+                          <div class="examples-section" id="exampleSection">
+                            <br>
+                            <h1 class="title header"> Examples </h1>
+
+                            <div class="exampleBlock">
+                              <h2> Starter </h2>
+                              <p class="lead"> Get started quickly with this chart. </p>
+                              <div class="row">
+                                <div class="col-md-4 text-right">
+                                  <img class="img-fluid rounded-lg bg-img-city example-gif"  src="../assets/img/demo4.gif" />
+                                </div>
+                                <div class="col-md-8">
+                                  <div class="code-block mt-3">
+                                  <pre><code class="swift language-swift"><span class="key">import</span> SwiftUI
+<span class="key">import</span> SwiftUICharts
+
+<span class="key">struct</span> <span class="pointer">ContentView</span>: <span class="type">View</span> {
+    <span class="key">var</span> body: <span class="key">some</span> <span class="type">View</span> {
+        <span class="pointer">LineChart</span>(data: [<span class="number">8</span>,<span class="number">32</span>,<span class="number">11</span>,<span class="number">23</span>,<span class="number">40</span>,<span class="number">28</span>,<span class="number">15</span>,<span class="number">20</span>,<span class="number">30</span>,<span class="number">25</span>])
+    }
+}</code></pre>
+                        </div>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="exampleBlock">
+                              <h2> Simple Graph </h2>
+                              <p class="lead"> Enable chart statistics to make your chart & its data interactive. <br> Add a title to give your chart some context. </p>
+
+                              <div class="row">
+                                <div class="col-md-4 text-right">
+                                  <img class="img-fluid rounded-lg bg-img-city example-gif"  src="../assets/img/demo0.gif" />
+                                </div>
+                                <div class="col-md-8">
+                                  <div class="code-block mt-3">
+                                  <pre><code class="swift language-swift"><span class="key">import</span> SwiftUI
+<span class="key">import</span> SwiftUICharts
+
+<span class="key">struct</span> <span class="pointer">ContentView</span>: <span class="type">View</span> {
+    <span class="key">var</span> <span class="pointer">data</span>:[<span class="type">Double</span>] = [<span class="number">8</span>,<span class="number">32</span>,<span class="number">11</span>,<span class="number">23</span>,<span class="number">40</span>,<span class="number">28</span>,<span class="number">15</span>,<span class="number">20</span>,<span class="number">30</span>,<span class="number">25</span>]
+
+    <span class="key">var</span> body: <span class="key">some</span> <span class="type">View</span> {
+        <span class="pointer">LineChart</span>(
+            data: <span class="enum">data</span>,
+            title: <span class="string">"My Graph"</span>,
+            displayChartStats: <span class="key">true</span>
+        )
+    }
+}</code></pre>
+                        </div>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="exampleBlock">
+                              <h2> Stock App </h2>
+                              <p class="lead"> Utalize the built in <code><span class="pointer">ExampleData</span></code> to test your chart with sophisticated data.
+                                <br> Set <code>curvedLines</code> to false to give your stocks graph a more realistic feel.
+                              <br> Choose style: <code><span class="enum">.tertiary</span></code> for a minimalist chart aesthetic.</p>
+                              <div class="row">
+                                <div class="col-md-4 text-right">
+                                  <img class="img-fluid rounded-lg bg-img-city example-gif"  src="../assets/img/demo1.gif" />
+                                </div>
+                                <div class="col-md-8">
+                                  <div class="code-block mt-3">
+                                  <pre><code class="swift language-swift"><span class="key">import</span> SwiftUI
+<span class="key">import</span> SwiftUICharts
+
+<span class="key">struct</span> <span class="pointer">ContentView</span>: <span class="type">View</span> {
+    <span class="key">var</span> <span class="pointer">data</span>:[<span class="type">Double</span>] = <span class="pointer">ExampleData.stockData</span>
+
+    <span class="key">var</span> body: <span class="key">some</span> <span class="type">View</span> {
+        <span class="pointer">LineChart</span>(
+            data: <span class="enum">data</span>,
+            title: <span class="string">"AAPL"</span>,
+            subtitle: <span class="string">"Apple Computers"</span>,
+            style: <span class="enum">.tertiary</span>,
+            curvedLines: <span class="key">false</span>,
+            displayChartStats: <span class="key">true</span>,
+        )
+    }
+}</code></pre>
+                        </div>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="exampleBlock">
+                              <h2> Dark Theme </h2>
+                              <p class="lead"> Enable fullscreen to cover the safe areas with your background color. <br>
+                                Change the cursor color to round out your fully customized chart.
+                                <br>Change the font to your company's brand.
+                                  </p>
+                              <div class="row">
+                                <div class="col-md-4 text-right">
+                                  <img class="img-fluid rounded-lg bg-img-city example-gif"  src="../assets/img/demo2.gif" />
+                                </div>
+                                <div class="col-md-8">
+                                  <div class="code-block mt-3">
+                                  <pre><code class="swift language-swift"><span class="key">import</span> SwiftUI
+<span class="key">import</span> SwiftUICharts
+
+<span class="key">struct</span> <span class="pointer">ContentView</span>: <span class="type">View</span> {
+    <span class="key">var</span> <span class="pointer">data</span>:[<span class="type">Double</span>] = <span class="pointer">ExampleData.stockData</span>
+
+    <span class="key">var</span> body: <span class="key">some</span> <span class="type">View</span> {
+        <span class="pointer">LineChart</span>(
+            data: <span class="enum">data</span>,
+            title: <span class="string">"My Dark Themed App"</span>,
+            subtitle: <span class="string">"Sleek. Simple."</span>,
+            style: .<span class="enum">dark</span>,
+            titleColor: <span class="pointer">Colors.NeonRed</span>,
+            cursorColor: <span class="type">Color.black</span>,
+            titleFont: .<span class="type">system</span>(size: <span class="number">14</span>, weight: .<span class="enum">light</span>, design: .<span class="enum">monospaced</span>),
+            titleFont: .<span class="type">system</span>(size: <span class="number">24</span>, weight: .<span class="enum">bold</span>, design: .<span class="enum">monospaced</span>),
+            fullScreen: <span class="key">true</span>
+        )
+    }
+}</code></pre>
+                        </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <hr>
 
                           <div class="instructions-block mt-5" id="customizeSection">
                             <h1 class="title header"> Customize </h1>
@@ -411,134 +604,6 @@
 
                           </div>
 
-                          <hr>
-
-
-                          <div class="examples-section" id="exampleSection">
-                            <br>
-                            <h1 class="title header"> Examples </h1>
-
-                            <div class="exampleBlock">
-                              <h2> Starter </h2>
-                              <p class="lead"> Get started quickly with this chart. </p>
-                              <div class="row">
-                                <div class="col-md-4 text-right">
-                                  <img class="img-fluid rounded-lg bg-img-city example-gif"  src="../assets/img/demo4.gif" />
-                                </div>
-                                <div class="col-md-8">
-                                  <div class="code-block mt-3">
-                                  <pre><code class="swift language-swift"><span class="key">import</span> SwiftUI
-<span class="key">import</span> SwiftUICharts
-
-<span class="key">struct</span> <span class="pointer">ContentView</span>: <span class="type">View</span> {
-    <span class="key">var</span> body: <span class="key">some</span> <span class="type">View</span> {
-        <span class="pointer">LineChart</span>(data: [<span class="number">8</span>,<span class="number">32</span>,<span class="number">11</span>,<span class="number">23</span>,<span class="number">40</span>,<span class="number">28</span>,<span class="number">15</span>,<span class="number">20</span>,<span class="number">30</span>,<span class="number">25</span>])
-    }
-}</code></pre>
-                        </div>
-                                </div>
-                              </div>
-                            </div>
-
-                            <div class="exampleBlock">
-                              <h2> Simple Graph </h2>
-                              <p class="lead"> Enable chart statistics to make your chart & its data interactive. <br> Add a title to give your chart some context. </p>
-
-                              <div class="row">
-                                <div class="col-md-4 text-right">
-                                  <img class="img-fluid rounded-lg bg-img-city example-gif"  src="../assets/img/demo0.gif" />
-                                </div>
-                                <div class="col-md-8">
-                                  <div class="code-block mt-3">
-                                  <pre><code class="swift language-swift"><span class="key">import</span> SwiftUI
-<span class="key">import</span> SwiftUICharts
-
-<span class="key">struct</span> <span class="pointer">ContentView</span>: <span class="type">View</span> {
-    <span class="key">var</span> <span class="pointer">data</span>:[<span class="type">Double</span>] = [<span class="number">8</span>,<span class="number">32</span>,<span class="number">11</span>,<span class="number">23</span>,<span class="number">40</span>,<span class="number">28</span>,<span class="number">15</span>,<span class="number">20</span>,<span class="number">30</span>,<span class="number">25</span>]
-
-    <span class="key">var</span> body: <span class="key">some</span> <span class="type">View</span> {
-        <span class="pointer">LineChart</span>(
-            data: <span class="enum">data</span>,
-            title: <span class="string">"My Graph"</span>,
-            displayChartStats: <span class="key">true</span>
-        )
-    }
-}</code></pre>
-                        </div>
-                                </div>
-                              </div>
-                            </div>
-
-                            <div class="exampleBlock">
-                              <h2> Stock App </h2>
-                              <p class="lead"> Utalize the built in <code><span class="pointer">ExampleData</span></code> to test your chart with sophisticated data.
-                                <br> Set <code>curvedLines</code> to false to give your stocks graph a more realistic feel.
-                              <br> Choose style: <code><span class="enum">.tertiary</span></code> for a minimalist chart aesthetic.</p>
-                              <div class="row">
-                                <div class="col-md-4 text-right">
-                                  <img class="img-fluid rounded-lg bg-img-city example-gif"  src="../assets/img/demo1.gif" />
-                                </div>
-                                <div class="col-md-8">
-                                  <div class="code-block mt-3">
-                                  <pre><code class="swift language-swift"><span class="key">import</span> SwiftUI
-<span class="key">import</span> SwiftUICharts
-
-<span class="key">struct</span> <span class="pointer">ContentView</span>: <span class="type">View</span> {
-    <span class="key">var</span> <span class="pointer">data</span>:[<span class="type">Double</span>] = <span class="pointer">ExampleData.stockData</span>
-
-    <span class="key">var</span> body: <span class="key">some</span> <span class="type">View</span> {
-        <span class="pointer">LineChart</span>(
-            data: <span class="enum">data</span>,
-            title: <span class="string">"AAPL"</span>,
-            subtitle: <span class="string">"Apple Computers"</span>,
-            style: <span class="enum">.tertiary</span>,
-            curvedLines: <span class="key">false</span>,
-            displayChartStats: <span class="key">true</span>,
-        )
-    }
-}</code></pre>
-                        </div>
-                                </div>
-                              </div>
-                            </div>
-
-                            <div class="exampleBlock">
-                              <h2> Dark Theme </h2>
-                              <p class="lead"> Enable fullscreen to cover the safe areas with your background color. <br>
-                                Change the cursor color to round out your fully customized chart.
-                                <br>Change the font to your company's brand.
-                                  </p>
-                              <div class="row">
-                                <div class="col-md-4 text-right">
-                                  <img class="img-fluid rounded-lg bg-img-city example-gif"  src="../assets/img/demo2.gif" />
-                                </div>
-                                <div class="col-md-8">
-                                  <div class="code-block mt-3">
-                                  <pre><code class="swift language-swift"><span class="key">import</span> SwiftUI
-<span class="key">import</span> SwiftUICharts
-
-<span class="key">struct</span> <span class="pointer">ContentView</span>: <span class="type">View</span> {
-    <span class="key">var</span> <span class="pointer">data</span>:[<span class="type">Double</span>] = <span class="pointer">ExampleData.stockData</span>
-
-    <span class="key">var</span> body: <span class="key">some</span> <span class="type">View</span> {
-        <span class="pointer">LineChart</span>(
-            data: <span class="enum">data</span>,
-            title: <span class="string">"My Dark Themed App"</span>,
-            subtitle: <span class="string">"Sleek. Simple."</span>,
-            style: .<span class="enum">dark</span>,
-            titleColor: <span class="pointer">Colors.NeonRed</span>,
-            cursorColor: <span class="type">Color.black</span>,
-            titleFont: .<span class="type">system</span>(size: <span class="number">14</span>, weight: .<span class="enum">light</span>, design: .<span class="enum">monospaced</span>),
-            titleFont: .<span class="type">system</span>(size: <span class="number">24</span>, weight: .<span class="enum">bold</span>, design: .<span class="enum">monospaced</span>),
-            fullScreen: <span class="key">true</span>
-        )
-    }
-}</code></pre>
-                        </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
 
                           <hr>
 
@@ -598,7 +663,7 @@
 
                                 <div class="card accordion-faq-item">
                                     <a class="card-header collapsed" id="helpHeadingTwo" data-toggle="collapse" data-target="#helpCollapseTwo" aria-expanded="true" aria-controls="helpCollapseTwo" href="javascript:void(0);" style="border:none;">
-                                      <div class="accordion-faq-item-heading ">Import LineChart <i class="accordion-faq-item-heading-arrow" data-feather="chevron-down"></i>
+                                      <div class="accordion-faq-item-heading ">Install LineChart <i class="accordion-faq-item-heading-arrow" data-feather="chevron-down"></i>
                                       </div>
                                     </a>
                                     <div class="collapse" id="helpCollapseTwo" aria-labelledby="helpHeadingTwo" data-parent="#helpAccordion">

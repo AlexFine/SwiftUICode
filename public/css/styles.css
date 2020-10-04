@@ -511,6 +511,39 @@ h2 {
   font-size: 30pt;
 }
 
+.instructions-text {
+  margin-top:12pt;
+  font-size:15pt;
+  font-weight: 300;
+}
+
+ol {
+  list-style: none;
+  counter-reset: my-awesome-counter;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+}
+ol li {
+  counter-increment: my-awesome-counter;
+  display: flex;
+
+}
+ol li::before {
+  content: counter(my-awesome-counter);
+  padding:7pt;
+  padding-right:12pt;
+  padding-left:12pt;
+  color: #ff8093;
+  border-radius:50%;
+  font-weight: 800;
+
+  font-size: 3rem;
+  margin-right: 0.5rem;
+  line-height: 1;
+}
+
 
 html {
   font-family: sans-serif;

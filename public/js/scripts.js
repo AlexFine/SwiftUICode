@@ -72,7 +72,7 @@ function copyText(id) {
 }
 
 
-var imageSources = ["../assets/img/demo1.gif", "../assets/img/demo0.gif", "../assets/img/demo2.gif", "../assets/img/demo4.gif"]
+var imageSources = ["assets/img/demo1.gif", "assets/img/demo0.gif", "assets/img/demo2.gif", "assets/img/demo4.gif"]
 
 var index = 0;
 setInterval (function(){

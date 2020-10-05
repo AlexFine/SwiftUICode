@@ -204,11 +204,9 @@
 <span class="key">import</span> LineChart
 
 <span class="key">struct</span> <span class="pointer">ContentView</span>: <span class="type">View</span> {
-    <span class="key">var</span> <span class="pointer">data</span>:[<span class="type">Double</span>] = [<span class="number">8</span>,<span class="number">32</span>,<span class="number">11</span>,<span class="number">23</span>,<span class="number">40</span>,<span class="number">28</span>,<span class="number">15</span>,<span class="number">20</span>,<span class="number">30</span>,<span class="number">25</span>]
-
     <span class="key">var</span> body: <span class="key">some</span> <span class="type">View</span> {
         <span class="pointer">LineChart</span>(
-            data: <span class="enum">data</span>,
+            data: [<span class="number">8</span>,<span class="number">32</span>,<span class="number">11</span>,<span class="number">23</span>,<span class="number">40</span>,<span class="number">28</span>,<span class="number">15</span>,<span class="number">20</span>,<span class="number">30</span>,<span class="number">25</span>],
             title: <span class="string">"My Graph"</span>,
             displayChartStats: <span class="key">true</span>
         )

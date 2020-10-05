@@ -547,7 +547,19 @@ ol li .code-block {
   display: default !important;
 }
 
+.instructions-number {
+  color: #e3005a;
+  font-weight: 800;
+  font-size: 3rem;
+}
 
+.instruction-content {
+  margin-top:4pt;
+}
+
+.instructions-row {
+  margin-top:10pt;
+}
 
 /*
 ol {

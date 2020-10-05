@@ -60,14 +60,57 @@
 
                             <div class="exampleBlock">
 
-                              <div class="row">
+                              <div class="row instructions-row">
                                 <div class="col-md-4 text-right">
                                   <img class="img-fluid rounded-lg bg-img-city example-gif" id="imgRotate" src="assets/img/demo4.gif" />
                                 </div>
                                 <div class="col-md-8  mt-3">
 
+                                  <div class="row">
+                                    <div class="col-2 text-right">
+                                      <p class="instructions-number"> 1. </p>
+                                    </div>
+                                    <div class="col-10 instruction-content">
+                                      <p class="instructions-text">
+                                        <a id="helpHeadingTwo" data-toggle="collapse" data-target="#helpCollapseTwo" aria-expanded="true" aria-controls="helpCollapseTwo" href="javascript:void(0);" style="text-decoration:none;">Install <code>LineChart</code>. </a>
+                                      </p>
+                                    </div>
+                                  </div>
 
-                                  <ol class="instructions-list">
+                                  <div class="row instructions-row">
+                                    <div class="col-2 text-right">
+                                      <p class="instructions-number"> 2. </p>
+                                    </div>
+                                    <div class="col-10 instruction-content">
+                                      <p class="instructions-text">
+                                        Add <code>LineChart</code> to your project.
+                                      </p>
+                                      <div class="code-block mt-3">
+                                      <pre><code class="swift language-swift"><span class="key">import</span> SwiftUI
+<span class="key">import</span> LineChart
+
+<span class="key">struct</span> <span class="pointer">ContentView</span>: <span class="type">View</span> {
+  <span class="key">var</span> body: <span class="key">some</span> <span class="type">View</span> {
+      <span class="pointer">LineChart</span>(data: [<span class="number">1</span>,<span class="number">3</span>,<span class="number">2</span>])
+  }
+}</code></pre>
+                            </div>
+                                    </div>
+                                  </div>
+
+                                  <div class="row instructions-row">
+                                    <div class="col-2 text-right">
+                                      <p class="instructions-number"> 3. </p>
+                                    </div>
+                                    <div class="col-10 instruction-content">
+                                      <p class="instructions-text">
+                                        <a href="#customizeSection" style="text-decoration:none;"> Customize </a> your <code>LineChart</code>.
+                                      </p>
+                                    </div>
+                                  </div>
+
+
+                                  <!-- <ol class="instructions-list">
 
                                     <li>
                                       <div>
@@ -75,10 +118,7 @@
                                           <a id="helpHeadingTwo" data-toggle="collapse" data-target="#helpCollapseTwo" aria-expanded="true" aria-controls="helpCollapseTwo" href="javascript:void(0);" style="text-decoration:none;">Install <code>LineChart</code>. </a>
                                         </p>
 
-                                        <!-- <div class="code-classic">
-                                          <pre><code><span class="type">import</span><span class="pointer"> LineChart</span></code></pre>
-                                        </div>
-                                      </div> -->
+
                                     </li>
 
                                     <li>
@@ -111,7 +151,7 @@
                                       </div>
                                     </li>
 
-                                  </ol>
+                                  </ol> -->
 
 
                                 </div>

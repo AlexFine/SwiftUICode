@@ -245,6 +245,7 @@ li {
 }
 
 .parameter-description {
+  width:50%;
   padding-top:15pt !important;
 }
 
@@ -545,6 +546,10 @@ ol li::before {
 
 ol li .code-block {
   display: default !important;
+}
+
+.color-description {
+  width:100%; border-radius:3pt; height:30pt; margin-top:-6pt;
 }
 
 .instructions-number {

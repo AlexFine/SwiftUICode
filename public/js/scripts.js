@@ -71,6 +71,17 @@ function copyText(id) {
   document.execCommand("copy");
 }
 
+var colorImageSources = ["assets/img/colordemo3.png", "assets/img/colordemo2.png", "assets/img/colordemo1.png"]
+
+var colorIDX = 0;
+setInterval (function(){
+  if (colorIDX === colorImageSources.length) {
+    colorIDX = 0;
+  }
+  document.getElementById("imgRotateColors").src = colorImageSources[colorIDX];
+  colorIDX++;
+} , 700);
+
 
 var imageSources = ["assets/img/demo1.gif", "assets/img/demo0.gif", "assets/img/demo2.gif", "assets/img/demo4.gif"]
 

@@ -185,6 +185,23 @@ box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.0) !important;
   display: visible !important;
 }
 
+.code-clipboard {
+  float:right;
+  cursor: pointer;
+}
+
+#swift1 {
+
+}
+
+.faded-border {
+  border:2pt solid blue;
+  transition: 2s;
+}
+.unfaded-border {
+  border: 1pt solid rgba(200, 200, 200, 0.6) !important;
+}
+
 .badge {
   margin:3pt;
 }
@@ -209,7 +226,7 @@ box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.0) !important;
   padding-right:12pt;
   padding-bottom:0pt;
   border-radius: 10px;
-  border: 1pt solid rgba(200, 200, 200, 0.6)  !important;
+  border: 1pt solid rgba(200, 200, 200, 0.6);
   font-weight:400;
   margin:5pt;
   cursor:auto;
@@ -340,6 +357,13 @@ code .enum{color:#197480};
 
 .header {
   font-weight:600;
+  font-size: 50pt !important;
+}
+
+
+
+.header-sm {
+  font-size:40pt !important;
 }
 
 .code-classic {
@@ -626,6 +650,10 @@ hr {
   box-sizing: content-box;
   height: 0;
   overflow: visible;
+  /* height:10pt;
+  background:rgba(100, 100, 100, .05);
+  border: none !important;
+  border-radius:5pt; */
 }
 
 h1, h2, h3, h4, h5, h6 {

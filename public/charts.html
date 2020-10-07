@@ -55,7 +55,7 @@
                           <div class="col-lg-8">
 
                             <h1 class="title header"> <code> LineChart </code> </h1>
-                            <p class="lead" style="font-size:20pt; font-weight:300;"><i> Quickly implement & easily customize great looking line charts.</i> </p>
+                            <p class="lead" style="font-size:20pt; font-weight:500;" id="headertext">Quickly implement & easily customize great looking line charts.</p>
 
 
                             <div class="exampleBlock">
@@ -72,7 +72,7 @@
                                     </div>
                                     <div class="col-10 instruction-content">
                                       <p class="instructions-text">
-                                        <a id="helpHeadingTwo" data-toggle="collapse" data-target="#helpCollapseTwo" aria-expanded="true" aria-controls="helpCollapseTwo" href="javascript:void(0);" style="text-decoration:none;">Install <code>LineChart</code>. </a>
+                                        <a id="helpHeadingTwo" data-toggle="collapse" data-target="#helpCollapseTwo" aria-expanded="true" aria-controls="helpCollapseTwo" href="javascript:void(0);" style="text-decoration:none;">Install  </a><code>LineChart</code>.
                                       </p>
                                     </div>
                                   </div>
@@ -85,13 +85,20 @@
                                       <p class="instructions-text">
                                         Add <code>LineChart</code> to your project.
                                       </p>
-                                      <div class="code-block mt-3">
+                                      <div class="code-block mt-3" id="swift1">
+                                        <div class="code-clipboard" onclick="CopyToClipboard('swift1')">
+                                          <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-clipboard" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/>
+                                            <path fill-rule="evenodd" d="M9.5 1h-3a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"/>
+                                          </svg>
+                                        </div>
+
                                       <pre><code class="swift language-swift"><span class="key">import</span> SwiftUI
 <span class="key">import</span> LineChart
 
 <span class="key">struct</span> <span class="pointer">ContentView</span>: <span class="type">View</span> {
   <span class="key">var</span> body: <span class="key">some</span> <span class="type">View</span> {
-      <span class="pointer">LineChart</span>(data: [<span class="number">1</span>,<span class="number">3</span>,<span class="number">2</span>])
+      <span class="pointer">LineChart</span>(data: [<span class="number">8</span>,<span class="number">32</span>,<span class="number">11</span>,<span class="number">23</span>,<span class="number">40</span>,<span class="number">28</span>,<span class="number">15</span>,<span class="number">20</span>,<span class="number">30</span>,<span class="number">25</span>])
   }
 }</code></pre>
                             </div>
@@ -159,36 +166,14 @@
                             </div>
 
 
-
-
                           <hr>
 
 
                           <div class="examples-section" id="exampleSection">
                             <br>
-                            <h1 class="title header"> Examples </h1>
+                            <h1 class="title header header-sm"> Examples </h1>
 
-                            <div class="exampleBlock">
-                              <h2> Starter </h2>
-                              <p class="lead"> Get started quickly with this chart. </p>
-                              <div class="row">
-                                <div class="col-md-4 text-right">
-                                  <img class="img-fluid rounded-lg bg-img-city example-gif"  src="assets/img/demo4.gif" />
-                                </div>
-                                <div class="col-md-8">
-                                  <div class="code-block mt-3">
-                                  <pre><code class="swift language-swift"><span class="key">import</span> SwiftUI
-<span class="key">import</span> LineChart
 
-<span class="key">struct</span> <span class="pointer">ContentView</span>: <span class="type">View</span> {
-    <span class="key">var</span> body: <span class="key">some</span> <span class="type">View</span> {
-        <span class="pointer">LineChart</span>(data: [<span class="number">8</span>,<span class="number">32</span>,<span class="number">11</span>,<span class="number">23</span>,<span class="number">40</span>,<span class="number">28</span>,<span class="number">15</span>,<span class="number">20</span>,<span class="number">30</span>,<span class="number">25</span>])
-    }
-}</code></pre>
-                        </div>
-                                </div>
-                              </div>
-                            </div>
 
                             <div class="exampleBlock">
                               <h2> Simple Graph </h2>
@@ -199,7 +184,13 @@
                                   <img class="img-fluid rounded-lg bg-img-city example-gif"  src="assets/img/demo0.gif" />
                                 </div>
                                 <div class="col-md-8">
-                                  <div class="code-block mt-3">
+                                  <div class="code-block mt-3" id="demo2">
+                                    <div class="code-clipboard" onclick="CopyToClipboard('demo2')">
+                                      <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-clipboard" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/>
+                                        <path fill-rule="evenodd" d="M9.5 1h-3a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"/>
+                                      </svg>
+                                    </div>
                                   <pre><code class="swift language-swift"><span class="key">import</span> SwiftUI
 <span class="key">import</span> LineChart
 
@@ -227,7 +218,13 @@
                                   <img class="img-fluid rounded-lg bg-img-city example-gif"  src="assets/img/demo1.gif" />
                                 </div>
                                 <div class="col-md-8">
-                                  <div class="code-block mt-3">
+                                  <div class="code-block mt-3" id="demo3">
+                                    <div class="code-clipboard" onclick="CopyToClipboard('demo3')">
+                                      <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-clipboard" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/>
+                                        <path fill-rule="evenodd" d="M9.5 1h-3a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"/>
+                                      </svg>
+                                    </div>
                                   <pre><code class="swift language-swift"><span class="key">import</span> SwiftUI
 <span class="key">import</span> LineChart
 
@@ -241,7 +238,7 @@
             subtitle: <span class="string">"Apple Computers"</span>,
             style: <span class="enum">.tertiary</span>,
             curvedLines: <span class="key">false</span>,
-            displayChartStats: <span class="key">true</span>,
+            displayChartStats: <span class="key">true</span>
         )
     }
 }</code></pre>
@@ -261,7 +258,13 @@
                                   <img class="img-fluid rounded-lg bg-img-city example-gif"  src="assets/img/demo2.gif" />
                                 </div>
                                 <div class="col-md-8">
-                                  <div class="code-block mt-3">
+                                  <div class="code-block mt-3" id="demo4">
+                                    <div class="code-clipboard" onclick="CopyToClipboard('demo4')">
+                                      <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-clipboard" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/>
+                                        <path fill-rule="evenodd" d="M9.5 1h-3a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"/>
+                                      </svg>
+                                    </div>
                                   <pre><code class="swift language-swift"><span class="key">import</span> SwiftUI
 <span class="key">import</span> LineChart
 
@@ -277,7 +280,7 @@
             titleColor: <span class="pointer">Colors.NeonRed</span>,
             cursorColor: <span class="type">Color.black</span>,
             titleFont: .<span class="type">system</span>(size: <span class="number">14</span>, weight: .<span class="enum">light</span>, design: .<span class="enum">monospaced</span>),
-            titleFont: .<span class="type">system</span>(size: <span class="number">24</span>, weight: .<span class="enum">bold</span>, design: .<span class="enum">monospaced</span>),
+            subtitleFont: .<span class="type">system</span>(size: <span class="number">24</span>, weight: .<span class="enum">bold</span>, design: .<span class="enum">monospaced</span>),
             fullScreen: <span class="key">true</span>
         )
     }
@@ -291,11 +294,17 @@
                           <hr>
 
                           <div class="instructions-block mt-5" id="customizeSection">
-                            <h1 class="title header"> Customize </h1>
+                            <h1 class="title header header-sm"> Customize </h1>
                             <p class="lead"> <code class="inline-code">LineChart</code>  supports a variety of custom parameters. All custom parameters are built into the struct initialization. </p>
 
                             <p class="lead"> <b>Example:</b> Add a title, change the style, and display chart statistics with the following code block: </p>
-                            <div class="code-block">
+                            <div class="code-block" id="demo5">
+                              <div class="code-clipboard" onclick="CopyToClipboard('demo5')">
+                                <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-clipboard" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                  <path fill-rule="evenodd" d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/>
+                                  <path fill-rule="evenodd" d="M9.5 1h-3a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"/>
+                                </svg>
+                              </div>
           <pre><code class="swift language-swift"><span class="pointer">LineChart</span>(
     data: <span class="key">self</span>.<span class="enum">data</span>,
     title: <span class="string">"My Graph"</span>,

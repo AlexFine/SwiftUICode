@@ -79,7 +79,7 @@
 }
 
 .microcopy {
-  font-size: 10pt;
+  font-size: 12pt !important;
   color: rgba(0, 0, 0, 0.60);
   margin:1pt;
 }
@@ -393,7 +393,7 @@ code .enum{color:#197480};
 
 .person-photo {
   border-radius: 50%;
-  width:auto;
+  width:100pt !important;
   margin:5pt;
   /* height:50pt; */
 }
@@ -417,6 +417,23 @@ code .enum{color:#197480};
   flex-direction: column;
 }
 
+#startBtn {
+  display: none;
+}
+
+.btn-start {
+  width:100%;
+}
+
+#pixel-to-watch {
+position: absolute;
+width: 1px;
+height: 1px;
+top: 100px;
+left: 0;
+}
+
+
 .instructions-block {
   padding:15pt;
   padding-top:20pt;
@@ -430,7 +447,7 @@ code .enum{color:#197480};
   /* box-shadow: 0 0 0.50rem rgba(0,0,0,0.10); */
   /* border: 2px solid rgba(0,0,0,0.17); */
 }
-
+/*
 @media (max-width:1200px) {
   .new_html_code {
     height:325pt;
@@ -441,7 +458,7 @@ code .enum{color:#197480};
   .new_html_code {
     height:455pt;
   }
-}
+} */
 
 
 
@@ -3949,18 +3966,18 @@ fieldset:disabled a.btn {
 
 .btn-danger {
   color: #fff;
-  background-color: #e81500;
+  background-color: #e3005a;
   border-color: #e81500;
 }
 .btn-danger:hover {
   color: #fff;
-  background-color: #c21200;
+  background-color: #cc0052;
   border-color: #b51000;
 }
 .btn-danger:focus, .btn-danger.focus {
   color: #fff;
-  background-color: #c21200;
-  border-color: #b51000;
+  background-color: #99003d;
+  border-color: #99003d;
   box-shadow: 0 0 0 0.2rem rgba(235, 56, 38, 0.5);
 }
 .btn-danger.disabled, .btn-danger:disabled {
@@ -3970,7 +3987,7 @@ fieldset:disabled a.btn {
 }
 .btn-danger:not(:disabled):not(.disabled):active, .btn-danger:not(:disabled):not(.disabled).active, .show > .btn-danger.dropdown-toggle {
   color: #fff;
-  background-color: #b51000;
+  background-color: #99003d;
   border-color: #a80f00;
 }
 .btn-danger:not(:disabled):not(.disabled):active:focus, .btn-danger:not(:disabled):not(.disabled).active:focus, .show > .btn-danger.dropdown-toggle:focus {
@@ -4104,13 +4121,13 @@ fieldset:disabled a.btn {
 }
 .btn-red:hover {
   color: #fff;
-  background-color: #c21200;
-  border-color: #b51000;
+  background-color: #99003d;
+  border-color: #99003d;
 }
 .btn-red:focus, .btn-red.focus {
   color: #fff;
-  background-color: #c21200;
-  border-color: #b51000;
+  background-color: #99003d;
+  border-color: #99003d;
   box-shadow: 0 0 0 0.2rem rgba(235, 56, 38, 0.5);
 }
 .btn-red.disabled, .btn-red:disabled {

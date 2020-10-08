@@ -89,6 +89,29 @@ function CopyToClipboard(containerid) {
   }
 }
 
+let observer = new IntersectionObserver(entries => {
+  console.log(entries);
+  if (entries[0].boundingClientRect.y < 0) {
+    $("#startBtn").fadeIn(200);
+  } else {
+    console.log("Not past 100pt");
+    $("#startBtn").fadeOut(200);
+  }
+});
+observer.observe(document.querySelector("#pixel-to-watch"));
+
+// var offsetTop = $("#exampleSection").offset().top;
+//
+// $(window).scroll(function(){
+//   var scrollTop = $(window).scrollTop();
+//   if(scrollTop > offsetTop){
+//     $("#show").fadeIn(200);
+//   }
+//   if (scrollTop < offsetTop){
+//     $("#show").faded(200);
+//   }
+// });
+
 var colorImageSources = ["assets/img/colordemo3.png", "assets/img/colordemo2.png", "assets/img/colordemo1.png"]
 
 var colorIDX = 0;
@@ -99,6 +122,8 @@ setInterval (function(){
   document.getElementById("imgRotateColors").src = colorImageSources[colorIDX];
   colorIDX++;
 } , 700);
+
+
 
 
 var imageSources = ["assets/img/demo1.gif", "assets/img/demo0.gif", "assets/img/demo2.gif", "assets/img/demo4.gif"]

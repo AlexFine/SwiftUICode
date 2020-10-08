@@ -158,6 +158,17 @@
 box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.0) !important;
 }
 
+.library-header{
+  font-size:40pt !important;
+  font-weight: 600 !important
+}
+
+.library-subtitle {
+  font-size:16pt !important;
+  font-weight:600 !important;
+  color:rgba(50, 50, 50, 0.8);
+}
+
 .example-gif {
   margin: 10pt;
   box-shadow: 0 0 15pt rgba(80, 80, 80, 0.5) !important;

@@ -89,28 +89,28 @@ function CopyToClipboard(containerid) {
   }
 }
 
-let observer = new IntersectionObserver(entries => {
-  console.log(entries);
-  if (entries[0].boundingClientRect.y < 0) {
+// let observer = new IntersectionObserver(entries => {
+//   console.log(entries);
+//   if (entries[0].boundingClientRect.y < 0) {
+//     $("#startBtn").fadeIn(200);
+//   } else {
+//     console.log("Not past 100pt");
+//     $("#startBtn").fadeOut(200);
+//   }
+// });
+// observer.observe(document.querySelector("#pixel-to-watch"));
+
+var offsetTop = $("#exampleSection").offset().top;
+
+$(window).scroll(function(){
+  var scrollTop = $(window).scrollTop();
+  if(scrollTop > offsetTop){
     $("#startBtn").fadeIn(200);
-  } else {
-    console.log("Not past 100pt");
+  }
+  if (scrollTop < offsetTop){
     $("#startBtn").fadeOut(200);
   }
 });
-observer.observe(document.querySelector("#pixel-to-watch"));
-
-// var offsetTop = $("#exampleSection").offset().top;
-//
-// $(window).scroll(function(){
-//   var scrollTop = $(window).scrollTop();
-//   if(scrollTop > offsetTop){
-//     $("#show").fadeIn(200);
-//   }
-//   if (scrollTop < offsetTop){
-//     $("#show").faded(200);
-//   }
-// });
 
 var colorImageSources = ["assets/img/colordemo3.png", "assets/img/colordemo2.png", "assets/img/colordemo1.png"]
 

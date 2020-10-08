@@ -84,6 +84,14 @@
   margin:1pt;
 }
 
+#check {
+  display: none;
+}
+
+.display-true {
+  display: visible !important;
+}
+
 .code-font {
   font-family: 'Source Code Pro', monospace !important;
   font-weight: 400;

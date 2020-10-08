@@ -85,6 +85,9 @@ function CopyToClipboard(containerid) {
     range.selectNode(document.getElementById(containerid));
     window.getSelection().addRange(range);
     document.execCommand("copy");
+    document.getElementById(containerid.concat("check")).style.display = "block";
+    document.getElementById(containerid.concat("check")).style.display = "block";
+    document.getElementById(containerid.concat("clipboard")).style.display = "none";
     // alert("Text has been copied, now paste in the text-area")
   }
 }

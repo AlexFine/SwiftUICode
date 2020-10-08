@@ -162,7 +162,7 @@ box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.0) !important;
   margin: 10pt;
   box-shadow: 0 0 15pt rgba(80, 80, 80, 0.5) !important;
   width:100%;
-  max-width: 200pt !important;
+  max-width: 240pt !important;
 }
 
 @media (max-width:576pt) {
@@ -239,6 +239,7 @@ box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.0) !important;
   font-weight:400;
   margin:5pt;
   cursor:auto;
+  width:auto;
 }
 
 .inline-block {

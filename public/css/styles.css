@@ -97,7 +97,8 @@
   font-weight: 400;
   font-size:10pt !important;
   background: rgba(0, 0, 0, 0.08) !important;
-  color: rgba(0, 0, 0, 0.60) !important
+  color: rgba(0, 0, 0, 0.60) !important;
+
 }
 
 
@@ -449,6 +450,14 @@ left: 0;
   border-radius: 10pt;
 }
 
+.footer-link {
+  margin-right:6pt;
+  margin-left:6pt;
+  /* text-transform: uppercase; */
+  font-weight:600;
+  font-size:14pt;
+}
+
 .instructions-block:hover {
   /* -moz-box-shadow: 0 0 3px #ccc;
   -webkit-box-shadow: 0 0 3px #ccc; */
@@ -669,6 +678,12 @@ body {
 
 [tabindex="-1"]:focus:not(:focus-visible) {
   outline: 0 !important;
+}
+
+.btn-instructions {
+  border-radius: 0pt !important;
+  width:100%;
+  max-width:125pt;
 }
 
 hr {
@@ -3330,10 +3345,18 @@ pre code {
   border: 0;
 }
 
+.install-txt {
+  margin-left:15pt;
+}
+
+.no-border {
+  border:none !important;
+}
+
 .form-control {
   display: block;
   width: 100%;
-  height: calc(1.5em + 1rem + 2px);
+  height: calc(1.5em + 1rem + 2px + 8pt);
   padding: 0.5rem 1rem;
   font-size: 1rem;
   font-weight: 400;
@@ -3346,6 +3369,7 @@ pre code {
   -webkit-transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
+
 @media (prefers-reduced-motion: reduce) {
   .form-control {
     -webkit-transition: none;

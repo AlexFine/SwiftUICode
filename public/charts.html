@@ -52,20 +52,20 @@
                   <section class="bg-white pt-5 pb-5" >
                       <div class="container">
                         <div class="row">
+                          <div class="col"></div>
                           <div class="col-lg-9">
 
-                            <h1 class="title header" id="getStarted"><code> LineChart  </code></h1>
+                            <h1 class="title header text-center" id="getStarted"><code> LineChart  </code></h1>
 
-                            <p class="lead" style="font-size:20pt; font-weight:500;" id="headertext">Quickly implement & easily customize great looking line charts.</p>
+                            <p class="lead text-center" style="font-size:20pt; font-weight:500;" id="headertext">Quickly implement & easily customize great looking line charts.</p>
 
-
-                            <div class="exampleBlock">
+                            <div class="exampleBlock mt-5">
 
                               <div class="row instructions-row">
                                 <div class="col-md-4 text-right">
                                   <img class="img-fluid rounded-lg bg-img-city example-gif" id="imgRotate" src="assets/img/demo4.gif" />
                                 </div>
-                                <div class="col-md-8  mt-3">
+                                <div class="col-md-8 mt-3">
 
                                   <div class="row">
                                     <div class="col-2 text-right">
@@ -84,19 +84,94 @@
                                       <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                         <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
                                           <div class="modal-content">
-                                            <div class="modal-header">
-                                              <h5 class="modal-title" id="exampleModalLabel"> Instructions </h5>
-                                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                <span aria-hidden="true">&times;</span>
-                                              </button>
+                                            <div class="modal-header" style="padding:0">
+                                              <h5 class="modal-title" id="exampleModalLabel" style="margin-left:10pt; margin-top:8pt; font-weight:500;"> Instructions </h5>
+                                              <div class="input-group no-border" style="max-width:60%; margin:0; margin-right:1pt;;">
+
+                                                <input type="text" class="form-control code-font no-border" aria-label="Input group example" aria-describedby="btnGroupAddon" value="https://github.com/SwiftUIPackages/ChartView.git" readonly id="downloadURL">
+                                                <div class="input-group-prepend copy-button no-border">
+                                                  <div class="input-group-text no-border" id="btnGroupAddon" onclick="copyText('downloadURL')" style="border-radius:5pt">
+                                                    <svg id="textCopy" width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-clipboard" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                                      <path fill-rule="evenodd" d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/>
+                                                      <path fill-rule="evenodd" d="M9.5 1h-3a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"/>
+                                                    </svg>
+                                                  </div>
+                                                </div>
+
+                                              </div>
                                             </div>
-                                            <div class="modal-body">
-                                              ...
+                                            <div class="modal-body"  style="padding:0; margin:0;">
+                                              <div id="carouselExampleControls" class="carousel slide" >
+                                                <div class="carousel-inner">
+                                                  <div class="carousel-item active">
+                                                    <div class="new_html_code">
+                                                      <div class="text-left" style="border-bottom:1pt solid rgba(200, 200, 200, 0.20); margin-bottom:15pt;">
+                                                        <p class="lead install-txt">(1/3) Open XCode. Go to <kbd> File > Swift Packges > Add Package Dependency... </kbd> </p>
+                                                      </div>
+                                                      <img src="assets/img/instructions0.gif" style="width:100%; border-radius:0pt; padding:0pt; margin:0;">
+
+                                                      <div class="row">
+                                                        <!-- <div class="col text-left">
+                                                          <button type="button" class="btn btn-light btn-lg btn-instructions">Back</button>
+                                                        </div> -->
+                                                        <div class="col text-right">
+                                                          <a href="#carouselExampleControls" role="button" data-slide="next"><button type="button" class="btn btn-dark btn-lg btn-instructions">NEXT</button></a>
+                                                        </div>
+
+                                                      </div>
+                                                    </div>
+                                                  </div>
+
+                                                  <div class="carousel-item">
+                                                    <div class="new_html_code">
+                                                      <div class="text-left" style="border-bottom:1pt solid rgba(200, 200, 200, 0.20); margin-bottom:15pt;">
+                                                        <p class="lead install-txt">(2/3) Input <kbd>https://github.com/SwiftUIPackages/ChartView.git</kbd> & click Next. </p>
+                                                      </div>
+                                                      <img src="assets/img/instructions1.gif" style="width:100%; border-radius:0pt; padding:0pt; margin:0;">
+
+                                                      <div class="row">
+                                                        <div class="col text-left">
+                                                          <a href="#carouselExampleControls" role="button" data-slide="prev"><button type="button" class="btn btn-light btn-lg btn-instructions">Back</button></a>
+                                                        </div>
+                                                        <div class="col text-right">
+                                                          <a href="#carouselExampleControls" role="button" data-slide="next"><button type="button" class="btn btn-dark btn-lg btn-instructions">NEXT</button></a>
+                                                        </div>
+
+                                                      </div>
+                                                    </div>
+
+                                                  </div>
+
+                                                  <div class="carousel-item">
+                                                    <div class="new_html_code">
+                                                      <div class="text-left" style="border-bottom:1pt solid rgba(200, 200, 200, 0.20); margin-bottom:15pt;">
+                                                        <p class="lead install-txt">(3/3) Select <b> Version: Up to Next Major </b> & click finish. </p>
+                                                      </div>
+                                                      <img src="assets/img/instructions2.gif" style="width:100%; border-radius:0pt; padding:0pt; margin:0;">
+
+                                                      <div class="row">
+                                                        <div class="col text-left">
+                                                          <a href="#carouselExampleControls" role="button" data-slide="prev"><button type="button" class="btn btn-light btn-lg btn-instructions">Back</button></a>
+                                                        </div>
+                                                        <!-- <div class="col text-right">
+                                                          <a href="#carouselExampleControls" role="button" data-slide="next"><button type="button" class="btn btn-dark btn-lg btn-instructions">NEXT</button></a>
+                                                        </div> -->
+
+                                                      </div>
+                                                    </div>
+
+                                                  </div>
+
+
+
+
+
+                                                </div>
+
+
+                                              </div>
                                             </div>
-                                            <div class="modal-footer">
-                                              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                              <button type="button" class="btn btn-primary">Save changes</button>
-                                            </div>
+
                                           </div>
                                         </div>
                                       </div>
@@ -107,90 +182,12 @@
                                               <div class="accordion-faq-item-heading ">Install LineChart <i class="accordion-faq-item-heading-arrow" data-feather="chevron-down"></i>
                                               </div>
                                             </a> -->
-                                            <div class="collapse" id="helpCollapseTwo" aria-labelledby="helpHeadingTwo" data-parent="#helpAccordion">
+                                            <!-- <div class="collapse" id="helpCollapseTwo" aria-labelledby="helpHeadingTwo" data-parent="#helpAccordion">
                                               <div class="instructions-body border-bottom"  style="border: 1px solid rgba(80, 80, 80, 0.25);  border-radius:5pt;">
-                                                <div id="carouselExampleControls" class="carousel slide" >
-                                                  <div class="carousel-inner">
-                                                    <div class="carousel-item active">
-                                                      <div class="new_html_code" style="">
-                                                        <img src="assets/img/instructions0.gif" style="width:100%; border-radius:5pt;">
 
-                                                        <div class="row mt-3">
-
-                                                          <div class="col-md-12">
-                                                            (1/3) Open XCode. Go to <kbd> File > Swift Packges > Add Package Dependency... </kbd>
-                                                          </div>
-                                                        </div>
-                                                        <div class="row next-row">
-
-                                                          <div class="col text-right">
-                                                            <a class="next-btn" href="#carouselExampleControls" role="button" data-slide="next">
-                                                              Ok. Got It
-                                                            </a>
-                                                          </div>
-                                                        </div>
-                                                      </div>
-                                                    </div>
-
-                                                    <div class="carousel-item">
-                                                      <div class="new_html_code">
-                                                        <img src="assets/img/instructions1.gif" style="width:100%; border-radius:5pt;">
-                                                        <div class="row mt-3">
-
-                                                          <div class="col-md-12">
-                                                            (2/3) Input <kbd>https://github.com/SwiftUIPackages/ChartView.git</kbd> & click Next.
-                                                          </div>
-
-                                                        </div>
-                                                        <hr>
-                                                        <div class="row next-row">
-                                                          <div class="col text-left">
-                                                            <a class="back-btn" href="#carouselExampleControls" role="button" data-slide="prev">
-                                                              Back
-                                                            </a>
-                                                          </div>
-                                                          <div class="col text-right">
-                                                            <a class="next-btn" href="#carouselExampleControls" role="button" data-slide="next">
-                                                              Inputted
-                                                            </a>
-                                                          </div>
-                                                        </div>
-                                                      </div>
-                                                    </div>
-
-                                                    <div class="carousel-item">
-                                                      <div class="new_html_code">
-                                                        <img src="assets/img/instructions2.gif" style="width:100%; border-radius:5pt;">
-                                                        <div class="row mt-3">
-
-                                                          <div class="col-md-12">
-                                                            (3/3) Select <b> Version: Up to Next Major </b> & click finish.
-                                                          </div>
-
-                                                        </div>
-                                                        <hr>
-                                                        <div class="row next-row">
-                                                          <div class="col text-left">
-                                                            <a class="back-btn" href="#carouselExampleControls" role="button" data-slide="prev">
-                                                              Back
-                                                            </a>
-                                                          </div>
-
-                                                        </div>
-                                                      </div>
-                                                    </div>
-
-
-
-
-
-                                                  </div>
-
-
-                                                </div>
 
                                               </div>
-                                            </div>
+                                            </div> -->
                                         </div>
                                       </div>
                                     </div>
@@ -289,8 +286,13 @@
                             </div>
 
 
-                          <hr>
 
+                        </div>
+                        <div class="col"></div>
+                      </div>
+                      <hr>
+                      <div class="row">
+                        <div class="col-lg-9">
 
                           <div class="examples-section" id="exampleSection">
                             <br>
@@ -767,7 +769,6 @@
 
 
 
-
                           <!-- <h2> Customization </h2>
                           <p class="lead"> <code class="inline-code">MultilineTextField</code> supports a variety of supplementary inputs designed for additional functionality.</p>
                           <hr> -->
@@ -820,10 +821,10 @@
                 </main>
             </div>
 
-            <div id="layoutDefault_footer">
-                <footer class="footer pt-10 pb-5 mt-auto ">
+            <div id="layoutDefault_footer" style="background:rgba(220, 220, 220, 0.25)">
+                <footer class="footer pt-2 pb-5">
                     <div class="container">
-                      <hr class="my-5" />
+                      <!-- <hr class="my-5" /> -->
                       <div class="row">
 
                           <div class="col-lg-9">
@@ -831,9 +832,9 @@
 
                                   <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
                                       <ul class="list-unstyled mb-0">
-                                          <li class="mb-2"><a href="https://general099748.typeform.com/to/rFAcEjt5">Feedback</a></li>
-                                          <li class="mb-2"><a href="https://general099748.typeform.com/to/nHoJx90F">Suggest a Package</a></li>
-                                          <li class="mb-2"><a href="https://general099748.typeform.com/to/sPnrIZDd">Add a Package</a></li>
+                                          <li class="mb-2"></li>
+                                          <li class="mb-2"></li>
+                                          <li class="mb-2"></li>
                                       </ul>
                                   </div>
 
@@ -843,8 +844,15 @@
                       </div>
                       <br>
                         <div class="row align-items-center">
-                            <div class="col-md-6 small">Copyright &copy; Peach Blossom Spring Inc. 2020</div>
-                            <div class="col-md-6 text-md-right small">
+                            <div class="col-md small">Copyright &copy; Peach Blossom Spring Inc. 2020</div>
+                            <div class="col-md-7 text-center">
+                              <a href="https://general099748.typeform.com/to/rFAcEjt5" class="footer-link">Feedback</a>
+                              &middot;
+                              <a href="https://general099748.typeform.com/to/nHoJx90F" class="footer-link"> Request A Package </a>
+                              &middot;
+                              <a href="https://general099748.typeform.com/to/sPnrIZDd" class="footer-link"> Contribute Your Package </a>
+                            </div>
+                            <div class="col-md text-md-right small">
 
                                 <a href="javascript:void(0);">Privacy Policy</a>
                                 &middot;

@@ -92,28 +92,18 @@ function CopyToClipboard(containerid) {
   }
 }
 
-// let observer = new IntersectionObserver(entries => {
-//   console.log(entries);
-//   if (entries[0].boundingClientRect.y < 0) {
-//     $("#startBtn").fadeIn(200);
-//   } else {
-//     console.log("Not past 100pt");
-//     $("#startBtn").fadeOut(200);
-//   }
-// });
-// observer.observe(document.querySelector("#pixel-to-watch"));
 
-var colorImageSources = ["assets/img/colordemo3.png", "assets/img/colordemo2.png", "assets/img/colordemo1.png"]
+var offsetTop = $("#exampleSection").offset().top;
 
-var colorIDX = 0;
-setInterval (function(){
-  if (colorIDX === colorImageSources.length) {
-    colorIDX = 0;
+$(window).scroll(function(){
+  var scrollTop = $(window).scrollTop();
+  if(scrollTop > offsetTop){
+    $("#startBtn").fadeIn(200);
   }
-  document.getElementById("imgRotateColors").src = colorImageSources[colorIDX];
-  colorIDX++;
-} , 700);
-
+  if (scrollTop < offsetTop){
+    $("#startBtn").fadeOut(200);
+  }
+});
 
 
 

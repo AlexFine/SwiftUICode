@@ -154,8 +154,14 @@
   margin-bottom:80pt;
 }
 
+/* .navbar-light {
+  height:45pt;
+  padding-left:40pt !important;
+  padding-right:40pt !important;
+} */
+
 .nav-link {
-  margin-right:20pt;
+  /* margin-right:20pt; */
   font-weight:600 !important;
 }
 .nav-link:hover{
@@ -466,7 +472,7 @@ left: 0;
 .instructions-block {
   padding:15pt;
   padding-top:20pt;
-  padding-left:20pt;
+  /* padding-left:20pt; */
   border-radius: 10pt;
 }
 
@@ -562,6 +568,7 @@ left: 0;
 .navbar-brand {
   color: rgba(100, 100, 100, 1.0) !important;
   font-weight: 700 !important;
+  margin-left:60pt;
 }
 .navbar-brand:hover {
   color: black !important;
@@ -700,10 +707,16 @@ body {
   outline: 0 !important;
 }
 
+.instruction-numbers {
+  font-weight:800;
+  color:rgba(100, 100, 100, 0.8)
+}
+
 .btn-instructions {
   border-radius: 0pt !important;
   width:100%;
   max-width:125pt;
+  height:50pt;
 }
 
 hr {

@@ -154,6 +154,14 @@
   margin-bottom:80pt;
 }
 
+.nav-link {
+  margin-right:20pt;
+  font-weight:600 !important;
+}
+.nav-link:hover{
+
+}
+
 .import-card {
 box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.0) !important;
 }

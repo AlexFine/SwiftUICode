@@ -72,7 +72,6 @@ function copyText(id) {
 }
 
 function CopyToClipboard(containerid) {
-  console.log(containerid)
 
   if (document.selection) {
     var range = document.body.createTextRange();

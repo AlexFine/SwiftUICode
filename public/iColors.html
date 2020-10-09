@@ -74,15 +74,15 @@
                           <div class="col"></div>
                           <div class="col-lg-9">
 
-                            <h1 class="title header text-center" id="getStarted"><code> iLineChart  </code></h1>
+                            <h1 class="title header text-center" id="getStarted"><code> iColors  </code></h1>
 
-                            <p class="lead text-center" style="font-size:20pt; font-weight:500;" id="headertext">Quickly implement & easily customize great looking line charts.</p>
+                            <p class="lead text-center" style="font-size:20pt; font-weight:500;" id="headertext"> Quickly add modern colors to your app. </p>
 
                             <div class="exampleBlock mt-5">
 
                               <div class="row instructions-row">
                                 <div class="col-md-4 text-right">
-                                  <img class="img-fluid rounded-lg bg-img-city example-gif" id="imgRotate" src="assets/img/demo1.gif" />
+                                  <img class="img-fluid rounded-lg bg-img-city example-gif" id="imgRotate" src="assets/img/colordemo3.png" />
                                 </div>
                                 <div class="col-md-8 mt-3">
 
@@ -92,7 +92,7 @@
                                     </div>
                                     <div class="col-10 instruction-content">
                                       <p class="instructions-text">
-                                        <a id="helpHeadingTwo" href="#" data-toggle="modal" data-target="#exampleModal" style="text-decoration:none; font-weight:600;">Install  </a><code>iLineChart</code>.
+                                        <a id="helpHeadingTwo" href="#" data-toggle="modal" data-target="#exampleModal" style="text-decoration:none; font-weight:600;">Install  </a><code>iColors</code>.
                                       </p>
                                       <!-- Button trigger modal -->
 
@@ -105,7 +105,7 @@
                                               <h5 class="modal-title" id="exampleModalLabel" style="margin-left:10pt; margin-top:8pt; font-weight:600; font-size:16pt;"> Instructions </h5>
                                               <div class="input-group no-border" style="max-width:60%; margin:0; margin-right:1pt;;">
 
-                                                <input type="text" class="form-control code-font no-border" aria-label="Input group example" aria-describedby="btnGroupAddon" value="https://github.com/iSwiftUIHome/ChartView.git" readonly id="downloadURL2">
+                                                <input type="text" class="form-control code-font no-border" aria-label="Input group example" aria-describedby="btnGroupAddon" value="https://github.com/iSwiftUIHome/iColors.git" readonly id="downloadURL2">
                                                 <div class="input-group-prepend copy-button no-border">
                                                   <div class="input-group-text no-border" id="btnGroupAddon" onclick="CopyToClipboard('downloadURL2')" style="border-radius:5pt">
                                                     <svg id="downloadURL2clipboard" width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-clipboard" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -144,7 +144,7 @@
                                                   <div class="carousel-item">
                                                     <div class="new_html_code">
                                                       <div class="text-left" style="border-bottom:1pt solid rgba(200, 200, 200, 0.20); margin-bottom:15pt;">
-                                                        <p class="lead install-txt"><span class="instruction-numbers">(2/3)</span> Input <span class="code-font" style="font-size:14pt; padding:6pt; border-radius:3pt; margin-bottom:10pt;">https://github.com/iSwiftUIHome/ChartView.git</span> & click Next. </p>
+                                                        <p class="lead install-txt"><span class="instruction-numbers">(2/3)</span> Input <span class="code-font" style="font-size:14pt; padding:6pt; border-radius:3pt; margin-bottom:10pt;">https://github.com/iSwiftUIHome/iColors.git</span> & click Next. </p>
                                                       </div>
                                                       <img src="assets/img/instructions1.gif" style="width:100%; border-radius:0pt; padding:0pt; margin:0;">
 
@@ -209,7 +209,7 @@
                                     </div>
                                     <div class="col-10 instruction-content">
                                       <p class="instructions-text">
-                                        Add <code>iLineChart</code> to your project.
+                                        Add <code>iColors</code> to your project.
                                       </p>
                                       <div class="code-block mt-3" id="swift1">
                                         <div class="code-clipboard" onclick="CopyToClipboard('swift1')">
@@ -223,13 +223,13 @@
                                           </svg>
                                         </div>
 
-                                      <pre><code class="swift language-swift"><span class="key">import</span> SwiftUI
-<span class="key">import</span> iLineChart
+                                        <pre><code class="swift language-swift"><span class="key">import</span> SwiftUI
+<span class="key">import</span> iColors
 
 <span class="key">struct</span> <span class="pointer">ContentView</span>: <span class="type">View</span> {
-  <span class="key">var</span> body: <span class="key">some</span> <span class="type">View</span> {
-      <span class="pointer">iLineChart</span>(data: [<span class="number">8</span>,<span class="number">32</span>,<span class="number">11</span>,<span class="number">23</span>,<span class="number">40</span>,<span class="number">28</span>,<span class="number">15</span>,<span class="number">20</span>,<span class="number">30</span>,<span class="number">25</span>])
-  }
+    <span class="key">var</span> body: <span class="key">some</span> <span class="type">View</span> {
+        <span class="type">Rectangle()</span><span class="method">.fill</span>(<span class="pointer">Colors.NeonBlue</span>)
+    }
 }</code></pre>
                             </div>
                                     </div>
@@ -241,7 +241,7 @@
                                     </div>
                                     <div class="col-10 instruction-content">
                                       <p class="instructions-text">
-                                        <a href="#customizeSection" style="text-decoration:none; font-weight:600;"> Customize </a> your <code>iLineChart</code>.
+                                        <a href="#customizeSection" style="text-decoration:none; font-weight:600;"> Play </a> with your <code>iColors</code>.
                                       </p>
                                     </div>
                                   </div>
@@ -271,13 +271,13 @@
 
 
                             <div class="exampleBlock">
-                              <h2> Simple Graph </h2>
-                              <p class="lead"> Enable chart statistics to make your chart & its data interactive. <br> Add a title to give your chart some context. </p>
+                              <h2> Ocean </h2>
+                              <p class="lead"> Use these colors to convey healthy, community, & trust. </p>
 
                               <div class="row">
                                 <div class="col-md-4 text-right">
 
-                                  <img class="img-fluid rounded-lg bg-img-city example-gif"  src="assets/img/demo2.gif" />
+                                  <img class="img-fluid rounded-lg bg-img-city example-gif"  src="assets/img/colordemo3.png" />
 
                                 </div>
                                 <div class="col-md-8">
@@ -293,16 +293,28 @@
                                         <path fill-rule="evenodd" d="M1.5 13A1.5 1.5 0 0 0 3 14.5h10a1.5 1.5 0 0 0 1.5-1.5V8a.5.5 0 0 0-1 0v5a.5.5 0 0 1-.5.5H3a.5.5 0 0 1-.5-.5V3a.5.5 0 0 1 .5-.5h8a.5.5 0 0 0 0-1H3A1.5 1.5 0 0 0 1.5 3v10z"/>
                                       </svg>
                                     </div>
-                                  <pre><code class="swift language-swift"><span class="key">import</span> SwiftUI
-<span class="key">import</span> iLineChart
+                                    <pre><code class="swift language-swift"><span class="key">import</span> SwiftUI
+<span class="key">import</span> iColors
 
 <span class="key">struct</span> <span class="pointer">ContentView</span>: <span class="type">View</span> {
     <span class="key">var</span> body: <span class="key">some</span> <span class="type">View</span> {
-        <span class="pointer">iLineChart</span>(
-            data: [<span class="number">8</span>,<span class="number">32</span>,<span class="number">11</span>,<span class="number">23</span>,<span class="number">40</span>,<span class="number">28</span>,<span class="number">15</span>,<span class="number">20</span>,<span class="number">30</span>,<span class="number">25</span>],
-            title: <span class="string">"My Graph"</span>,
-            displayChartStats: <span class="key">true</span>
-        )
+        <span class="type">VStack</span>{
+            <span class="type">HStack</span>{
+                <span class="type">Rectangle()</span>.<span class="method">fill(<span class="pointer">Colors.LightGreen</span>).<span class="method">cornerRadius(<span class="number">5</span>)
+                <span class="type">Rectangle()</span>.<span class="method">fill(<span class="pointer">Colors.NeonGreen</span>).<span class="method">cornerRadius(<span class="number">5</span>)
+                <span class="type">Rectangle()</span>.<span class="method">fill(<span class="pointer">Colors.DarkGreen</span>).<span class="method">cornerRadius(<span class="number">5</span>)
+            }
+            <span class="type">HStack</span>{
+                <span class="type">Rectangle()</span>.<span class="method">fill(<span class="pointer">Colors.LightOceanBlue</span>).<span class="method">cornerRadius(<span class="number">5</span>)
+                <span class="type">Rectangle()</span>.<span class="method">fill(<span class="pointer">Colors.NeonOceanBlue</span>).<span class="method">cornerRadius(<span class="number">5</span>)
+                <span class="type">Rectangle()</span>.<span class="method">fill(<span class="pointer">Colors.DarkOceanBlue</span>).<span class="method">cornerRadius(<span class="number">5</span>)
+            }
+            <span class="type">HStack</span>{
+                <span class="type">Rectangle()</span>.<span class="method">fill(<span class="pointer">Colors.LightBlue</span>).<span class="method">cornerRadius(<span class="number">5</span>)
+                <span class="type">Rectangle()</span>.<span class="method">fill(<span class="pointer">Colors.NeonBlue</span>).<span class="method">cornerRadius(<span class="number">5</span>)
+                <span class="type">Rectangle()</span>.<span class="method">fill(<span class="pointer">Colors.DarkBlue</span>).<span class="method">cornerRadius(<span class="number">5</span>)
+            }
+        }
     }
 }</code></pre>
                         </div>
@@ -314,13 +326,11 @@
 
 
                             <div class="exampleBlock">
-                              <h2> Stock App </h2>
-                              <p class="lead"> Utalize the built in <code><span class="pointer">ExampleData</span></code> to test your chart with sophisticated data.
-                                <br> Set <code>curvedLines</code> to false to give your stocks graph a more realistic feel.
-                              <br> Choose style: <code><span class="enum">.tertiary</span></code> for a minimalist chart aesthetic.</p>
+                              <h2> Volcano </h2>
+                              <p class="lead"> Use these colors to convey energy, urgency, or action. </p>
                               <div class="row">
                                 <div class="col-md-4 text-right">
-                                  <img class="img-fluid rounded-lg bg-img-city example-gif"  src="assets/img/demo3.gif" />
+                                  <img class="img-fluid rounded-lg bg-img-city example-gif"  src="assets/img/colordemo2.png" />
                                 </div>
                                 <div class="col-md-8">
                                   <div class="code-block mt-3" id="demo3">
@@ -334,21 +344,28 @@
                                         <path fill-rule="evenodd" d="M1.5 13A1.5 1.5 0 0 0 3 14.5h10a1.5 1.5 0 0 0 1.5-1.5V8a.5.5 0 0 0-1 0v5a.5.5 0 0 1-.5.5H3a.5.5 0 0 1-.5-.5V3a.5.5 0 0 1 .5-.5h8a.5.5 0 0 0 0-1H3A1.5 1.5 0 0 0 1.5 3v10z"/>
                                       </svg>
                                     </div>
-                                  <pre><code class="swift language-swift"><span class="key">import</span> SwiftUI
-<span class="key">import</span> iLineChart
+                                    <pre><code class="swift language-swift"><span class="key">import</span> SwiftUI
+<span class="key">import</span> iColors
 
 <span class="key">struct</span> <span class="pointer">ContentView</span>: <span class="type">View</span> {
-    <span class="key">var</span> <span class="pointer">data</span>:[<span class="type">Double</span>] = <span class="pointer">ExampleData.stockData</span>
-
     <span class="key">var</span> body: <span class="key">some</span> <span class="type">View</span> {
-        <span class="pointer">iLineChart</span>(
-            data: <span class="enum">data</span>,
-            title: <span class="string">"AAPL"</span>,
-            subtitle: <span class="string">"Apple Computers"</span>,
-            style: <span class="enum">.tertiary</span>,
-            curvedLines: <span class="key">false</span>,
-            displayChartStats: <span class="key">true</span>
-        )
+        <span class="type">VStack</span>{
+            <span class="type">HStack</span>{
+                <span class="type">Rectangle()</span>.<span class="method">fill(<span class="pointer">Colors.LightPink</span>).<span class="method">cornerRadius(<span class="number">5</span>)
+                <span class="type">Rectangle()</span>.<span class="method">fill(<span class="pointer">Colors.NeonPink</span>).<span class="method">cornerRadius(<span class="number">5</span>)
+                <span class="type">Rectangle()</span>.<span class="method">fill(<span class="pointer">Colors.DarkPink</span>).<span class="method">cornerRadius(<span class="number">5</span>)
+            }
+            <span class="type">HStack</span>{
+                <span class="type">Rectangle()</span>.<span class="method">fill(<span class="pointer">Colors.LightRed</span>).<span class="method">cornerRadius(<span class="number">5</span>)
+                <span class="type">Rectangle()</span>.<span class="method">fill(<span class="pointer">Colors.NeonRed</span>).<span class="method">cornerRadius(<span class="number">5</span>)
+                <span class="type">Rectangle()</span>.<span class="method">fill(<span class="pointer">Colors.DarkRed</span>).<span class="method">cornerRadius(<span class="number">5</span>)
+            }
+            <span class="type">HStack</span>{
+                <span class="type">Rectangle()</span>.<span class="method">fill(<span class="pointer">Colors.LightOrange</span>).<span class="method">cornerRadius(<span class="number">5</span>)
+                <span class="type">Rectangle()</span>.<span class="method">fill(<span class="pointer">Colors.NeonOrange</span>).<span class="method">cornerRadius(<span class="number">5</span>)
+                <span class="type">Rectangle()</span>.<span class="method">fill(<span class="pointer">Colors.DarkOrange</span>).<span class="method">cornerRadius(<span class="number">5</span>)
+            }
+        }
     }
 }</code></pre>
                         </div>
@@ -357,14 +374,11 @@
                             </div>
 
                             <div class="exampleBlock">
-                              <h2> Dark Theme </h2>
-                              <p class="lead"> Change the cursor color with the built in <code>iColors</code> library.<br>
-                                Enable fullscreen to cover the safe areas with your background color.
-                                <br>Change the font to your company's brand.
-                                  </p>
+                              <h2> Grays </h2>
+                              <p class="lead"> Use these colors to standardize your user experience.  </p>
                               <div class="row box">
                                 <div class="col-md-4 text-left">
-                                  <img class="img-fluid rounded-lg bg-img-city example-gif"  src="assets/img/demo4.gif" />
+                                  <img class="img-fluid rounded-lg bg-img-city example-gif"  src="assets/img/colordemo1.png" />
                                 </div>
                                 <div class="col-md-8 text-left">
 
@@ -379,25 +393,21 @@
                                         <path fill-rule="evenodd" d="M1.5 13A1.5 1.5 0 0 0 3 14.5h10a1.5 1.5 0 0 0 1.5-1.5V8a.5.5 0 0 0-1 0v5a.5.5 0 0 1-.5.5H3a.5.5 0 0 1-.5-.5V3a.5.5 0 0 1 .5-.5h8a.5.5 0 0 0 0-1H3A1.5 1.5 0 0 0 1.5 3v10z"/>
                                       </svg>
                                     </div>
-                                  <pre><code class="swift language-swift"><span class="key">import</span> SwiftUI
-<span class="key">import</span> iLineChart
+                                    <pre><code class="swift language-swift"><span class="key">import</span> SwiftUI
 <span class="key">import</span> iColors
 
 <span class="key">struct</span> <span class="pointer">ContentView</span>: <span class="type">View</span> {
-    <span class="key">var</span> <span class="pointer">data</span>:[<span class="type">Double</span>] = <span class="pointer">ExampleData.stockData</span>
-
     <span class="key">var</span> body: <span class="key">some</span> <span class="type">View</span> {
-        <span class="pointer">iLineChart</span>(
-            data: <span class="enum">data</span>,
-            title: <span class="string">"My Dark Themed App"</span>,
-            subtitle: <span class="string">"Sleek. Simple."</span>,
-            style: .<span class="enum">dark</span>,
-            titleColor: <span class="pointer">Colors.NeonRed</span>,
-            cursorColor: <span class="pointer">Colors.Black</span>,
-            titleFont: .<span class="type">system</span>(size: <span class="number">14</span>, weight: .<span class="enum">regular</span>, design: .<span class="enum">monospaced</span>),
-            subtitleFont: .<span class="type">system</span>(size: <span class="number">24</span>, weight: .<span class="enum">bold</span>, design: .<span class="enum">monospaced</span>),
-            fullScreen: <span class="key">true</span>
-        )
+        <span class="type">VStack</span>{
+            <span class="type">HStack</span>{
+                <span class="type">Rectangle()</span>.<span class="method">fill(<span class="pointer">Colors.LightGray</span>).<span class="method">cornerRadius(<span class="number">5</span>)
+                <span class="type">Rectangle()</span>.<span class="method">fill(<span class="pointer">Colors.Gray</span>).<span class="method">cornerRadius(<span class="number">5</span>)
+            }
+            <span class="type">HStack</span>{
+                <span class="type">Rectangle()</span>.<span class="method">fill(<span class="pointer">Colors.DarkGray</span>).<span class="method">cornerRadius(<span class="number">5</span>)
+                <span class="type">Rectangle()</span>.<span class="method">fill(<span class="pointer">Colors.Black</span>).<span class="method">cornerRadius(<span class="number">5</span>)
+            }
+        }
     }
 }</code></pre>
                         </div>
@@ -445,254 +455,297 @@
                                 <tr>
                                   <td class="text-left">
                                     <div class="code-classic">
-                                      <pre><code>title: <span class="type">String? </span> = <span class="key"> nil</span> </span> </code></pre>
+                                      <pre><code><span class="pointer">Colors.LightRed</span> </code></pre>
                                     </div>
 
                                   </td>
                                   <td class="parameter-description">
-                                    Add a title above your graph.
+                                    <div class="color-description" style="background:#ffb3b3"></div>
                                   </td>
                                 </tr>
 
                                 <tr>
                                   <td class="text-left">
                                     <div class="code-classic">
-                                      <pre><code>subtitle: <span class="type">String? </span> = <span class="key"> nil</span> </span> </code></pre>
+                                      <pre><code><span class="pointer">Colors.LightOrange</span> </code></pre>
                                     </div>
 
                                   </td>
                                   <td class="parameter-description">
-                                    Add a subtitle below your title and above your graph.
+                                    <div class="color-description" style="background:#ffd9b3"></div>
+                                  </td>
+                                </tr>
+
+
+
+                                <tr>
+                                  <td class="text-left">
+                                    <div class="code-classic">
+                                      <pre><code><span class="pointer">Colors.LighGreen</span> </code></pre>
+                                    </div>
+
+                                  </td>
+                                  <td class="parameter-description">
+                                    <div class="color-description" style="background:#b3ffdf"></div>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td class="text-left">
+                                    <div class="code-classic">
+                                      <pre><code><span class="pointer">Colors.LightOceanBlue</span> </code></pre>
+                                    </div>
+
+                                  </td>
+                                  <td class="parameter-description">
+                                    <div class="color-description" style="background:#b3f2ff"></div>
                                   </td>
                                 </tr>
 
                                 <tr>
                                   <td class="text-left">
                                     <div class="code-classic">
-                                      <pre><code>style: <span class="pointer"> LineChartStyle </span> = <span class="enum"> .primary </span> </span> </code></pre>
+                                      <pre><code><span class="pointer">Colors.LightBlue</span> </code></pre>
                                     </div>
 
                                   </td>
                                   <td class="parameter-description">
-                                    <code class="inline-code"><span class="pointer">LineChartStyle</span></code> is an enum of different default style choices. You can choose between <code><span class="enum">.primary</span></code>, <code><span class="enum">.secondary</span></code>, <code><span class="enum">.tertiary</span></code> or <code><span class="enum">.dark</span></code>.
+                                    <div class="color-description" style="background:#b3dfff"></div>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td class="text-left">
+                                    <div class="code-classic">
+                                      <pre><code><span class="pointer">Colors.LightPurple</span> </code></pre>
+                                    </div>
+
+                                  </td>
+                                  <td class="parameter-description">
+                                    <div class="color-description" style="background:#b3b3ff"></div>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td class="text-left">
+                                    <div class="code-classic">
+                                      <pre><code><span class="pointer">Colors.LightPink</span> </code></pre>
+                                    </div>
+
+                                  </td>
+                                  <td class="parameter-description">
+                                    <div class="color-description" style="background:#ffb3d1"></div>
+                                  </td>
+                                </tr>
+
+
+                                <tr>
+                                  <td class="text-left">
+                                    <div class="code-classic">
+                                      <pre><code><span class="pointer">Colors.NeonRed</span> </code></pre>
+                                    </div>
+
+                                  </td>
+                                  <td class="parameter-description">
+                                    <div class="color-description" style="background:#ff5959"></div>
                                   </td>
                                 </tr>
 
                                 <tr>
                                   <td class="text-left">
                                     <div class="code-classic">
-                                      <pre><code>lineGradient: <span class="pointer"> GradientColor? </span> = <span class="key"> nil </span> </span> </code></pre>
+                                      <pre><code><span class="pointer">Colors.NeonOrange</span> </code></pre>
                                     </div>
 
                                   </td>
                                   <td class="parameter-description">
-                                    Change the gradient of the graph line.
+                                    <div class="color-description" style="background:#ffac59"></div>
+                                  </td>
+                                </tr>
+
+
+
+                                <tr>
+                                  <td class="text-left">
+                                    <div class="code-classic">
+                                      <pre><code><span class="pointer">Colors.NeonGreen</span> </code></pre>
+                                    </div>
+
+                                  </td>
+                                  <td class="parameter-description">
+                                    <div class="color-description" style="background:#59ffba"></div>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td class="text-left">
+                                    <div class="code-classic">
+                                      <pre><code><span class="pointer">Colors.NeonOceanBlue</span> </code></pre>
+                                    </div>
+
+                                  </td>
+                                  <td class="parameter-description">
+                                    <div class="color-description" style="background:#59e3ff"></div>
                                   </td>
                                 </tr>
 
                                 <tr>
                                   <td class="text-left">
                                     <div class="code-classic">
-                                      <pre><code>chartBackgroundGradient: <span class="pointer"> GradientColor? </span> = <span class="key"> nil </span> </span> </code></pre>
+                                      <pre><code><span class="pointer">Colors.NeonBlue</span> </code></pre>
                                     </div>
 
                                   </td>
                                   <td class="parameter-description">
-                                    Change the gradient that lies below the chart line.
+                                    <div class="color-description" style="background:#59baff"></div>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td class="text-left">
+                                    <div class="code-classic">
+                                      <pre><code><span class="pointer">Colors.NeonPurple</span> </code></pre>
+                                    </div>
+
+                                  </td>
+                                  <td class="parameter-description">
+                                    <div class="color-description" style="background:#5959ff"></div>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td class="text-left">
+                                    <div class="code-classic">
+                                      <pre><code><span class="pointer">Colors.NeonPink</span> </code></pre>
+                                    </div>
+
+                                  </td>
+                                  <td class="parameter-description">
+                                    <div class="color-description" style="background:#ff599e"></div>
+                                  </td>
+                                </tr>
+
+
+                                <tr>
+                                  <td class="text-left">
+                                    <div class="code-classic">
+                                      <pre><code><span class="pointer">Colors.DarkRed</span> </code></pre>
+                                    </div>
+
+                                  </td>
+                                  <td class="parameter-description">
+                                    <div class="color-description" style="background:#591b1b"></div>
                                   </td>
                                 </tr>
 
                                 <tr>
                                   <td class="text-left">
                                     <div class="code-classic">
-                                      <pre><code>canvasBackgroundColor: <span class="type">Color? </span> = <span class="key"> nil </span> </span> </code></pre>
+                                      <pre><code><span class="pointer">Colors.DarkOrange</span> </code></pre>
                                     </div>
 
                                   </td>
                                   <td class="parameter-description">
-                                    Change the canvas color that lies behind the entire <code><span class="type">View</span></code> (including the header text).
+                                    <div class="color-description" style="background:#593a1b"></div>
+                                  </td>
+                                </tr>
+
+
+                                <tr>
+                                  <td class="text-left">
+                                    <div class="code-classic">
+                                      <pre><code><span class="pointer">Colors.DarkGreen</span> </code></pre>
+                                    </div>
+
+                                  </td>
+                                  <td class="parameter-description">
+                                    <div class="color-description" style="background:#1b593f"></div>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td class="text-left">
+                                    <div class="code-classic">
+                                      <pre><code><span class="pointer">Colors.DarkOceanBlue</span> </code></pre>
+                                    </div>
+
+                                  </td>
+                                  <td class="parameter-description">
+                                    <div class="color-description" style="background:#1b4f59"></div>
                                   </td>
                                 </tr>
 
                                 <tr>
                                   <td class="text-left">
                                     <div class="code-classic">
-                                      <pre><code>titleColor: <span class="type">Color? </span> = <span class="key"> nil </span> </span> </code></pre>
+                                      <pre><code><span class="pointer">Colors.DarkBlue</span> </code></pre>
                                     </div>
 
                                   </td>
                                   <td class="parameter-description">
-                                    Change the title color.
+                                    <div class="color-description" style="background:#1b3f59"></div>
                                   </td>
                                 </tr>
-
                                 <tr>
                                   <td class="text-left">
                                     <div class="code-classic">
-                                      <pre><code>subtitleColor: <span class="type">Color? </span> = <span class="key"> nil </span> </span> </code></pre>
+                                      <pre><code><span class="pointer">Colors.DarkPurple</span> </code></pre>
                                     </div>
 
                                   </td>
                                   <td class="parameter-description">
-                                    Change the subtitle color.
+                                    <div class="color-description" style="background:#1c1c5a"></div>
                                   </td>
                                 </tr>
-
                                 <tr>
                                   <td class="text-left">
                                     <div class="code-classic">
-                                      <pre><code>numberColor: <span class="type">Color? </span> = <span class="key"> nil </span> </span> </code></pre>
+                                      <pre><code><span class="pointer">Colors.DarkPink</span> </code></pre>
                                     </div>
 
                                   </td>
                                   <td class="parameter-description">
-                                    Change the color of the graph numbers.
+                                    <div class="color-description" style="background:#5a1c35"></div>
                                   </td>
                                 </tr>
-
                                 <tr>
                                   <td class="text-left">
                                     <div class="code-classic">
-                                      <pre><code>curvedLines: <span class="type">Bool </span> = <span class="key"> true </span> </code></pre>
+                                      <pre><code><span class="pointer">Colors.LightGray</span> </code></pre>
                                     </div>
 
                                   </td>
                                   <td class="parameter-description">
-                                    Does your graph have curved or straight lines.
+                                    <div class="color-description" style="background:#cccccc"></div>
                                   </td>
                                 </tr>
-
                                 <tr>
                                   <td class="text-left">
                                     <div class="code-classic">
-                                      <pre><code>cursorColor: <span class="type">Color </span> = <span class="pointer"> Colors.NeonPink </span> </span> </code></pre>
+                                      <pre><code><span class="pointer">Colors.Gray</span> </code></pre>
                                     </div>
 
                                   </td>
                                   <td class="parameter-description">
-                                    When a user clicks on the graph, this parameters controls their cursor color. Use the internal <code> <span class="pointer">Colors</span></code> struct to quickly access good colors.
+                                    <div class="color-description" style="background:#999999"></div>
                                   </td>
                                 </tr>
-
                                 <tr>
                                   <td class="text-left">
                                     <div class="code-classic">
-                                      <pre><code>displayChartStats: <span class="type"> Bool </span> = <span class="number"> false </span> </span> </code></pre>
+                                      <pre><code><span class="pointer">Colors.DarkGray</span> </code></pre>
                                     </div>
 
                                   </td>
                                   <td class="parameter-description">
-                                    Display a line of text that reads the final data point, the current selected point (when applicable) and the percent change from the first data point.
+                                    <div class="color-description" style="background:#404040"></div>
                                   </td>
                                 </tr>
-
                                 <tr>
                                   <td class="text-left">
                                     <div class="code-classic">
-                                      <pre><code>minWidth: <span class="type">CGFloat </span> = <span class="number"> 0 </span> </span> </code></pre>
+                                      <pre><code><span class="pointer">Colors.Black</span> </code></pre>
                                     </div>
 
                                   </td>
                                   <td class="parameter-description">
-                                    Minimum chart width.
+                                    <div class="color-description" style="background:#1a1a1a"></div>
                                   </td>
                                 </tr>
 
-                                <tr>
-                                  <td class="text-left">
-                                    <div class="code-classic">
-                                      <pre><code>minHeight: <span class="type">CGFloat </span> = <span class="number"> 0 </span>  </code></pre>
-                                    </div>
-
-                                  </td>
-                                  <td class="parameter-description">
-                                    Minimum chart height.
-                                  </td>
-                                </tr>
-
-                                <tr>
-                                  <td class="text-left">
-                                    <div class="code-classic">
-                                      <pre><code>maxWidth: <span class="type">CGFloat </span> = <span class="type"> .infinity </span>  </code></pre>
-                                    </div>
-
-                                  </td>
-                                  <td class="parameter-description">
-                                    Maximum chart width.
-                                  </td>
-                                </tr>
-
-                                <tr>
-                                  <td class="text-left">
-                                    <div class="code-classic">
-                                      <pre><code>maxHeight: <span class="type">CGFloat </span> = <span class="type"> .infinity </span> </span> </code></pre>
-                                    </div>
-
-                                  </td>
-                                  <td class="parameter-description">
-                                    Maximum chart height.
-                                  </td>
-                                </tr>
-
-                                <tr>
-                                  <td class="text-left">
-                                    <div class="code-classic">
-                                      <pre><code>titleFont: <span class="type">Font </span> = .<span class="type">system</span>(size: <span class="number">30</span>, weight: .<span class="type">regular</span>, design: .<span class="type">rounded</span>) </code></pre>
-                                    </div>
-
-                                  </td>
-                                  <td class="parameter-description">
-                                    Title font.
-                                  </td>
-                                </tr>
-
-                                <tr>
-                                  <td class="text-left">
-                                    <div class="code-classic">
-                                      <pre><code>subtitleFont: <span class="type">Font </span> = .<span class="type">system</span>(size: <span class="number">14</span>, weight: .<span class="type">light</span>, design: .<span class="type">rounded</span>) </code></pre>
-                                    </div>
-
-                                  </td>
-                                  <td class="parameter-description">
-                                    Subtitle font.
-                                  </td>
-                                </tr>
-
-                                <tr>
-                                  <td class="text-left">
-                                    <div class="code-classic">
-                                      <pre><code>dataFont: <span class="type">Font </span> = .<span class="type">system</span>(size: <span class="number">16</span>, weight: .<span class="type">bold</span>, design: .<span class="type">monospace</span>) </code></pre>
-                                    </div>
-
-                                  </td>
-                                  <td class="parameter-description">
-                                    Data font.
-                                  </td>
-                                </tr>
-
-                                <tr>
-                                  <td class="text-left">
-                                    <div class="code-classic">
-                                      <pre><code>fullScreen: <span class="type">Bool </span> = <span class="key"> false </span> </code></pre>
-                                    </div>
-
-                                  </td>
-                                  <td class="parameter-description">
-                                    Allow chart view to expand to the entire screen – including safe areas.
-                                  </td>
-                                </tr>
-
-                                <tr>
-                                  <td class="text-left">
-                                    <div class="code-classic">
-                                      <pre><code>floatingPointNumberFormat: <span class="type">String </span> = <span class="string"> "%.1f" </span> </code></pre>
-                                    </div>
-
-                                  </td>
-                                  <td class="parameter-description">
-                                    A regular expression for how to format datapoints from the chart.
-                                  </td>
-                                </tr>
 
 
 
@@ -707,15 +760,12 @@
 
                           <div class="instructions-block mt-5">
                             <h2> Community </h2>
-                            <p class="lead"> Meet the developers behind <code class="inline-code">LineChart</code>. </p>
+                            <p class="lead"> Meet the developers behind <code class="inline-code">iColors</code>. </p>
                             <div class="row"  style="margin-left:10pt;">
-                              <div class="person text-center">
-                                <img class="mb-4 person-photo" src="assets/img/GithubAppPear.jpg" style="width: 15rem;" />
-                                <p class="lead microcopy"> Package Owner <br> @AppPear </p>
-                              </div>
+
                               <div class="person text-center">
                                 <img class="mb-4 person-photo" src="assets/img/AlexFine.jpg" style="width: 15rem;" />
-                                <p class="lead microcopy"> Contributor <br> @AlexFine </p>
+                                <p class="lead microcopy"> @AlexFine </p>
                               </div>
 
                             </div>
@@ -732,7 +782,7 @@
                               </div>
                               <div class="input-group">
 
-                                <input type="text" class="form-control code-font" aria-label="Input group example" aria-describedby="btnGroupAddon" value="https://github.com/iSwiftUIHome/ChartView.git" readonly id="downloadURLSide">
+                                <input type="text" class="form-control code-font" aria-label="Input group example" aria-describedby="btnGroupAddon" value="https://github.com/iSwiftUIHome/iColors.git" readonly id="downloadURLSide">
                                 <div class="input-group-prepend copy-button">
                                   <div class="input-group-text" id="btnGroupAddon" onclick="CopyToClipboard('downloadURLSide')">
                                     <svg id="downloadURLSideclipboard" width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-clipboard" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -760,9 +810,7 @@
                               <div class="title header">
                                 <a href="#layoutDefault"><button type="button" class="btn btn-danger btn-start">Get Started</button></a>
                               </div>
-
                             </div>
-
                           </div>
                         </div>
                       </div>
@@ -838,7 +886,7 @@
         <script src="https://code.jquery.com/jquery-3.4.1.min.js" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
 
-        <script src="js/linechart.js"></script>
+        <script src="js/colors.js"></script>
         <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
         <script>
 

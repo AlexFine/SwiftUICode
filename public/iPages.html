@@ -19,7 +19,7 @@
         <title>iSwiftUI</title>
 
         <meta property="og:title" content="iLineChart" />
-        <meta property="og:image" content="https://iswiftui.com/assets/img/colordemo3.png" />
+        <meta property="og:image" content="https://iswiftui.com/assets/img/iPagesDemo3Dark.gif" />
 
         <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
         <link href="css/styles.css" rel="stylesheet" />
@@ -74,15 +74,15 @@
                           <div class="col"></div>
                           <div class="col-lg-9">
 
-                            <h1 class="title header text-center" id="getStarted"><code> iColors  </code></h1>
+                            <h1 class="title header text-center" id="getStarted"><code> iPages  </code></h1>
 
-                            <p class="lead text-center" style="font-size:20pt; font-weight:500;" id="headertext"> Quickly add modern colors to your app. </p>
+                            <p class="lead text-center" style="font-size:20pt; font-weight:500;" id="headertext">Quickly implement swipable views.</p>
 
                             <div class="exampleBlock mt-5">
 
                               <div class="row instructions-row">
                                 <div class="col-md-4 text-right">
-                                  <img class="img-fluid rounded-lg bg-img-city example-gif" id="imgRotate" src="assets/img/colordemo3.png" />
+                                  <img class="img-fluid rounded-lg bg-img-city example-gif" id="imgRotate" src="assets/img/iPagesDemoPrimary.gif" />
                                 </div>
                                 <div class="col-md-8 mt-3">
 
@@ -92,7 +92,7 @@
                                     </div>
                                     <div class="col-10 instruction-content">
                                       <p class="instructions-text">
-                                        <a id="helpHeadingTwo" href="#" data-toggle="modal" data-target="#exampleModal" style="text-decoration:none; font-weight:600;">Install  </a><code>iColors</code>.
+                                        <a id="helpHeadingTwo" href="#" data-toggle="modal" data-target="#exampleModal" style="text-decoration:none; font-weight:600;">Install  </a><code>iPages</code>.
                                       </p>
                                       <!-- Button trigger modal -->
 
@@ -105,7 +105,7 @@
                                               <h5 class="modal-title" id="exampleModalLabel" style="margin-left:10pt; margin-top:8pt; font-weight:600; font-size:16pt;"> Instructions </h5>
                                               <div class="input-group no-border" style="max-width:60%; margin:0; margin-right:1pt;;">
 
-                                                <input type="text" class="form-control code-font no-border" aria-label="Input group example" aria-describedby="btnGroupAddon" value="https://github.com/iSwiftUIHome/iColors.git" readonly id="downloadURL2">
+                                                <input type="text" class="form-control code-font no-border" aria-label="Input group example" aria-describedby="btnGroupAddon" value="https://github.com/AlexFine/iPages.git" readonly id="downloadURL2">
                                                 <div class="input-group-prepend copy-button no-border">
                                                   <div class="input-group-text no-border" id="btnGroupAddon" onclick="CopyToClipboard('downloadURL2')" style="border-radius:5pt">
                                                     <svg id="downloadURL2clipboard" width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-clipboard" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -144,7 +144,7 @@
                                                   <div class="carousel-item">
                                                     <div class="new_html_code">
                                                       <div class="text-left" style="border-bottom:1pt solid rgba(200, 200, 200, 0.20); margin-bottom:15pt;">
-                                                        <p class="lead install-txt"><span class="instruction-numbers">(2/3)</span> Input <span class="code-font" style="font-size:14pt; padding:6pt; border-radius:3pt; margin-bottom:10pt;">https://github.com/iSwiftUIHome/iColors.git</span> & click Next. </p>
+                                                        <p class="lead install-txt"><span class="instruction-numbers">(2/3)</span> Input <span class="code-font" style="font-size:14pt; padding:6pt; border-radius:3pt; margin-bottom:10pt;">https://github.com/AlexFine/iPages.git</span> & click Next. </p>
                                                       </div>
                                                       <img src="assets/img/instructions1.gif" style="width:100%; border-radius:0pt; padding:0pt; margin:0;">
 
@@ -209,7 +209,7 @@
                                     </div>
                                     <div class="col-10 instruction-content">
                                       <p class="instructions-text">
-                                        Add <code>iColors</code> to your project.
+                                        Add <code>iPages</code> to your project.
                                       </p>
                                       <div class="code-block mt-3" id="swift1">
                                         <div class="code-clipboard" onclick="CopyToClipboard('swift1')">
@@ -223,12 +223,15 @@
                                           </svg>
                                         </div>
 
-                                        <pre><code class="swift language-swift"><span class="key">import</span> SwiftUI
-<span class="key">import</span> iColors
+                                      <pre><code class="swift language-swift"><span class="key">import</span> SwiftUI
+<span class="key">import</span> iPages
+<span class="key">import</span> iGraphics
 
 <span class="key">struct</span> <span class="pointer">ContentView</span>: <span class="type">View</span> {
+    <span class="type">@State</span> <span class="key">var</span> <span class="enum">currentPage</span>: <span class="type">Int</span> = <span class="number">0</span>
+
     <span class="key">var</span> body: <span class="key">some</span> <span class="type">View</span> {
-        <span class="type">Rectangle()</span><span class="method">.fill</span>(<span class="pointer">Colors.NeonBlue</span>)
+        <span class="pointer">iPages</span>([<span class="pointer">iGraphics()</span>, <span class="pointer">iGraphics()</span>], currentPage: <span class="enum">$currentPage</span>)
     }
 }</code></pre>
                             </div>
@@ -241,7 +244,7 @@
                                     </div>
                                     <div class="col-10 instruction-content">
                                       <p class="instructions-text">
-                                        <a href="#customizeSection" style="text-decoration:none; font-weight:600;"> Play </a> with your <code>iColors</code>.
+                                        <a href="#customizeSection" style="text-decoration:none; font-weight:600;"> Customize </a> your <code>iPages</code>.
                                       </p>
                                     </div>
                                   </div>
@@ -268,16 +271,52 @@
 
                             <h1 class="title header header-sm"> Examples </h1>
 
+                            <div class="exampleBlock">
+                              <h2> Marketing Materials </h2>
+                              <p class="lead"> Use <code>iGraphicsView</code> to demo marketing slides.</p>
+                              <div class="row">
+                                <div class="col-md-4 text-right">
+                                  <img class="img-fluid rounded-lg bg-img-city example-gif"  src="assets/img/iPagesDemo2Light.gif" />
+                                </div>
+                                <div class="col-md-8">
+                                  <div class="code-block mt-3" id="demo3">
+                                    <div class="code-clipboard" onclick="CopyToClipboard('demo3')">
+                                      <svg id="demo3clipboard" width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-clipboard" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/>
+                                        <path fill-rule="evenodd" d="M9.5 1h-3a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"/>
+                                      </svg>
+                                      <svg class="hide" id="demo3check" width="1.2em" height="1.2em" viewBox="0 0 16 16" class="bi bi-check2-square" fill="currentColor" xmlns="http://www.w3.org/2000/svg" style="color:#29cc52; margin-top:2pt; margin-left: 2pt;">
+                                        <path fill-rule="evenodd" d="M15.354 2.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3-3a.5.5 0 1 1 .708-.708L8 9.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+                                        <path fill-rule="evenodd" d="M1.5 13A1.5 1.5 0 0 0 3 14.5h10a1.5 1.5 0 0 0 1.5-1.5V8a.5.5 0 0 0-1 0v5a.5.5 0 0 1-.5.5H3a.5.5 0 0 1-.5-.5V3a.5.5 0 0 1 .5-.5h8a.5.5 0 0 0 0-1H3A1.5 1.5 0 0 0 1.5 3v10z"/>
+                                      </svg>
+                                    </div>
+                                  <pre><code class="swift language-swift"><span class="key">import</span> SwiftUI
+<span class="key">import</span> iLineChart
 
+<span class="key">struct</span> <span class="pointer">ContentView</span>: <span class="type">View</span> {
+    <span class="type">@State</span> <span class="key">var</span> <span class="enum">currentPage</span>: <span class="type">Int</span> = <span class="number">0</span>
+
+    <span class="key">var</span> body: <span class="key">some</span> <span class="type">View</span> {
+        <span class="pointer">iPages</span>([<span class="pointer">iGraphicsView</span>(<span class="enum">.first</span>),
+                <span class="pointer">iGraphicsView</span>(<span class="enum">.second</span>),
+                <span class="pointer">iGraphicsView</span>(<span class="enum">.third</span>)],
+               currentPage: <span class="enum">$currentPage</span>)
+    }
+}</code></pre>
+                        </div>
+                                </div>
+                              </div>
+                            </div>
 
                             <div class="exampleBlock">
-                              <h2> Ocean </h2>
-                              <p class="lead"> Use these colors to convey healthy, community, & trust. </p>
+                              <h2> Shopping App </h2>
+                              <p class="lead"> Hide the bottom dots & add infinite scroll to remove context. <br>
+                                 </p>
 
                               <div class="row">
                                 <div class="col-md-4 text-right">
 
-                                  <img class="img-fluid rounded-lg bg-img-city example-gif"  src="assets/img/colordemo3.png" />
+                                  <img class="img-fluid rounded-lg bg-img-city example-gif"  src="assets/img/iPagesDemo4Dark.gif" />
 
                                 </div>
                                 <div class="col-md-8">
@@ -293,28 +332,22 @@
                                         <path fill-rule="evenodd" d="M1.5 13A1.5 1.5 0 0 0 3 14.5h10a1.5 1.5 0 0 0 1.5-1.5V8a.5.5 0 0 0-1 0v5a.5.5 0 0 1-.5.5H3a.5.5 0 0 1-.5-.5V3a.5.5 0 0 1 .5-.5h8a.5.5 0 0 0 0-1H3A1.5 1.5 0 0 0 1.5 3v10z"/>
                                       </svg>
                                     </div>
-                                    <pre><code class="swift language-swift"><span class="key">import</span> SwiftUI
-<span class="key">import</span> iColors
+                                    <!-- iPages([iGraphicsBox(.photo).stack(3), iGraphicsBox(.card).stack(2)], currentPage: $currentPage)
+            .hideDots(true)
+            .wrapsInfinitely(true) -->
+                                  <pre><code class="swift language-swift"><span class="key">import</span> SwiftUI
+<span class="key">import</span> iPages
+<span class="key">import</span> iGraphics
 
 <span class="key">struct</span> <span class="pointer">ContentView</span>: <span class="type">View</span> {
+    <span class="type">@State</span> <span class="key">var</span> <span class="enum">currentPage</span>: <span class="type">Int</span> = <span class="number">0</span>
+
     <span class="key">var</span> body: <span class="key">some</span> <span class="type">View</span> {
-        <span class="type">VStack</span>{
-            <span class="type">HStack</span>{
-                <span class="type">Rectangle()</span>.<span class="method">fill(<span class="pointer">Colors.LightGreen</span>).<span class="method">cornerRadius(<span class="number">5</span>)
-                <span class="type">Rectangle()</span>.<span class="method">fill(<span class="pointer">Colors.NeonGreen</span>).<span class="method">cornerRadius(<span class="number">5</span>)
-                <span class="type">Rectangle()</span>.<span class="method">fill(<span class="pointer">Colors.DarkGreen</span>).<span class="method">cornerRadius(<span class="number">5</span>)
-            }
-            <span class="type">HStack</span>{
-                <span class="type">Rectangle()</span>.<span class="method">fill(<span class="pointer">Colors.LightOceanBlue</span>).<span class="method">cornerRadius(<span class="number">5</span>)
-                <span class="type">Rectangle()</span>.<span class="method">fill(<span class="pointer">Colors.NeonOceanBlue</span>).<span class="method">cornerRadius(<span class="number">5</span>)
-                <span class="type">Rectangle()</span>.<span class="method">fill(<span class="pointer">Colors.DarkOceanBlue</span>).<span class="method">cornerRadius(<span class="number">5</span>)
-            }
-            <span class="type">HStack</span>{
-                <span class="type">Rectangle()</span>.<span class="method">fill(<span class="pointer">Colors.LightBlue</span>).<span class="method">cornerRadius(<span class="number">5</span>)
-                <span class="type">Rectangle()</span>.<span class="method">fill(<span class="pointer">Colors.NeonBlue</span>).<span class="method">cornerRadius(<span class="number">5</span>)
-                <span class="type">Rectangle()</span>.<span class="method">fill(<span class="pointer">Colors.DarkBlue</span>).<span class="method">cornerRadius(<span class="number">5</span>)
-            }
-        }
+        <span class="pointer">iPages</span>([<span class="pointer">iGraphicsBox</span>(<span class="enum">.photo</span>).<span class="type">stack</span>(<span class="number">3</span>),
+                <span class="pointer">iGraphicsBox</span>(<span class="enum">.card</span>).<span class="type">stack</span>(<span class="number">2</span>)],
+                currentPage: <span class="enum">$currentPage</span>)
+        <span class="method">.hideDots</span>(<span class="key">true</span>)
+        <span class="method">.wrapsInfinitely</span>(<span class="key">true</span>)
     }
 }</code></pre>
                         </div>
@@ -325,109 +358,42 @@
                             </div>
 
 
-                            <div class="exampleBlock">
-                              <h2> Volcano </h2>
-                              <p class="lead"> Use these colors to convey energy, urgency, or action. </p>
-                              <div class="row">
-                                <div class="col-md-4 text-right">
-                                  <img class="img-fluid rounded-lg bg-img-city example-gif"  src="assets/img/colordemo2.png" />
-                                </div>
-                                <div class="col-md-8">
-                                  <div class="code-block mt-3" id="demo3">
-                                    <div class="code-clipboard" onclick="CopyToClipboard('demo3')">
-                                      <svg id="demo3clipboard" width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-clipboard" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/>
-                                        <path fill-rule="evenodd" d="M9.5 1h-3a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"/>
-                                      </svg>
-                                      <svg class="hide" id="demo3check" width="1.2em" height="1.2em" viewBox="0 0 16 16" class="bi bi-check2-square" fill="currentColor" xmlns="http://www.w3.org/2000/svg" style="color:#29cc52; margin-top:2pt; margin-left: 2pt;">
-                                        <path fill-rule="evenodd" d="M15.354 2.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3-3a.5.5 0 1 1 .708-.708L8 9.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
-                                        <path fill-rule="evenodd" d="M1.5 13A1.5 1.5 0 0 0 3 14.5h10a1.5 1.5 0 0 0 1.5-1.5V8a.5.5 0 0 0-1 0v5a.5.5 0 0 1-.5.5H3a.5.5 0 0 1-.5-.5V3a.5.5 0 0 1 .5-.5h8a.5.5 0 0 0 0-1H3A1.5 1.5 0 0 0 1.5 3v10z"/>
-                                      </svg>
-                                    </div>
-                                    <pre><code class="swift language-swift"><span class="key">import</span> SwiftUI
-<span class="key">import</span> iColors
 
-<span class="key">struct</span> <span class="pointer">ContentView</span>: <span class="type">View</span> {
-    <span class="key">var</span> body: <span class="key">some</span> <span class="type">View</span> {
-        <span class="type">VStack</span>{
-            <span class="type">HStack</span>{
-                <span class="type">Rectangle()</span>.<span class="method">fill(<span class="pointer">Colors.LightPink</span>).<span class="method">cornerRadius(<span class="number">5</span>)
-                <span class="type">Rectangle()</span>.<span class="method">fill(<span class="pointer">Colors.NeonPink</span>).<span class="method">cornerRadius(<span class="number">5</span>)
-                <span class="type">Rectangle()</span>.<span class="method">fill(<span class="pointer">Colors.DarkPink</span>).<span class="method">cornerRadius(<span class="number">5</span>)
-            }
-            <span class="type">HStack</span>{
-                <span class="type">Rectangle()</span>.<span class="method">fill(<span class="pointer">Colors.LightRed</span>).<span class="method">cornerRadius(<span class="number">5</span>)
-                <span class="type">Rectangle()</span>.<span class="method">fill(<span class="pointer">Colors.NeonRed</span>).<span class="method">cornerRadius(<span class="number">5</span>)
-                <span class="type">Rectangle()</span>.<span class="method">fill(<span class="pointer">Colors.DarkRed</span>).<span class="method">cornerRadius(<span class="number">5</span>)
-            }
-            <span class="type">HStack</span>{
-                <span class="type">Rectangle()</span>.<span class="method">fill(<span class="pointer">Colors.LightOrange</span>).<span class="method">cornerRadius(<span class="number">5</span>)
-                <span class="type">Rectangle()</span>.<span class="method">fill(<span class="pointer">Colors.NeonOrange</span>).<span class="method">cornerRadius(<span class="number">5</span>)
-                <span class="type">Rectangle()</span>.<span class="method">fill(<span class="pointer">Colors.DarkOrange</span>).<span class="method">cornerRadius(<span class="number">5</span>)
-            }
-        }
-    }
-}</code></pre>
-                        </div>
-                                </div>
-                              </div>
-                            </div>
 
-                            <div class="exampleBlock">
-                              <h2> Grays </h2>
-                              <p class="lead"> Use these colors to standardize your user experience.  </p>
-                              <div class="row box">
-                                <div class="col-md-4 text-left">
-                                  <img class="img-fluid rounded-lg bg-img-city example-gif"  src="assets/img/colordemo1.png" />
-                                </div>
-                                <div class="col-md-8 text-left">
-
-                                  <div class="code-block mt-3" id="demo4">
-                                    <div class="code-clipboard" onclick="CopyToClipboard('demo4')">
-                                      <svg id="demo4clipboard" width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-clipboard" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/>
-                                        <path fill-rule="evenodd" d="M9.5 1h-3a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"/>
-                                      </svg>
-                                      <svg class="hide" id="demo4check" width="1.2em" height="1.2em" viewBox="0 0 16 16" class="bi bi-check2-square" fill="currentColor" xmlns="http://www.w3.org/2000/svg" style="color:#29cc52; margin-top:2pt; margin-left: 2pt;">
-                                        <path fill-rule="evenodd" d="M15.354 2.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3-3a.5.5 0 1 1 .708-.708L8 9.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
-                                        <path fill-rule="evenodd" d="M1.5 13A1.5 1.5 0 0 0 3 14.5h10a1.5 1.5 0 0 0 1.5-1.5V8a.5.5 0 0 0-1 0v5a.5.5 0 0 1-.5.5H3a.5.5 0 0 1-.5-.5V3a.5.5 0 0 1 .5-.5h8a.5.5 0 0 0 0-1H3A1.5 1.5 0 0 0 1.5 3v10z"/>
-                                      </svg>
-                                    </div>
-                                    <pre><code class="swift language-swift"><span class="key">import</span> SwiftUI
-<span class="key">import</span> iColors
-
-<span class="key">struct</span> <span class="pointer">ContentView</span>: <span class="type">View</span> {
-    <span class="key">var</span> body: <span class="key">some</span> <span class="type">View</span> {
-        <span class="type">VStack</span>{
-            <span class="type">HStack</span>{
-                <span class="type">Rectangle()</span>.<span class="method">fill(<span class="pointer">Colors.LightGray</span>).<span class="method">cornerRadius(<span class="number">5</span>)
-                <span class="type">Rectangle()</span>.<span class="method">fill(<span class="pointer">Colors.Gray</span>).<span class="method">cornerRadius(<span class="number">5</span>)
-            }
-            <span class="type">HStack</span>{
-                <span class="type">Rectangle()</span>.<span class="method">fill(<span class="pointer">Colors.DarkGray</span>).<span class="method">cornerRadius(<span class="number">5</span>)
-                <span class="type">Rectangle()</span>.<span class="method">fill(<span class="pointer">Colors.Black</span>).<span class="method">cornerRadius(<span class="number">5</span>)
-            }
-        }
-    }
-}</code></pre>
-                        </div>
-                                </div>
-                              </div>
-                            </div>
                           </div>
 
                           <hr>
 
                           <div class="instructions-block mt-5" id="customizeSection">
                             <h1 class="title header header-sm"> Customize </h1>
-                            <p class="lead"> Colors are all static properties & make it easy to match accessability standards in your app UI. </p>
+                            <p class="lead"> <code>iPages</code> has two required parameters: an array of views, and a state variable to track the current page. <code class="inline-code">iPages</code> supports a variety of custom modifiers. All customizations are built into our modifiers.  </p>
+
+                            <p class="lead"> <b>Example:</b> Change the dot colors, enable infinite wrap & hide dots for single page views with the following code block: </p>
+                            <div class="code-block" id="demo5">
+                              <div class="code-clipboard" onclick="CopyToClipboard('demo5')">
+                                <svg id="demo5clipboard" width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-clipboard" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                  <path fill-rule="evenodd" d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/>
+                                  <path fill-rule="evenodd" d="M9.5 1h-3a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"/>
+                                </svg>
+                                <svg class="hide" id="demo5check" width="1.2em" height="1.2em" viewBox="0 0 16 16" class="bi bi-check2-square" fill="currentColor" xmlns="http://www.w3.org/2000/svg" style="color:#29cc52; margin-top:2pt; margin-left: 2pt;">
+                                  <path fill-rule="evenodd" d="M15.354 2.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3-3a.5.5 0 1 1 .708-.708L8 9.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+                                  <path fill-rule="evenodd" d="M1.5 13A1.5 1.5 0 0 0 3 14.5h10a1.5 1.5 0 0 0 1.5-1.5V8a.5.5 0 0 0-1 0v5a.5.5 0 0 1-.5.5H3a.5.5 0 0 1-.5-.5V3a.5.5 0 0 1 .5-.5h8a.5.5 0 0 0 0-1H3A1.5 1.5 0 0 0 1.5 3v10z"/>
+                                </svg>
+                              </div>
+          <pre><code class="swift language-swift"><span class="pointer">iPages</span>([], <span class="enum">$currentPage</span>)
+    <span class="method">.dotsTintColors</span>(currentPage: <span class="type">Color</span>, otherPages: <span class="type">Color</span>)
+    <span class="method">.wrapsInfinitely</span>(<span class="key">true</span>)
+    <span class="method">.dotsHideForSinglePage</span>(<span class="key">true</span>)
+
+</code></pre>
+</div>
 <br>
                           <div class="table-responsive">
                             <p class="lead"> Use our exhaustive input list to customize your chart. </p>
                             <table class="table table-borderless">
                               <thead>
                                 <tr>
-                                  <th scope="col">Parameter</th>
+                                  <th scope="col">Modifier</th>
                                   <th scope="col">Description</th>
                                 </tr>
                               </thead>
@@ -435,298 +401,74 @@
                                 <tr>
                                   <td class="text-left">
                                     <div class="code-classic">
-                                      <pre><code><span class="pointer">Colors.LightRed</span> </code></pre>
+                                      <pre><code><span class="method">.hideDots</span>(hideDots: <span class="type">Bool</span>) -> <span class="pointer">iPages</span></code></pre>
                                     </div>
 
                                   </td>
                                   <td class="parameter-description">
-                                    <div class="color-description" style="background:#ffb3b3"></div>
+                                    Modifies whether or not the page view should include the standard page control dots.
                                   </td>
                                 </tr>
 
                                 <tr>
                                   <td class="text-left">
                                     <div class="code-classic">
-                                      <pre><code><span class="pointer">Colors.LightOrange</span> </code></pre>
+                                      <pre><code><span class="method">.wrapsInfinitely</span>(wraps: <span class="type">Bool</span>) -> <span class="pointer">iPages</span></code></pre>
                                     </div>
 
                                   </td>
                                   <td class="parameter-description">
-                                    <div class="color-description" style="background:#ffd9b3"></div>
-                                  </td>
-                                </tr>
-
-
-
-                                <tr>
-                                  <td class="text-left">
-                                    <div class="code-classic">
-                                      <pre><code><span class="pointer">Colors.LighGreen</span> </code></pre>
-                                    </div>
-
-                                  </td>
-                                  <td class="parameter-description">
-                                    <div class="color-description" style="background:#b3ffdf"></div>
-                                  </td>
-                                </tr>
-                                <tr>
-                                  <td class="text-left">
-                                    <div class="code-classic">
-                                      <pre><code><span class="pointer">Colors.LightOceanBlue</span> </code></pre>
-                                    </div>
-
-                                  </td>
-                                  <td class="parameter-description">
-                                    <div class="color-description" style="background:#b3f2ff"></div>
+                                    Modifies whether or not the page view should restart at the beginning when swiping past the end.
                                   </td>
                                 </tr>
 
                                 <tr>
                                   <td class="text-left">
                                     <div class="code-classic">
-                                      <pre><code><span class="pointer">Colors.LightBlue</span> </code></pre>
+                                      <pre><code><span class="method">.dotsHideForSinglePage</span>(hide: <span class="type">Bool</span>) -> <span class="pointer">iPages</span></code></pre>
                                     </div>
 
                                   </td>
                                   <td class="parameter-description">
-                                    <div class="color-description" style="background:#b3dfff"></div>
-                                  </td>
-                                </tr>
-                                <tr>
-                                  <td class="text-left">
-                                    <div class="code-classic">
-                                      <pre><code><span class="pointer">Colors.LightPurple</span> </code></pre>
-                                    </div>
-
-                                  </td>
-                                  <td class="parameter-description">
-                                    <div class="color-description" style="background:#b3b3ff"></div>
-                                  </td>
-                                </tr>
-                                <tr>
-                                  <td class="text-left">
-                                    <div class="code-classic">
-                                      <pre><code><span class="pointer">Colors.LightPink</span> </code></pre>
-                                    </div>
-
-                                  </td>
-                                  <td class="parameter-description">
-                                    <div class="color-description" style="background:#ffb3d1"></div>
-                                  </td>
-                                </tr>
-
-
-                                <tr>
-                                  <td class="text-left">
-                                    <div class="code-classic">
-                                      <pre><code><span class="pointer">Colors.NeonRed</span> </code></pre>
-                                    </div>
-
-                                  </td>
-                                  <td class="parameter-description">
-                                    <div class="color-description" style="background:#ff5959"></div>
+                                    Modifies whether the page dots are hidden when there is only one page.
                                   </td>
                                 </tr>
 
                                 <tr>
                                   <td class="text-left">
                                     <div class="code-classic">
-                                      <pre><code><span class="pointer">Colors.NeonOrange</span> </code></pre>
+                                      <pre><code><span class="method">.dotsTintColors</span>(currentPage: <span class="type">Color</span>, otherPages: <span class="type">Color</span>) -> <span class="pointer">iPages</span></code></pre>
                                     </div>
 
                                   </td>
                                   <td class="parameter-description">
-                                    <div class="color-description" style="background:#ffac59"></div>
-                                  </td>
-                                </tr>
-
-
-
-                                <tr>
-                                  <td class="text-left">
-                                    <div class="code-classic">
-                                      <pre><code><span class="pointer">Colors.NeonGreen</span> </code></pre>
-                                    </div>
-
-                                  </td>
-                                  <td class="parameter-description">
-                                    <div class="color-description" style="background:#59ffba"></div>
-                                  </td>
-                                </tr>
-                                <tr>
-                                  <td class="text-left">
-                                    <div class="code-classic">
-                                      <pre><code><span class="pointer">Colors.NeonOceanBlue</span> </code></pre>
-                                    </div>
-
-                                  </td>
-                                  <td class="parameter-description">
-                                    <div class="color-description" style="background:#59e3ff"></div>
+                                    Modifies tint colors to be used for the page dots.
                                   </td>
                                 </tr>
 
                                 <tr>
                                   <td class="text-left">
                                     <div class="code-classic">
-                                      <pre><code><span class="pointer">Colors.NeonBlue</span> </code></pre>
+                                      <pre><code><span class="method">.dotsBackgroundStyle</span>(style: <span class="type">UIPageControl.BackgroundStyle</span>) -> <span class="pointer">iPages</span></code></pre>
                                     </div>
 
                                   </td>
                                   <td class="parameter-description">
-                                    <div class="color-description" style="background:#59baff"></div>
-                                  </td>
-                                </tr>
-                                <tr>
-                                  <td class="text-left">
-                                    <div class="code-classic">
-                                      <pre><code><span class="pointer">Colors.NeonPurple</span> </code></pre>
-                                    </div>
-
-                                  </td>
-                                  <td class="parameter-description">
-                                    <div class="color-description" style="background:#5959ff"></div>
-                                  </td>
-                                </tr>
-                                <tr>
-                                  <td class="text-left">
-                                    <div class="code-classic">
-                                      <pre><code><span class="pointer">Colors.NeonPink</span> </code></pre>
-                                    </div>
-
-                                  </td>
-                                  <td class="parameter-description">
-                                    <div class="color-description" style="background:#ff599e"></div>
-                                  </td>
-                                </tr>
-
-
-                                <tr>
-                                  <td class="text-left">
-                                    <div class="code-classic">
-                                      <pre><code><span class="pointer">Colors.DarkRed</span> </code></pre>
-                                    </div>
-
-                                  </td>
-                                  <td class="parameter-description">
-                                    <div class="color-description" style="background:#591b1b"></div>
+                                    Modifies the background style of the page dots.
                                   </td>
                                 </tr>
 
                                 <tr>
                                   <td class="text-left">
                                     <div class="code-classic">
-                                      <pre><code><span class="pointer">Colors.DarkOrange</span> </code></pre>
+                                      <pre><code><span class="method">.dotsAllowContinuousInteraction</span>(allowContinuousInteraction: <span class="type">Bool</span>) -> <span class="pointer">iPages</span></code></pre>
                                     </div>
 
                                   </td>
                                   <td class="parameter-description">
-                                    <div class="color-description" style="background:#593a1b"></div>
+                                    Modifies the continuous interaction settings of the dots.
                                   </td>
                                 </tr>
-
-
-                                <tr>
-                                  <td class="text-left">
-                                    <div class="code-classic">
-                                      <pre><code><span class="pointer">Colors.DarkGreen</span> </code></pre>
-                                    </div>
-
-                                  </td>
-                                  <td class="parameter-description">
-                                    <div class="color-description" style="background:#1b593f"></div>
-                                  </td>
-                                </tr>
-                                <tr>
-                                  <td class="text-left">
-                                    <div class="code-classic">
-                                      <pre><code><span class="pointer">Colors.DarkOceanBlue</span> </code></pre>
-                                    </div>
-
-                                  </td>
-                                  <td class="parameter-description">
-                                    <div class="color-description" style="background:#1b4f59"></div>
-                                  </td>
-                                </tr>
-
-                                <tr>
-                                  <td class="text-left">
-                                    <div class="code-classic">
-                                      <pre><code><span class="pointer">Colors.DarkBlue</span> </code></pre>
-                                    </div>
-
-                                  </td>
-                                  <td class="parameter-description">
-                                    <div class="color-description" style="background:#1b3f59"></div>
-                                  </td>
-                                </tr>
-                                <tr>
-                                  <td class="text-left">
-                                    <div class="code-classic">
-                                      <pre><code><span class="pointer">Colors.DarkPurple</span> </code></pre>
-                                    </div>
-
-                                  </td>
-                                  <td class="parameter-description">
-                                    <div class="color-description" style="background:#1c1c5a"></div>
-                                  </td>
-                                </tr>
-                                <tr>
-                                  <td class="text-left">
-                                    <div class="code-classic">
-                                      <pre><code><span class="pointer">Colors.DarkPink</span> </code></pre>
-                                    </div>
-
-                                  </td>
-                                  <td class="parameter-description">
-                                    <div class="color-description" style="background:#5a1c35"></div>
-                                  </td>
-                                </tr>
-                                <tr>
-                                  <td class="text-left">
-                                    <div class="code-classic">
-                                      <pre><code><span class="pointer">Colors.LightGray</span> </code></pre>
-                                    </div>
-
-                                  </td>
-                                  <td class="parameter-description">
-                                    <div class="color-description" style="background:#cccccc"></div>
-                                  </td>
-                                </tr>
-                                <tr>
-                                  <td class="text-left">
-                                    <div class="code-classic">
-                                      <pre><code><span class="pointer">Colors.Gray</span> </code></pre>
-                                    </div>
-
-                                  </td>
-                                  <td class="parameter-description">
-                                    <div class="color-description" style="background:#999999"></div>
-                                  </td>
-                                </tr>
-                                <tr>
-                                  <td class="text-left">
-                                    <div class="code-classic">
-                                      <pre><code><span class="pointer">Colors.DarkGray</span> </code></pre>
-                                    </div>
-
-                                  </td>
-                                  <td class="parameter-description">
-                                    <div class="color-description" style="background:#404040"></div>
-                                  </td>
-                                </tr>
-                                <tr>
-                                  <td class="text-left">
-                                    <div class="code-classic">
-                                      <pre><code><span class="pointer">Colors.Black</span> </code></pre>
-                                    </div>
-
-                                  </td>
-                                  <td class="parameter-description">
-                                    <div class="color-description" style="background:#1a1a1a"></div>
-                                  </td>
-                                </tr>
-
-
 
 
                               </tbody>
@@ -740,12 +482,15 @@
 
                           <div class="instructions-block mt-5">
                             <h2> Community </h2>
-                            <p class="lead"> Meet the developers behind <code class="inline-code">iColors</code>. </p>
+                            <p class="lead"> Meet the developers behind <code class="inline-code">iPages</code>. </p>
                             <div class="row"  style="margin-left:10pt;">
-
+                              <div class="person text-center">
+                                <img class="mb-4 person-photo" src="assets/img/ben.png" style="width: 15rem;" />
+                                <p class="lead microcopy"> <br> @benjaminsage </p>
+                              </div>
                               <div class="person text-center">
                                 <img class="mb-4 person-photo" src="assets/img/AlexFine.jpg" style="width: 15rem;" />
-                                <p class="lead microcopy"> @AlexFine </p>
+                                <p class="lead microcopy"> <br> @AlexFine </p>
                               </div>
 
                             </div>
@@ -762,7 +507,7 @@
                               </div>
                               <div class="input-group">
 
-                                <input type="text" class="form-control code-font" aria-label="Input group example" aria-describedby="btnGroupAddon" value="https://github.com/iSwiftUIHome/iColors.git" readonly id="downloadURLSide">
+                                <input type="text" class="form-control code-font" aria-label="Input group example" aria-describedby="btnGroupAddon" value="https://github.com/AlexFine/iPages.git" readonly id="downloadURLSide">
                                 <div class="input-group-prepend copy-button">
                                   <div class="input-group-text" id="btnGroupAddon" onclick="CopyToClipboard('downloadURLSide')">
                                     <svg id="downloadURLSideclipboard" width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-clipboard" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -790,7 +535,9 @@
                               <div class="title header">
                                 <a href="#layoutDefault"><button type="button" class="btn btn-danger btn-start">Get Started</button></a>
                               </div>
+
                             </div>
+
                           </div>
                         </div>
                       </div>
@@ -866,7 +613,7 @@
         <script src="https://code.jquery.com/jquery-3.4.1.min.js" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
 
-        <script src="js/colors.js"></script>
+        <script src="js/iPages.js"></script>
         <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
         <script>
 

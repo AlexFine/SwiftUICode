@@ -211,6 +211,35 @@
 
                               <div class="row">
                                 <div class="col-md-4 text-right">
+                                  <a href="iTextField.html"><img class="img-fluid rounded-lg bg-img-city example-gif" src="assets/img/iPhoneNumberTFDemo1Light.gif" /></a>
+                                </div>
+                                <div class="col-md-8  mt-3">
+
+                                  <a href="iTextField.html" style="text-decoration:none;"><h1 class="title library-header"><code>iTextField</code></h1>
+                                    <p class="lead library-subtitle"> Quickly implement a textfield with all the UIKit capabilities in SwiftUI.</p>
+                                  </a>
+                                  <div class="code-block mt-3">
+                                    <pre><code class="swift language-swift"><span class="key">import</span> SwiftUI
+<span class="key">import</span> iTextField
+
+<span class="key">struct</span> <span class="pointer">ContentView</span>: <span class="type">View</span> {
+    <span class="type">@State</span> <span class="key">var</span> text: <span class="type">String</span> = <span class="string">""</span>
+    <span class="type">@State</span> <span class="key">var</span> isEditing: <span class="type">Bool</span> = <span class="key">false</span>
+
+    <span class="key">var</span> body: <span class="key">some</span> <span class="type">View</span> {
+        <span class="pointer">iTextField</span>(<span class="string">"Placeholder"</span>, text: <span class="enum">$text</span>, isEditing: <span class="enum">$isEditing</span>)
+    }
+}</code></pre>
+                        </div>
+                                </div>
+                              </div>
+                            </div>
+
+
+                            <div class="card mt-5" style="padding:20pt; cursor: default;">
+
+                              <div class="row">
+                                <div class="col-md-4 text-right">
                                   <a href="iDummyCursor.html"><img class="img-fluid rounded-lg bg-img-city example-gif" src="assets/img/iDummyDemo1Dark.gif" /></a>
                                 </div>
                                 <div class="col-md-8  mt-3">

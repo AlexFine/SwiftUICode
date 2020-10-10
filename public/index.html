@@ -153,6 +153,36 @@
 
                               <div class="row">
                                 <div class="col-md-4 text-right">
+                                  <a href="iPhoneNumberTextField.html"><img class="img-fluid rounded-lg bg-img-city example-gif" src="assets/img/iPhoneNumberTFDemo1Light.gif" /></a>
+                                </div>
+                                <div class="col-md-8  mt-3">
+
+                                  <a href="iPhoneNumberTextField.html" style="text-decoration:none;"><h1 class="title library-header"><code>iPhoneNumberTextField</code></h1>
+                                    <p class="lead library-subtitle"> Quickly implement a textfield designed for phone number.</p>
+                                  </a>
+                                  <div class="code-block mt-3">
+                                    <pre><code class="swift language-swift"><span class="key">import</span> SwiftUI
+<span class="key">import</span> iPhoneNumberTextField
+
+<span class="key">struct</span> <span class="pointer">ContentView</span>: <span class="type">View</span> {
+    <span class="type">@State</span> <span class="key">var</span> text: <span class="type">String</span> = <span class="string">""</span>
+    <span class="type">@State</span> <span class="key">var</span> isEditing: <span class="type">Bool</span> = <span class="key">false</span>
+
+    <span class="key">var</span> body: <span class="key">some</span> <span class="type">View</span> {
+        <span class="pointer">iPhoneNumberTextField</span>(<span class="string">"Placeholder"</span>, text: <span class="enum">$text</span>, isEditing: <span class="enum">$isEditing</span>)
+            <span class="method">.style()</span>
+    }
+}</code></pre>
+                        </div>
+                                </div>
+                              </div>
+                            </div>
+
+
+                            <div class="card mt-5" style="padding:20pt; cursor: default;">
+
+                              <div class="row">
+                                <div class="col-md-4 text-right">
                                   <a href="iPaymentsButton.html"><img class="img-fluid rounded-lg bg-img-city example-gif" src="assets/img/iPaymentsButtonDemo1Dark.gif" /></a>
                                 </div>
                                 <div class="col-md-8  mt-3">

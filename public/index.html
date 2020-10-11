@@ -67,32 +67,88 @@
 
                           </p>
 
-                            <div class="card" style="padding:20pt; cursor: default;">
 
-                              <div class="row">
-                                <div class="col-md-4 text-right">
-                                  <a href="charts.html"><img class="img-fluid rounded-lg bg-img-city example-gif" id="imgRotate" src="assets/img/demo1.gif" /></a>
-                                </div>
-                                <div class="col-md-8  mt-3">
+                          <div class="card mt-5" style="padding:20pt; cursor: default;">
 
+                            <div class="row">
+                              <div class="col-md-4 text-right">
+                                <a href="iActivityIndicator.html"><img class="img-fluid rounded-lg bg-img-city example-gif" src="assets/img/iActivityIndicatorDemoPrimary.gif" /></a>
+                              </div>
+                              <div class="col-md-8  mt-3">
 
-                                  <a href="charts.html" style="text-decoration:none;"><h1 class="title library-header"><code>iLineChart</code></h1>
-                                    <p class="lead library-subtitle"> Quickly implement & easily customize great looking line charts. </p>
-                                  </a>
-                                  <div class="code-block mt-3">
+                                <a href="iActivityIndicator.html" style="text-decoration:none;"><h1 class="title library-header"><code>iActivityIndicator</code></h1>
+                                  <p class="lead library-subtitle"> Quickly implement & easily customize a great looking activity indicator.</p>
+                                </a>
+                                <div class="code-block mt-3">
                                   <pre><code class="swift language-swift"><span class="key">import</span> SwiftUI
+<span class="key">import</span> iActivityIndicator
+
+<span class="key">struct</span> <span class="pointer">ContentView</span>: <span class="type">View</span> {
+  <span class="key">var</span> body: <span class="key">some</span> <span class="type">View</span> {
+      <span class="pointer">iActivityIndicator</span>()
+  }
+}</code></pre>
+                      </div>
+                              </div>
+                            </div>
+                          </div>
+
+
+                          <div class="card mt-5" style="padding:20pt; cursor: default;">
+
+                            <div class="row">
+                              <div class="col-md-4 text-right">
+                                <a href="iPages.html"><img class="img-fluid rounded-lg bg-img-city example-gif" src="assets/img/iPagesDemoPrimary.gif" /></a>
+                              </div>
+                              <div class="col-md-8  mt-3">
+
+                                <a href="iPages.html" style="text-decoration:none;"><h1 class="title library-header"><code>iPages</code></h1>
+                                  <p class="lead library-subtitle"> Quickly implement swipable views.</p>
+                                </a>
+                                <div class="code-block mt-3">
+                                  <pre><code class="swift language-swift"><span class="key">import</span> SwiftUI
+<span class="key">import</span> iPages
+<span class="key">import</span> iGraphics
+
+<span class="key">struct</span> <span class="pointer">ContentView</span>: <span class="type">View</span> {
+    <span class="type">@State</span> <span class="key">var</span> <span class="enum">currentPage</span>: <span class="type">Int</span> = <span class="number">0</span>
+
+    <span class="key">var</span> body: <span class="key">some</span> <span class="type">View</span> {
+        <span class="pointer">iPages</span>([<span class="pointer">iGraphics()</span>, <span class="pointer">iGraphics()</span>], currentPage: <span class="enum">$currentPage</span>)
+    }
+}</code></pre>
+                          </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="card mt-5" style="padding:20pt; cursor: default;">
+
+                            <div class="row">
+                              <div class="col-md-4 text-right">
+                                <a href="charts.html"><img class="img-fluid rounded-lg bg-img-city example-gif" id="imgRotate" src="assets/img/demo1.gif" /></a>
+                              </div>
+                              <div class="col-md-8  mt-3">
+
+
+                                <a href="charts.html" style="text-decoration:none;"><h1 class="title library-header"><code>iLineChart</code></h1>
+                                  <p class="lead library-subtitle"> Quickly implement & easily customize great looking line charts. </p>
+                                </a>
+                                <div class="code-block mt-3">
+                                <pre><code class="swift language-swift"><span class="key">import</span> SwiftUI
 <span class="key">import</span> LineChart
 
 <span class="key">struct</span> <span class="pointer">ContentView</span>: <span class="type">View</span> {
-    <span class="key">var</span> body: <span class="key">some</span> <span class="type">View</span> {
-        <span class="pointer">LineChart</span>(data: [<span class="number">8</span>,<span class="number">32</span>,<span class="number">11</span>,<span class="number">23</span>,<span class="number">40</span>,<span class="number">28</span>,<span class="number">15</span>,<span class="number">20</span>,<span class="number">30</span>,<span class="number">25</span>])
-    }
+  <span class="key">var</span> body: <span class="key">some</span> <span class="type">View</span> {
+      <span class="pointer">LineChart</span>(data: [<span class="number">8</span>,<span class="number">32</span>,<span class="number">11</span>,<span class="number">23</span>,<span class="number">40</span>,<span class="number">28</span>,<span class="number">15</span>,<span class="number">20</span>,<span class="number">30</span>,<span class="number">25</span>])
+  }
 }</code></pre>
-                        </div>
+                      </div>
 
-                                </div>
                               </div>
                             </div>
+                          </div>
+
 
                             <div class="card mt-5" style="padding:20pt; cursor: default;">
 
@@ -120,33 +176,6 @@
                             </div>
 
 
-                            <div class="card mt-5" style="padding:20pt; cursor: default;">
-
-                              <div class="row">
-                                <div class="col-md-4 text-right">
-                                  <a href="iPages.html"><img class="img-fluid rounded-lg bg-img-city example-gif" src="assets/img/iPagesDemoPrimary.gif" /></a>
-                                </div>
-                                <div class="col-md-8  mt-3">
-
-                                  <a href="iPages.html" style="text-decoration:none;"><h1 class="title library-header"><code>iPages</code></h1>
-                                    <p class="lead library-subtitle"> Quickly implement swipable views.</p>
-                                  </a>
-                                  <div class="code-block mt-3">
-                                    <pre><code class="swift language-swift"><span class="key">import</span> SwiftUI
-<span class="key">import</span> iPages
-<span class="key">import</span> iGraphics
-
-<span class="key">struct</span> <span class="pointer">ContentView</span>: <span class="type">View</span> {
-    <span class="type">@State</span> <span class="key">var</span> <span class="enum">currentPage</span>: <span class="type">Int</span> = <span class="number">0</span>
-
-    <span class="key">var</span> body: <span class="key">some</span> <span class="type">View</span> {
-        <span class="pointer">iPages</span>([<span class="pointer">iGraphics()</span>, <span class="pointer">iGraphics()</span>], currentPage: <span class="enum">$currentPage</span>)
-    }
-}</code></pre>
-                        </div>
-                                </div>
-                              </div>
-                            </div>
 
 
                             <div class="card mt-5" style="padding:20pt; cursor: default;">
@@ -179,6 +208,61 @@
                             </div>
 
 
+
+                            <div class="card mt-5" style="padding:20pt; cursor: default;">
+
+                              <div class="row">
+                                <div class="col-md-4 text-right">
+                                  <a href="iGraphics.html"><img class="img-fluid rounded-lg bg-img-city example-gif" src="assets/img/iGraphicsDemo1Dark.gif" /></a>
+                                </div>
+                                <div class="col-md-8  mt-3">
+
+                                  <a href="iGraphics.html" style="text-decoration:none;"><h1 class="title library-header"><code>iGraphics</code></h1>
+                                    <p class="lead library-subtitle"> Quickly add familiar default graphics to your app.</p>
+                                  </a>
+                                  <div class="code-block mt-3">
+                                    <pre><code class="swift language-swift"><span class="key">import</span> SwiftUI
+<span class="key">import</span> iGraphics
+
+<span class="key">struct</span> <span class="pointer">ContentView</span>: <span class="type">View</span> {
+    <span class="key">var</span> body: <span class="key">some</span> <span class="type">View</span> {
+        <span class="pointer">iGraphicsBox</span>()
+    }
+}</code></pre>
+                        </div>
+                                </div>
+                              </div>
+                            </div>
+
+
+
+                            <div class="card mt-5" style="padding:20pt; cursor: default;">
+                              <div class="row">
+                                <div class="col-md-4 text-right">
+                                  <a href="iTextField.html"><img class="img-fluid rounded-lg bg-img-city example-gif" src="assets/img/iTextFieldDemo1Light.gif" /></a>
+                                </div>
+                                <div class="col-md-8  mt-3">
+
+                                  <a href="iTextField.html" style="text-decoration:none;"><h1 class="title library-header"><code>iTextField</code></h1>
+                                    <p class="lead library-subtitle"> Quickly implement a textfield with all the UIKit capabilities in SwiftUI.</p>
+                                  </a>
+                                  <div class="code-block mt-3">
+                                    <pre><code class="swift language-swift"><span class="key">import</span> SwiftUI
+<span class="key">import</span> iTextField
+
+<span class="key">struct</span> <span class="pointer">ContentView</span>: <span class="type">View</span> {
+    <span class="type">@State</span> <span class="key">var</span> text: <span class="type">String</span> = <span class="string">""</span>
+    <span class="type">@State</span> <span class="key">var</span> isEditing: <span class="type">Bool</span> = <span class="key">false</span>
+
+    <span class="key">var</span> body: <span class="key">some</span> <span class="type">View</span> {
+        <span class="pointer">iTextField</span>(<span class="string">"Placeholder"</span>, text: <span class="enum">$text</span>, isEditing: <span class="enum">$isEditing</span>)
+    }
+}</code></pre>
+                        </div>
+                                </div>
+                              </div>
+                            </div>
+
                             <div class="card mt-5" style="padding:20pt; cursor: default;">
 
                               <div class="row">
@@ -206,34 +290,6 @@
                               </div>
                             </div>
 
-
-                            <div class="card mt-5" style="padding:20pt; cursor: default;">
-
-                              <div class="row">
-                                <div class="col-md-4 text-right">
-                                  <a href="iTextField.html"><img class="img-fluid rounded-lg bg-img-city example-gif" src="assets/img/iTextFieldDemo1Light.gif" /></a>
-                                </div>
-                                <div class="col-md-8  mt-3">
-
-                                  <a href="iTextField.html" style="text-decoration:none;"><h1 class="title library-header"><code>iTextField</code></h1>
-                                    <p class="lead library-subtitle"> Quickly implement a textfield with all the UIKit capabilities in SwiftUI.</p>
-                                  </a>
-                                  <div class="code-block mt-3">
-                                    <pre><code class="swift language-swift"><span class="key">import</span> SwiftUI
-<span class="key">import</span> iTextField
-
-<span class="key">struct</span> <span class="pointer">ContentView</span>: <span class="type">View</span> {
-    <span class="type">@State</span> <span class="key">var</span> text: <span class="type">String</span> = <span class="string">""</span>
-    <span class="type">@State</span> <span class="key">var</span> isEditing: <span class="type">Bool</span> = <span class="key">false</span>
-
-    <span class="key">var</span> body: <span class="key">some</span> <span class="type">View</span> {
-        <span class="pointer">iTextField</span>(<span class="string">"Placeholder"</span>, text: <span class="enum">$text</span>, isEditing: <span class="enum">$isEditing</span>)
-    }
-}</code></pre>
-                        </div>
-                                </div>
-                              </div>
-                            </div>
 
 
                             <div class="card mt-5" style="padding:20pt; cursor: default;">

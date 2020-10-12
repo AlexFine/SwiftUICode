@@ -78,6 +78,11 @@
   box-sizing: border-box;
 }
 
+.donate-link {
+  color: rgba(212, 46, 97, 1.0) !important;
+  font-weight:800 !important;
+}
+
 .microcopy {
   font-size: 12pt !important;
   color: rgba(0, 0, 0, 0.60);

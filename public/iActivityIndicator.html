@@ -298,9 +298,9 @@
 
 <span class="key">struct</span> <span class="pointer">ContentView</span>: <span class="type">View</span> {
     <span class="key">var</span> body: <span class="key">some</span> <span class="type">View</span> {
-        <span class="pointer">iActivityIndicator</span>(style: <span class="enum">.arcs()</span>)
-        <span class="pointer">iActivityIndicator</span>(style: <span class="enum">.arcs(width: <span class="number">8</span>)</span>)
-        <span class="pointer">iActivityIndicator</span>(style: <span class="enum">.arcs(count: <span class="number">10</span>)</span>)
+        <span class="pointer">iActivityIndicator</span>().<span class="method">style</span>(<span class="enum">.arcs()</span>)
+        <span class="pointer">iActivityIndicator</span>().<span class="method">style</span>(.<span class="enum">arcs</span>(width: <span class="number">8</span>)</span>)
+        <span class="pointer">iActivityIndicator</span>().<span class="method">style</span>(.<span class="enum">arcs</span>(count: <span class="number">10</span>)</span>)
     }
 }</code></pre>
                         </div>
@@ -336,14 +336,14 @@
                                       </svg>
                                     </div>
                                   <pre><code class="swift language-swift"><span class="key">import</span> SwiftUI
-    <span class="key">import</span> iActivityIndicator
+<span class="key">import</span> iActivityIndicator
 
-    <span class="key">struct</span> <span class="pointer">ContentView</span>: <span class="type">View</span> {
+<span class="key">struct</span> <span class="pointer">ContentView</span>: <span class="type">View</span> {
     <span class="key">var</span> body: <span class="key">some</span> <span class="type">View</span> {
         <span class="type">VStack</span>{
             <span class="pointer">iActivityIndicator</span>() <span class="comment">// Default </span>
-            <span class="pointer">iActivityIndicator</span>(style: <span class="enum">.classic</span>(count: <span class="number">20</span>, width: <span class="number">2</span>))
-            <span class="pointer">iActivityIndicator</span>(style: <span class="enum">.classic</span>(count: <span class="number">3</span>, width: <span class="number">50</span>))
+            <span class="pointer">iActivityIndicator</span>().<span class="method">style</span>(<span class="enum">.classic</span>(count: <span class="number">20</span>, width: <span class="number">2</span>))
+            <span class="pointer">iActivityIndicator</span>().<span class="method">style</span>(<span class="enum">.classic</span>(count: <span class="number">3</span>, width: <span class="number">50</span>))
         }
         <span class="type">.foregroundColor</span>(<span class="type">.purple</span>)
         <span class="type">.padding</span>()
@@ -384,9 +384,9 @@
 <span class="key">struct</span> <span class="pointer">ContentView</span>: <span class="type">View</span> {
     <span class="key">var</span> body: <span class="key">some</span> <span class="type">View</span> {
         <span class="type">VStack</span>{
-            <span class="pointer">iActivityIndicator</span>(style: <span class="enum">.blinking</span>())
-            <span class="pointer">iActivityIndicator</span>(style: <span class="enum">.blinking</span>(count: <span class="number">30</span>))
-            <span class="pointer">iActivityIndicator</span>(style: <span class="enum">.blinking(count: <span class="number">3</span>)</span>, size: <span class="number">120</span>)
+            <span class="pointer">iActivityIndicator</span>().<span class="method">style</span>(<span class="enum">.blinking</span>())
+            <span class="pointer">iActivityIndicator</span>().<span class="method">style</span>(<span class="enum">.blinking</span>(count: <span class="number">30</span>))
+            <span class="pointer">iActivityIndicator</span>().<span class="method">style</span>(<span class="enum">.blinking</span>(count: <span class="number">3</span>, size: <span class="number">120</span>))
         }
         <span class="type">.foregroundColor</span>(<span class="type">.red</span>)
         <span class="type">.padding</span>()
@@ -429,9 +429,9 @@
 <span class="key">struct</span> <span class="pointer">ContentView</span>: <span class="type">View</span> {
     <span class="key">var</span> body: <span class="key">some</span> <span class="type">View</span> {
         <span class="type">VStack</span>{
-            <span class="pointer">iActivityIndicator</span>(style: <span class="enum">.bars</span>(opacityRange: <span class="number">1</span><span class="type">...</span><span class="number">1</span>))
-            <span class="pointer">iActivityIndicator</span>(style: <span class="enum">.bars</span>(scaleRange: <span class="number">1</span><span class="type">...</span><span class="number">1</span>))
-            <span class="pointer">iActivityIndicator</span>(style: <span class="enum">.bars(count: <span class="number">20</span>)</span>, scaleRange: <span class="number">0</span><span class="type">...</span><span class="number">1</span>, opacityRange: <span class="number">0</span><span class="type">...</span><span class="number">1</span>))
+            <span class="pointer">iActivityIndicator</span>().<span class="method">style</span>(<span class="enum">.bars</span>(opacityRange: <span class="number">1</span><span class="type">...</span><span class="number">1</span>))
+            <span class="pointer">iActivityIndicator</span>().<span class="method">style</span>(<span class="enum">.bars</span>(scaleRange: <span class="number">1</span><span class="type">...</span><span class="number">1</span>))
+            <span class="pointer">iActivityIndicator</span>().<span class="method">style</span>(<span class="enum">.bars</span>(count: <span class="number">20</span>, scaleRange: <span class="number">0</span><span class="type">...</span><span class="number">1</span>, opacityRange: <span class="number">0</span><span class="type">...</span><span class="number">1</span>))
         }
         <span class="type">.foregroundColor</span>(<span class="type">.pink</span>)
         <span class="type">.padding</span>()
@@ -473,9 +473,9 @@
 <span class="key">struct</span> <span class="pointer">ContentView</span>: <span class="type">View</span> {
     <span class="key">var</span> body: <span class="key">some</span> <span class="type">View</span> {
         <span class="type">VStack</span>{
-            <span class="pointer">iActivityIndicator</span>(style: <span class="enum">.rotatingShapes</span>())
-            <span class="pointer">iActivityIndicator</span>(style: <span class="enum">.rotatingShapes</span>(count: <span class="number">3</span>, size: <span class="number">50</span>))
-            <span class="pointer">iActivityIndicator</span>(style: <span class="enum">.rotatingShapes</span>(content: <span class="type">AnyView</span>(<span class="type">Text(<span class="string">"🎃"</span>)<span class="type">.fixedSize()</span>)))
+            <span class="pointer">iActivityIndicator</span>().<span class="method">style</span>(<span class="enum">.rotatingShapes</span>())
+            <span class="pointer">iActivityIndicator</span>().<span class="method">style</span>(<span class="enum">.rotatingShapes</span>(count: <span class="number">3</span>, size: <span class="number">50</span>))
+            <span class="pointer">iActivityIndicator</span>().<span class="method">style</span>(<span class="enum">.rotatingShapes</span>(content: <span class="type">AnyView</span>(<span class="type">Text(<span class="string">"🎃"</span>)<span class="type">.fixedSize()</span>)))
         }
         <span class="type">.padding</span>()
     }
@@ -486,16 +486,13 @@
                             </div>
 
 
-
-
-
                           </div>
 
                           <hr>
 
                           <div class="instructions-block mt-5" id="customizeSection">
                             <h1 class="title header header-sm"> Customize </h1>
-                            <p class="lead"> <code class="inline-code">iActivityIndicator</code>  supports a variety of types, each with their own parameters. Parameters, such as width, count, spacing, scaleRange, and opacityRange all refer to the individual rotating units in an activity indicator, as opposed to the activity indicator as a whole. Therefore, all custom parameters are built into the style enum declaration. </p>
+                            <p class="lead"> <code class="inline-code">iActivityIndicator</code>  supports a variety of styles, each with their own parameters. Styles are specified through a style modifier. Parameters, such as width, count, spacing, scaleRange, and opacityRange all refer to the individual rotating units in an activity indicator, as opposed to the activity indicator as a whole. Therefore, all custom parameters are built into the style enum declaration. </p>
 
                             <p class="lead"> <b>Example:</b> Change the activity indicator style, and modify the width of its individual rotating units with: </p>
                             <div class="code-block" id="demo5">
@@ -509,9 +506,9 @@
                                   <path fill-rule="evenodd" d="M1.5 13A1.5 1.5 0 0 0 3 14.5h10a1.5 1.5 0 0 0 1.5-1.5V8a.5.5 0 0 0-1 0v5a.5.5 0 0 1-.5.5H3a.5.5 0 0 1-.5-.5V3a.5.5 0 0 1 .5-.5h8a.5.5 0 0 0 0-1H3A1.5 1.5 0 0 0 1.5 3v10z"/>
                                 </svg>
                               </div>
-          <pre><code class="swift language-swift"><span class="pointer">iActivityIndicator</span>(style: <span class="enum">.arcs</span>(count: <span class="number">10</span>,
-                                width: <span class="number">5</span>,
-                                spacing: <span class="number">2</span>))</code></pre>
+          <pre><code class="swift language-swift"><span class="pointer">iActivityIndicator</span>().<span class="method">style</span>(<span class="enum">.arcs</span>(count: <span class="number">10</span>,
+                                 width: <span class="number">5</span>,
+                                 spacing: <span class="number">2</span>))</code></pre>
 </div>
 <br>
                           <div class="table-responsive">
@@ -527,7 +524,7 @@
                                 <tr>
                                   <td class="text-left">
                                     <div class="code-classic">
-                                      <pre><code>style: <span class="pointer">AStyle </span> = <span class="enum"> .classic()</span>  </code></pre>
+                                      <pre><code><span class="method">.style</span>(style: <span class="pointer">AStyle</span>) -> <span class="pointer">iActivityIndicator</span></code></pre>
                                     </div>
 
                                   </td>

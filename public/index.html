@@ -27,7 +27,9 @@
     <style>
     .pckg-btn{
       margin-top:60pt;
-      width:80%;
+      /* width:80%; */
+      padding-left:30pt !important;
+      padding-right:30pt !important;
       padding:15pt;
       background:rgba(212, 46, 97, 1.0);
       border:rgba(180, 30, 70, 1.0);
@@ -36,8 +38,11 @@
 
     .pckg-btn:hover{
       background:#e63268;
-      box-shadow:0 8pt 12pt 6pt #ff99b8;
-      transform: translate(0pt, -15pt);
+      box-shadow:0 0pt 6pt 4pt #ff99b8;
+      transform: translate(0pt, -0pt);
+      /* For some fun 😍😍😩😩comment this back in */
+      /* box-shadow:0 8pt 12pt 6pt #ff99b8; */
+      /* transform: translate(0pt, -12pt); */
       transition: 0.25s;
     }
 
@@ -102,8 +107,8 @@
 
 
                           <div class="card mt-5" style="padding:20pt; cursor: default;">
-
                             <div class="row">
+
                               <div class="col-md-4 text-right">
                                 <a href="iActivityIndicator.html"><img class="img-fluid rounded-lg bg-img-city example-gif" src="assets/img/iActivityIndicatorDemoPrimary.gif" /></a>
                               </div>
@@ -130,10 +135,12 @@
                           <div class="card mt-5" style="padding:20pt; cursor: default;">
 
                             <div class="row">
+
                               <div class="col-md-4 text-right">
                                 <a href="iPages.html"><img class="img-fluid rounded-lg bg-img-city example-gif" src="assets/img/iPagesDemoPrimary.gif" /></a>
                               </div>
                               <div class="col-md-8  mt-3">
+
 
                                 <a href="iPages.html" style="text-decoration:none;"><h1 class="title library-header"><code>iPages</code></h1>
                                   <p class="lead library-subtitle"> Quickly implement swipable views.</p>
@@ -147,7 +154,7 @@
     <span class="type">@State</span> <span class="key">var</span> <span class="enum">currentPage</span>: <span class="type">Int</span> = <span class="number">0</span>
 
     <span class="key">var</span> body: <span class="key">some</span> <span class="type">View</span> {
-        <span class="pointer">iPages</span>([<span class="pointer">iGraphics()</span>, <span class="pointer">iGraphics()</span>], currentPage: <span class="enum">$currentPage</span>)
+        <span class="pointer">iPages</span>([<span class="pointer">iGraphicsView.all</span>], currentPage: <span class="enum">$currentPage</span>)
     }
 }</code></pre>
                           </div>
@@ -200,7 +207,8 @@
 
 <span class="key">struct</span> <span class="pointer">ContentView</span>: <span class="type">View</span> {
     <span class="key">var</span> body: <span class="key">some</span> <span class="type">View</span> {
-        <span class="type">Rectangle()</span><span class="method">.fill</span>(<span class="pointer">Colors.NeonBlue</span>)
+        <span class="type">Rectangle()</span><span class="method">
+            .fill</span>(<span class="pointer">Colors.NeonBlue</span>)
     }
 }</code></pre>
                         </div>
@@ -231,8 +239,9 @@
     <span class="type">@State</span> <span class="key">var</span> isEditing: <span class="type">Bool</span> = <span class="key">false</span>
 
     <span class="key">var</span> body: <span class="key">some</span> <span class="type">View</span> {
-        <span class="pointer">iPhoneNumberTextField</span>(<span class="string">"Placeholder"</span>, text: <span class="enum">$text</span>, isEditing: <span class="enum">$isEditing</span>)
-            <span class="method">.style()</span>
+        <span class="pointer">iPhoneNumberTextField</span>(<span class="string">"Placeholder"</span>,
+                              text: <span class="enum">$text</span>,
+                              isEditing: <span class="enum">$isEditing</span>)
     }
 }</code></pre>
                         </div>
@@ -354,7 +363,7 @@
                               <div class="col text-center">
                                 <a href="request.html">
                                   <button type="button" class="btn btn-lg btn-primary text-center pckg-btn">
-                                    Didn't find what you're looking for? <br> Request A Package.
+                                    <span style="color:#ffd9e4; font-weight:300;">Didn't find what you're looking for?</span> <br> <span style="font-weight:600; font-size:16pt;">Request A Package</span>
                                   </button>
                                 </a>
 
@@ -396,19 +405,17 @@
                       <br>
 
                         <div class="row align-items-center">
-                            <div class="col-md small">Copyright &copy; 2020 The Peach Blossom Spring Incorporation </div>
-                            <div class="col-md-5 text-center">
+                            <div class="col-md small">Copyright &copy; 2020 The Peach Blossom Spring Institute </div>
+                            <div class="col-md-5 text-center small">
                               <!-- <a href="feedback.html" class="footer-link"> Feedback </a>
                               &middot; -->
-                              <a href="#" class="footer-link" data-toggle="modal" data-target="#donateModal"> Donate </a>
-                              &middot;
-                              <a href="#" class="footer-link" data-toggle="modal" data-target="#contributeModal"> Contribute Your Package </a>
+
                             </div>
                             <div class="col-md text-md-right small">
 
-                                <a href="javascript:void(0);">Privacy Policy</a>
+                                <a href="javascript:void(0);" data-toggle="modal" data-target="#donateModal">Donate</a>
                                 &middot;
-                                <a href="javascript:void(0);">Terms &amp; Conditions</a>
+                                <a href="javascript:void(0);" data-toggle="modal" data-target="#contributeModal">Contribute Your Package</a>
                             </div>
                         </div>
                     </div>

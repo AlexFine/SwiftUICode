@@ -53,9 +53,9 @@
                         <li class="nav-item">
                           <a class="nav-link" href="index.html">Home</a>
                         </li>
-                        <li class="nav-item">
+                        <!-- <li class="nav-item">
                           <a class="nav-link donate-link" href="donate.html">Donate</a>
-                        </li>
+                        </li> -->
                         <li class="nav-item">
                           <a class="nav-link" href="feedback.html">Feedback</a>
                         </li>
@@ -298,9 +298,14 @@
 
 <span class="key">struct</span> <span class="pointer">ContentView</span>: <span class="type">View</span> {
     <span class="key">var</span> body: <span class="key">some</span> <span class="type">View</span> {
-        <span class="pointer">iActivityIndicator</span>().<span class="method">style</span>(<span class="enum">.arcs()</span>)
-        <span class="pointer">iActivityIndicator</span>().<span class="method">style</span>(.<span class="enum">arcs</span>(width: <span class="number">8</span>)</span>)
-        <span class="pointer">iActivityIndicator</span>().<span class="method">style</span>(.<span class="enum">arcs</span>(count: <span class="number">10</span>)</span>)
+        <span class="pointer">iActivityIndicator</span>()
+            .<span class="method">style</span>(<span class="enum">.arcs()</span>)
+
+        <span class="pointer">iActivityIndicator</span>()
+            .<span class="method">style</span>(.<span class="enum">arcs</span>(width: <span class="number">8</span>)</span>)
+
+        <span class="pointer">iActivityIndicator</span>()
+            .<span class="method">style</span>(.<span class="enum">arcs</span>(count: <span class="number">10</span>)</span>)
     }
 }</code></pre>
                         </div>
@@ -342,8 +347,12 @@
     <span class="key">var</span> body: <span class="key">some</span> <span class="type">View</span> {
         <span class="type">VStack</span>{
             <span class="pointer">iActivityIndicator</span>() <span class="comment">// Default </span>
-            <span class="pointer">iActivityIndicator</span>().<span class="method">style</span>(<span class="enum">.classic</span>(count: <span class="number">20</span>, width: <span class="number">2</span>))
-            <span class="pointer">iActivityIndicator</span>().<span class="method">style</span>(<span class="enum">.classic</span>(count: <span class="number">3</span>, width: <span class="number">50</span>))
+
+            <span class="pointer">iActivityIndicator</span>()
+                .<span class="method">style</span>(<span class="enum">.classic</span>(count: <span class="number">20</span>, width: <span class="number">2</span>))
+
+            <span class="pointer">iActivityIndicator</span>()
+                .<span class="method">style</span>(<span class="enum">.classic</span>(count: <span class="number">3</span>, width: <span class="number">50</span>))
         }
         <span class="type">.foregroundColor</span>(<span class="type">.purple</span>)
         <span class="type">.padding</span>()
@@ -384,9 +393,14 @@
 <span class="key">struct</span> <span class="pointer">ContentView</span>: <span class="type">View</span> {
     <span class="key">var</span> body: <span class="key">some</span> <span class="type">View</span> {
         <span class="type">VStack</span>{
-            <span class="pointer">iActivityIndicator</span>().<span class="method">style</span>(<span class="enum">.blinking</span>())
-            <span class="pointer">iActivityIndicator</span>().<span class="method">style</span>(<span class="enum">.blinking</span>(count: <span class="number">30</span>))
-            <span class="pointer">iActivityIndicator</span>().<span class="method">style</span>(<span class="enum">.blinking</span>(count: <span class="number">3</span>, size: <span class="number">120</span>))
+            <span class="pointer">iActivityIndicator</span>()
+                .<span class="method">style</span>(<span class="enum">.blinking</span>())
+
+            <span class="pointer">iActivityIndicator</span>()
+                .<span class="method">style</span>(<span class="enum">.blinking</span>(count: <span class="number">30</span>))
+
+            <span class="pointer">iActivityIndicator</span>()
+                .<span class="method">style</span>(<span class="enum">.blinking</span>(count: <span class="number">3</span>, size: <span class="number">120</span>))
         }
         <span class="type">.foregroundColor</span>(<span class="type">.red</span>)
         <span class="type">.padding</span>()
@@ -429,9 +443,14 @@
 <span class="key">struct</span> <span class="pointer">ContentView</span>: <span class="type">View</span> {
     <span class="key">var</span> body: <span class="key">some</span> <span class="type">View</span> {
         <span class="type">VStack</span>{
-            <span class="pointer">iActivityIndicator</span>().<span class="method">style</span>(<span class="enum">.bars</span>(opacityRange: <span class="number">1</span><span class="type">...</span><span class="number">1</span>))
-            <span class="pointer">iActivityIndicator</span>().<span class="method">style</span>(<span class="enum">.bars</span>(scaleRange: <span class="number">1</span><span class="type">...</span><span class="number">1</span>))
-            <span class="pointer">iActivityIndicator</span>().<span class="method">style</span>(<span class="enum">.bars</span>(count: <span class="number">20</span>, scaleRange: <span class="number">0</span><span class="type">...</span><span class="number">1</span>, opacityRange: <span class="number">0</span><span class="type">...</span><span class="number">1</span>))
+            <span class="pointer">iActivityIndicator</span>()
+                .<span class="method">style</span>(<span class="enum">.bars</span>(opacityRange: <span class="number">1</span><span class="type">...</span><span class="number">1</span>))
+
+            <span class="pointer">iActivityIndicator</span>()
+                .<span class="method">style</span>(<span class="enum">.bars</span>(scaleRange: <span class="number">1</span><span class="type">...</span><span class="number">1</span>))
+
+            <span class="pointer">iActivityIndicator</span>()
+                .<span class="method">style</span>(<span class="enum">.bars</span>(count: <span class="number">20</span>, scaleRange: <span class="number">0</span><span class="type">...</span><span class="number">1</span>, opacityRange: <span class="number">0</span><span class="type">...</span><span class="number">1</span>))
         }
         <span class="type">.foregroundColor</span>(<span class="type">.pink</span>)
         <span class="type">.padding</span>()
@@ -473,9 +492,14 @@
 <span class="key">struct</span> <span class="pointer">ContentView</span>: <span class="type">View</span> {
     <span class="key">var</span> body: <span class="key">some</span> <span class="type">View</span> {
         <span class="type">VStack</span>{
-            <span class="pointer">iActivityIndicator</span>().<span class="method">style</span>(<span class="enum">.rotatingShapes</span>())
-            <span class="pointer">iActivityIndicator</span>().<span class="method">style</span>(<span class="enum">.rotatingShapes</span>(count: <span class="number">3</span>, size: <span class="number">50</span>))
-            <span class="pointer">iActivityIndicator</span>().<span class="method">style</span>(<span class="enum">.rotatingShapes</span>(content: <span class="type">AnyView</span>(<span class="type">Text(<span class="string">"🎃"</span>)<span class="type">.fixedSize()</span>)))
+            <span class="pointer">iActivityIndicator</span>()
+                .<span class="method">style</span>(<span class="enum">.rotatingShapes</span>())
+
+            <span class="pointer">iActivityIndicator</span>()
+                .<span class="method">style</span>(<span class="enum">.rotatingShapes</span>(count: <span class="number">3</span>, size: <span class="number">50</span>))
+
+            <span class="pointer">iActivityIndicator</span>()
+                .<span class="method">style</span>(<span class="enum">.rotatingShapes</span>(content: <span class="type">AnyView</span>(<span class="type">Text(<span class="string">"🎃"</span>)<span class="type">.fixedSize()</span>)))
         }
         <span class="type">.padding</span>()
     }
@@ -506,9 +530,10 @@
                                   <path fill-rule="evenodd" d="M1.5 13A1.5 1.5 0 0 0 3 14.5h10a1.5 1.5 0 0 0 1.5-1.5V8a.5.5 0 0 0-1 0v5a.5.5 0 0 1-.5.5H3a.5.5 0 0 1-.5-.5V3a.5.5 0 0 1 .5-.5h8a.5.5 0 0 0 0-1H3A1.5 1.5 0 0 0 1.5 3v10z"/>
                                 </svg>
                               </div>
-          <pre><code class="swift language-swift"><span class="pointer">iActivityIndicator</span>().<span class="method">style</span>(<span class="enum">.arcs</span>(count: <span class="number">10</span>,
-                                 width: <span class="number">5</span>,
-                                 spacing: <span class="number">2</span>))</code></pre>
+          <pre><code class="swift language-swift"><span class="pointer">iActivityIndicator</span>()
+    .<span class="method">style</span>(<span class="enum">.arcs</span>(count: <span class="number">10</span>,
+                 width: <span class="number">5</span>,
+                 spacing: <span class="number">2</span>))</code></pre>
 </div>
 <br>
                           <div class="table-responsive">
@@ -710,6 +735,23 @@
               </div>
             </div>
 
+            <!-- Modal -->
+            <div class="modal fade" id="donateModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Donate</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body" style="height:500pt;">
+                    <iframe src="https://general099748.typeform.com/to/sPnrIZDd" style="border:none; width:100%; height:100%;" title="Iframe Example"></iframe>
+                  </div>
+                </div>
+              </div>
+            </div>
+
             <div id="layoutDefault_footer" style="background:rgba(220, 220, 220, 0.25)">
                 <footer class="footer pt-2 pb-5">
                     <div class="container">
@@ -735,9 +777,9 @@
                         <div class="row align-items-center">
                             <div class="col-md small">Copyright &copy; 2020 The Peach Blossom Spring Incorporation </div>
                             <div class="col-md-5 text-center">
-                              <a href="feedback.html" class="footer-link"> Feedback </a>
-                              &middot;
-                              <a href="request.html" class="footer-link"> Request A Package </a>
+                              <!-- <a href="feedback.html" class="footer-link"> Feedback </a>
+                              &middot; -->
+                              <a href="#" class="footer-link" data-toggle="modal" data-target="#donateModal"> Donate </a>
                               &middot;
                               <a href="#" class="footer-link" data-toggle="modal" data-target="#contributeModal"> Contribute Your Package </a>
                             </div>

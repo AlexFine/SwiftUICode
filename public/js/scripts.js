@@ -114,7 +114,19 @@ setInterval (function(){
   colorIDX++;
 } , 700);
 
+var offsetTop = 10;
 
+$(window).scroll(function(){
+  var scrollTop = $(window).scrollTop();
+  if(scrollTop > offsetTop){
+    console.log("faffle")
+    $("#navcity").css({ "box-shadow":'0 0 7px 5px rgba(100, 100, 100, 0.15)'});
+  }
+  if (scrollTop < offsetTop){
+    console.log("not faffle")
+    $("#navcity").css({ "box-shadow":'0 0 7px 5px rgba(100, 100, 100, 0.0)'});
+  }
+});
 
 
 var imageSources = ["assets/img/demo2.gif", "assets/img/demo3.gif", "assets/img/demo4.gif", "assets/img/demo1.gif"]

@@ -363,8 +363,37 @@ li {
 }
 
 .card .content-skewed-hover .content-skewed-right-hover .content-skewed-item-hover {
-
   /* transition: -webkit-perspective 2s, -webkit-transform-style 2s, -webkit-perspective-origin 2s, -webkit-transform 2s; */
+}
+
+@media (max-width: 768px) {
+  .welcome {
+    font-size:30pt;
+  }
+  .welcome-subtitle {
+    font-size:12pt;
+    /* display: none; */
+  }
+}
+@media (min-width: 769px) {
+  .welcome {
+    font-size:6vw;
+  }
+  .welcome-subtitle {
+    font-size:1.8vw;
+
+  }
+}
+
+.welcome {
+
+}
+
+.welcome-subtitle{
+  /* font-size:1.8vw; */
+  font-weight:600;
+  color:rgba(100, 100, 100, 0.7);
+  margin-top:8pt;
 }
 
 .card {
@@ -386,9 +415,14 @@ code .pointer{color:#004d1a}
 code .enum{color:#197480};
 
 
+
+.shadow-city {
+  box-shadow:0 0 7px 5px rgba(100, 100, 100, 0.15)
+}
+
 .inline-code {
   padding:8px;
-  background:rgba(200,200,200, 1);
+  /* background:rgba(200,200,200, 1); */
 }
 
 .instructions-img {

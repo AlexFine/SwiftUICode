@@ -16,7 +16,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>iColors</title>
+        <title>iColor</title>
 
         <meta property="og:title" content="iColor" />
         <meta property="og:image" content="https://iswiftui.com/assets/img/colordemo3.png" />
@@ -74,9 +74,9 @@
                           <div class="col"></div>
                           <div class="col-lg-9">
 
-                            <h1 class="title header text-center" id="getStarted"><code> iColors  </code></h1>
+                            <h1 class="title header text-center" id="getStarted"><code> iColor  </code></h1>
 
-                            <p class="lead text-center" style="font-size:20pt; font-weight:500;" id="headertext"> Quickly add modern colors to your app. </p>
+                            <p class="lead text-center" style="font-size:20pt; font-weight:500;" id="headertext"> Quickly add modern <code>Color</code>s to your SwiftUI app. 🎨 </p>
 
                             <div class="exampleBlock mt-5">
 
@@ -92,7 +92,7 @@
                                     </div>
                                     <div class="col-10 instruction-content">
                                       <p class="instructions-text">
-                                        <a id="helpHeadingTwo" href="#" data-toggle="modal" data-target="#exampleModal" style="text-decoration:none; font-weight:600;">Install  </a><code>iColors</code>.
+                                        <a id="helpHeadingTwo" href="#" data-toggle="modal" data-target="#exampleModal" style="text-decoration:none; font-weight:600;">Install  </a><code>iColor</code>.
                                       </p>
                                       <!-- Button trigger modal -->
 
@@ -105,7 +105,7 @@
                                               <h5 class="modal-title" id="exampleModalLabel" style="margin-left:10pt; margin-top:8pt; font-weight:600; font-size:16pt;"> Instructions </h5>
                                               <div class="input-group no-border" style="max-width:60%; margin:0; margin-right:1pt;;">
 
-                                                <input type="text" class="form-control code-font no-border" aria-label="Input group example" aria-describedby="btnGroupAddon" value="https://github.com/iSwiftUIHome/iColors.git" readonly id="downloadURL2">
+                                                <input type="text" class="form-control code-font no-border" aria-label="Input group example" aria-describedby="btnGroupAddon" value="https://github.com/iSwiftUIHome/iColor.git" readonly id="downloadURL2">
                                                 <div class="input-group-prepend copy-button no-border">
                                                   <div class="input-group-text no-border" id="btnGroupAddon" onclick="CopyToClipboard('downloadURL2')" style="border-radius:5pt">
                                                     <svg id="downloadURL2clipboard" width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-clipboard" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -144,7 +144,7 @@
                                                   <div class="carousel-item">
                                                     <div class="new_html_code">
                                                       <div class="text-left" style="border-bottom:1pt solid rgba(200, 200, 200, 0.20); margin-bottom:15pt;">
-                                                        <p class="lead install-txt"><span class="instruction-numbers">(2/3)</span> Input <span class="code-font" style="font-size:14pt; padding:6pt; border-radius:3pt; margin-bottom:10pt;">https://github.com/iSwiftUIHome/iColors.git</span> & click Next. </p>
+                                                        <p class="lead install-txt"><span class="instruction-numbers">(2/3)</span> Input <span class="code-font" style="font-size:14pt; padding:6pt; border-radius:3pt; margin-bottom:10pt;">https://github.com/iSwiftUIHome/iColor.git</span> & click Next. </p>
                                                       </div>
                                                       <img src="assets/img/instructions1.gif" style="width:100%; border-radius:0pt; padding:0pt; margin:0;">
 
@@ -209,7 +209,7 @@
                                     </div>
                                     <div class="col-10 instruction-content">
                                       <p class="instructions-text">
-                                        Add <code>iColors</code> to your project.
+                                        Add <code>iColor</code> to your project.
                                       </p>
                                       <div class="code-block mt-3" id="swift1">
                                         <div class="code-clipboard" onclick="CopyToClipboard('swift1')">
@@ -224,11 +224,12 @@
                                         </div>
 
                                         <pre><code class="swift language-swift"><span class="key">import</span> SwiftUI
-<span class="key">import</span> iColors
+<span class="key">import</span> iColor
 
 <span class="key">struct</span> <span class="pointer">ContentView</span>: <span class="type">View</span> {
     <span class="key">var</span> body: <span class="key">some</span> <span class="type">View</span> {
-        <span class="type">Rectangle()</span><span class="method">.fill</span>(<span class="pointer">Colors.NeonBlue</span>)
+        <span class="type">Rectangle()</span>
+           <span class="method">.fill</span>(<span class="pointer">Color.neonBlue</span>)
     }
 }</code></pre>
                             </div>
@@ -241,7 +242,7 @@
                                     </div>
                                     <div class="col-10 instruction-content">
                                       <p class="instructions-text">
-                                        <a href="#customizeSection" style="text-decoration:none; font-weight:600;"> Play </a> with your <code>iColors</code>.
+                                        <a href="#customizeSection" style="text-decoration:none; font-weight:600;"> Play </a> with your <code>iColor</code>s.
                                       </p>
                                     </div>
                                   </div>
@@ -294,25 +295,25 @@
                                       </svg>
                                     </div>
                                     <pre><code class="swift language-swift"><span class="key">import</span> SwiftUI
-<span class="key">import</span> iColors
+<span class="key">import</span> iColor
 
 <span class="key">struct</span> <span class="pointer">ContentView</span>: <span class="type">View</span> {
     <span class="key">var</span> body: <span class="key">some</span> <span class="type">View</span> {
-        <span class="type">VStack</span>{
-            <span class="type">HStack</span>{
-                <span class="type">Rectangle()</span>.<span class="method">fill(<span class="pointer">Colors.LightGreen</span>).<span class="method">cornerRadius(<span class="number">5</span>)
-                <span class="type">Rectangle()</span>.<span class="method">fill(<span class="pointer">Colors.NeonGreen</span>).<span class="method">cornerRadius(<span class="number">5</span>)
-                <span class="type">Rectangle()</span>.<span class="method">fill(<span class="pointer">Colors.DarkGreen</span>).<span class="method">cornerRadius(<span class="number">5</span>)
+        <span class="type">VStack</span> {
+            <span class="type">HStack</span> {
+                <span class="type">Rectangle()</span>.<span class="method">fill(<span class="pointer">.lightGreen</span>).<span class="method">cornerRadius(<span class="number">5</span>)
+                <span class="type">Rectangle()</span>.<span class="method">fill(<span class="pointer">.neonGreen</span>).<span class="method">cornerRadius(<span class="number">5</span>)
+                <span class="type">Rectangle()</span>.<span class="method">fill(<span class="pointer">.darkGreen</span>).<span class="method">cornerRadius(<span class="number">5</span>)
             }
-            <span class="type">HStack</span>{
-                <span class="type">Rectangle()</span>.<span class="method">fill(<span class="pointer">Colors.LightOceanBlue</span>).<span class="method">cornerRadius(<span class="number">5</span>)
-                <span class="type">Rectangle()</span>.<span class="method">fill(<span class="pointer">Colors.NeonOceanBlue</span>).<span class="method">cornerRadius(<span class="number">5</span>)
-                <span class="type">Rectangle()</span>.<span class="method">fill(<span class="pointer">Colors.DarkOceanBlue</span>).<span class="method">cornerRadius(<span class="number">5</span>)
+            <span class="type">HStack</span> {
+                <span class="type">Rectangle()</span>.<span class="method">fill(<span class="pointer">.lightOceanBlue</span>).<span class="method">cornerRadius(<span class="number">5</span>)
+                <span class="type">Rectangle()</span>.<span class="method">fill(<span class="pointer">.neonOceanBlue</span>).<span class="method">cornerRadius(<span class="number">5</span>)
+                <span class="type">Rectangle()</span>.<span class="method">fill(<span class="pointer">.darkOceanBlue</span>).<span class="method">cornerRadius(<span class="number">5</span>)
             }
-            <span class="type">HStack</span>{
-                <span class="type">Rectangle()</span>.<span class="method">fill(<span class="pointer">Colors.LightBlue</span>).<span class="method">cornerRadius(<span class="number">5</span>)
-                <span class="type">Rectangle()</span>.<span class="method">fill(<span class="pointer">Colors.NeonBlue</span>).<span class="method">cornerRadius(<span class="number">5</span>)
-                <span class="type">Rectangle()</span>.<span class="method">fill(<span class="pointer">Colors.DarkBlue</span>).<span class="method">cornerRadius(<span class="number">5</span>)
+            <span class="type">HStack</span> {
+                <span class="type">Rectangle()</span>.<span class="method">fill(<span class="pointer">.lightBlue</span>).<span class="method">cornerRadius(<span class="number">5</span>)
+                <span class="type">Rectangle()</span>.<span class="method">fill(<span class="pointer">.neonBlue</span>).<span class="method">cornerRadius(<span class="number">5</span>)
+                <span class="type">Rectangle()</span>.<span class="method">fill(<span class="pointer">.darkBlue</span>).<span class="method">cornerRadius(<span class="number">5</span>)
             }
         }
     }
@@ -345,25 +346,25 @@
                                       </svg>
                                     </div>
                                     <pre><code class="swift language-swift"><span class="key">import</span> SwiftUI
-<span class="key">import</span> iColors
+<span class="key">import</span> iColor
 
 <span class="key">struct</span> <span class="pointer">ContentView</span>: <span class="type">View</span> {
     <span class="key">var</span> body: <span class="key">some</span> <span class="type">View</span> {
-        <span class="type">VStack</span>{
-            <span class="type">HStack</span>{
-                <span class="type">Rectangle()</span>.<span class="method">fill(<span class="pointer">Colors.LightPink</span>).<span class="method">cornerRadius(<span class="number">5</span>)
-                <span class="type">Rectangle()</span>.<span class="method">fill(<span class="pointer">Colors.NeonPink</span>).<span class="method">cornerRadius(<span class="number">5</span>)
-                <span class="type">Rectangle()</span>.<span class="method">fill(<span class="pointer">Colors.DarkPink</span>).<span class="method">cornerRadius(<span class="number">5</span>)
+        <span class="type">VStack</span> {
+            <span class="type">HStack</span> {
+                <span class="type">Rectangle()</span>.<span class="method">fill(<span class="pointer">.lightPink</span>).<span class="method">cornerRadius(<span class="number">5</span>)
+                <span class="type">Rectangle()</span>.<span class="method">fill(<span class="pointer">.neonPink</span>).<span class="method">cornerRadius(<span class="number">5</span>)
+                <span class="type">Rectangle()</span>.<span class="method">fill(<span class="pointer">.darkPink</span>).<span class="method">cornerRadius(<span class="number">5</span>)
             }
-            <span class="type">HStack</span>{
-                <span class="type">Rectangle()</span>.<span class="method">fill(<span class="pointer">Colors.LightRed</span>).<span class="method">cornerRadius(<span class="number">5</span>)
-                <span class="type">Rectangle()</span>.<span class="method">fill(<span class="pointer">Colors.NeonRed</span>).<span class="method">cornerRadius(<span class="number">5</span>)
-                <span class="type">Rectangle()</span>.<span class="method">fill(<span class="pointer">Colors.DarkRed</span>).<span class="method">cornerRadius(<span class="number">5</span>)
+            <span class="type">HStack</span> {
+                <span class="type">Rectangle()</span>.<span class="method">fill(<span class="pointer">.lightRed</span>).<span class="method">cornerRadius(<span class="number">5</span>)
+                <span class="type">Rectangle()</span>.<span class="method">fill(<span class="pointer">.neonRed</span>).<span class="method">cornerRadius(<span class="number">5</span>)
+                <span class="type">Rectangle()</span>.<span class="method">fill(<span class="pointer">.darkRed</span>).<span class="method">cornerRadius(<span class="number">5</span>)
             }
-            <span class="type">HStack</span>{
-                <span class="type">Rectangle()</span>.<span class="method">fill(<span class="pointer">Colors.LightOrange</span>).<span class="method">cornerRadius(<span class="number">5</span>)
-                <span class="type">Rectangle()</span>.<span class="method">fill(<span class="pointer">Colors.NeonOrange</span>).<span class="method">cornerRadius(<span class="number">5</span>)
-                <span class="type">Rectangle()</span>.<span class="method">fill(<span class="pointer">Colors.DarkOrange</span>).<span class="method">cornerRadius(<span class="number">5</span>)
+            <span class="type">HStack</span> {
+                <span class="type">Rectangle()</span>.<span class="method">fill(<span class="pointer">.lightOrange</span>).<span class="method">cornerRadius(<span class="number">5</span>)
+                <span class="type">Rectangle()</span>.<span class="method">fill(<span class="pointer">.neonOrange</span>).<span class="method">cornerRadius(<span class="number">5</span>)
+                <span class="type">Rectangle()</span>.<span class="method">fill(<span class="pointer">.darkOrange</span>).<span class="method">cornerRadius(<span class="number">5</span>)
             }
         }
     }
@@ -394,18 +395,18 @@
                                       </svg>
                                     </div>
                                     <pre><code class="swift language-swift"><span class="key">import</span> SwiftUI
-<span class="key">import</span> iColors
+<span class="key">import</span> iColor
 
 <span class="key">struct</span> <span class="pointer">ContentView</span>: <span class="type">View</span> {
     <span class="key">var</span> body: <span class="key">some</span> <span class="type">View</span> {
-        <span class="type">VStack</span>{
-            <span class="type">HStack</span>{
-                <span class="type">Rectangle()</span>.<span class="method">fill(<span class="pointer">Colors.LightGray</span>).<span class="method">cornerRadius(<span class="number">5</span>)
-                <span class="type">Rectangle()</span>.<span class="method">fill(<span class="pointer">Colors.Gray</span>).<span class="method">cornerRadius(<span class="number">5</span>)
+        <span class="type">VStack</span> {
+            <span class="type">HStack</span> {
+                <span class="type">Rectangle()</span>.<span class="method">fill(<span class="pointer">.lightGray</span>).<span class="method">cornerRadius(<span class="number">5</span>)
+                <span class="type">Rectangle()</span>.<span class="method">fill(<span class="pointer">.mediumGray</span>).<span class="method">cornerRadius(<span class="number">5</span>)
             }
-            <span class="type">HStack</span>{
-                <span class="type">Rectangle()</span>.<span class="method">fill(<span class="pointer">Colors.DarkGray</span>).<span class="method">cornerRadius(<span class="number">5</span>)
-                <span class="type">Rectangle()</span>.<span class="method">fill(<span class="pointer">Colors.Black</span>).<span class="method">cornerRadius(<span class="number">5</span>)
+            <span class="type">HStack</span> {
+                <span class="type">Rectangle()</span>.<span class="method">fill(<span class="pointer">.darkGray</span>).<span class="method">cornerRadius(<span class="number">5</span>)
+                <span class="type">Rectangle()</span>.<span class="method">fill(<span class="pointer">.black</span>).<span class="method">cornerRadius(<span class="number">5</span>)
             }
         }
     }
@@ -420,22 +421,22 @@
 
                           <div class="instructions-block mt-5" id="customizeSection">
                             <h1 class="title header header-sm"> Customize </h1>
-                            <p class="lead"> Colors are all static properties & make it easy to match accessability standards in your app UI. </p>
+                            <p class="lead"> The <code>iColor</code> package provides an extension of the SwiftUI <code>Color</code> class. All poperties are static & make it easy to match accessability standards in your app UI. </p>
 <br>
                           <div class="table-responsive">
                             <p class="lead"> Use our exhaustive input list to customize your colors. </p>
                             <table class="table table-borderless">
                               <thead>
                                 <tr>
-                                  <th scope="col">Parameter</th>
-                                  <th scope="col">Description</th>
+                                  <th scope="col">Property</th>
+                                  <th scope="col">Visual</th>
                                 </tr>
                               </thead>
                               <tbody>
                                 <tr>
                                   <td class="text-left">
                                     <div class="code-classic">
-                                      <pre><code><span class="pointer">Colors.LightRed</span> </code></pre>
+                                      <pre><code><span class="type">Color</span>.<span class="pointer">lightRed</span> </code></pre>
                                     </div>
 
                                   </td>
@@ -447,7 +448,7 @@
                                 <tr>
                                   <td class="text-left">
                                     <div class="code-classic">
-                                      <pre><code><span class="pointer">Colors.LightOrange</span> </code></pre>
+                                      <pre><code><span class="type">Color</span>.<span class="pointer">lightOrange</span> </code></pre>
                                     </div>
 
                                   </td>
@@ -461,7 +462,7 @@
                                 <tr>
                                   <td class="text-left">
                                     <div class="code-classic">
-                                      <pre><code><span class="pointer">Colors.LighGreen</span> </code></pre>
+                                      <pre><code><span class="type">Color</span>.<span class="pointer">lighGreen</span> </code></pre>
                                     </div>
 
                                   </td>
@@ -472,7 +473,7 @@
                                 <tr>
                                   <td class="text-left">
                                     <div class="code-classic">
-                                      <pre><code><span class="pointer">Colors.LightOceanBlue</span> </code></pre>
+                                      <pre><code><span class="type">Color</span>.<span class="pointer">lightOceanBlue</span> </code></pre>
                                     </div>
 
                                   </td>
@@ -484,7 +485,7 @@
                                 <tr>
                                   <td class="text-left">
                                     <div class="code-classic">
-                                      <pre><code><span class="pointer">Colors.LightBlue</span> </code></pre>
+                                      <pre><code><span class="type">Color</span>.<span class="pointer">lightBlue</span> </code></pre>
                                     </div>
 
                                   </td>
@@ -495,7 +496,7 @@
                                 <tr>
                                   <td class="text-left">
                                     <div class="code-classic">
-                                      <pre><code><span class="pointer">Colors.LightPurple</span> </code></pre>
+                                      <pre><code><span class="type">Color</span>.<span class="pointer">lightPurple</span> </code></pre>
                                     </div>
 
                                   </td>
@@ -506,7 +507,7 @@
                                 <tr>
                                   <td class="text-left">
                                     <div class="code-classic">
-                                      <pre><code><span class="pointer">Colors.LightPink</span> </code></pre>
+                                      <pre><code><span class="type">Color</span>.<span class="pointer">lightPink</span> </code></pre>
                                     </div>
 
                                   </td>
@@ -519,7 +520,7 @@
                                 <tr>
                                   <td class="text-left">
                                     <div class="code-classic">
-                                      <pre><code><span class="pointer">Colors.NeonRed</span> </code></pre>
+                                      <pre><code><span class="type">Color<span class="pointer">.<span class="pointer">neonRed</span> </code></pre>
                                     </div>
 
                                   </td>
@@ -531,7 +532,7 @@
                                 <tr>
                                   <td class="text-left">
                                     <div class="code-classic">
-                                      <pre><code><span class="pointer">Colors.NeonOrange</span> </code></pre>
+                                      <pre><code><span class="type">Color</span>.<span class="pointer">neonOrange</span> </code></pre>
                                     </div>
 
                                   </td>
@@ -545,7 +546,7 @@
                                 <tr>
                                   <td class="text-left">
                                     <div class="code-classic">
-                                      <pre><code><span class="pointer">Colors.NeonGreen</span> </code></pre>
+                                      <pre><code><span class="type">Color</span>.<span class="pointer">neonGreen</span> </code></pre>
                                     </div>
 
                                   </td>
@@ -556,7 +557,7 @@
                                 <tr>
                                   <td class="text-left">
                                     <div class="code-classic">
-                                      <pre><code><span class="pointer">Colors.NeonOceanBlue</span> </code></pre>
+                                      <pre><code><span class="type">Color</span>.<span class="pointer">neonOceanBlue</span> </code></pre>
                                     </div>
 
                                   </td>
@@ -568,7 +569,7 @@
                                 <tr>
                                   <td class="text-left">
                                     <div class="code-classic">
-                                      <pre><code><span class="pointer">Colors.NeonBlue</span> </code></pre>
+                                      <pre><code><span class="type">Color</span>.<span class="pointer">neonBlue</span> </code></pre>
                                     </div>
 
                                   </td>
@@ -579,7 +580,7 @@
                                 <tr>
                                   <td class="text-left">
                                     <div class="code-classic">
-                                      <pre><code><span class="pointer">Colors.NeonPurple</span> </code></pre>
+                                      <pre><code><span class="type">Color</span>.<span class="pointer">neonPurple</span> </code></pre>
                                     </div>
 
                                   </td>
@@ -590,7 +591,7 @@
                                 <tr>
                                   <td class="text-left">
                                     <div class="code-classic">
-                                      <pre><code><span class="pointer">Colors.NeonPink</span> </code></pre>
+                                      <pre><code><span class="type">Color</span>.<span class="pointer">neonPink</span> </code></pre>
                                     </div>
 
                                   </td>
@@ -603,7 +604,7 @@
                                 <tr>
                                   <td class="text-left">
                                     <div class="code-classic">
-                                      <pre><code><span class="pointer">Colors.DarkRed</span> </code></pre>
+                                      <pre><code><span class="type">Color</span>.<span class="pointer">darkRed</span> </code></pre>
                                     </div>
 
                                   </td>
@@ -615,7 +616,7 @@
                                 <tr>
                                   <td class="text-left">
                                     <div class="code-classic">
-                                      <pre><code><span class="pointer">Colors.DarkOrange</span> </code></pre>
+                                      <pre><code><span class="type">Color</span>.<span class="pointer">darkOrange</span> </code></pre>
                                     </div>
 
                                   </td>
@@ -628,7 +629,7 @@
                                 <tr>
                                   <td class="text-left">
                                     <div class="code-classic">
-                                      <pre><code><span class="pointer">Colors.DarkGreen</span> </code></pre>
+                                      <pre><code><span class="type">Color</span>.<span class="pointer">darkGreen</span> </code></pre>
                                     </div>
 
                                   </td>
@@ -639,7 +640,7 @@
                                 <tr>
                                   <td class="text-left">
                                     <div class="code-classic">
-                                      <pre><code><span class="pointer">Colors.DarkOceanBlue</span> </code></pre>
+                                      <pre><code><span class="type">Color</span>.<span class="pointer">darkOceanBlue</span> </code></pre>
                                     </div>
 
                                   </td>
@@ -651,7 +652,7 @@
                                 <tr>
                                   <td class="text-left">
                                     <div class="code-classic">
-                                      <pre><code><span class="pointer">Colors.DarkBlue</span> </code></pre>
+                                      <pre><code><span class="type">Color</span>.<span class="pointer">darkBlue</span> </code></pre>
                                     </div>
 
                                   </td>
@@ -662,7 +663,7 @@
                                 <tr>
                                   <td class="text-left">
                                     <div class="code-classic">
-                                      <pre><code><span class="pointer">Colors.DarkPurple</span> </code></pre>
+                                      <pre><code><span class="type">Color</span>.<span class="pointer">darkPurple</span> </code></pre>
                                     </div>
 
                                   </td>
@@ -673,7 +674,7 @@
                                 <tr>
                                   <td class="text-left">
                                     <div class="code-classic">
-                                      <pre><code><span class="pointer">Colors.DarkPink</span> </code></pre>
+                                      <pre><code><span class="type">Color</span>.<span class="pointer">darkPink</span> </code></pre>
                                     </div>
 
                                   </td>
@@ -684,7 +685,7 @@
                                 <tr>
                                   <td class="text-left">
                                     <div class="code-classic">
-                                      <pre><code><span class="pointer">Colors.LightGray</span> </code></pre>
+                                      <pre><code><span class="type">Color</span>.<span class="pointer">lightGray</span> </code></pre>
                                     </div>
 
                                   </td>
@@ -695,7 +696,7 @@
                                 <tr>
                                   <td class="text-left">
                                     <div class="code-classic">
-                                      <pre><code><span class="pointer">Colors.Gray</span> </code></pre>
+                                      <pre><code><span class="type">Color</span>.<span class="pointer">mediumGray</span> </code></pre>
                                     </div>
 
                                   </td>
@@ -706,23 +707,12 @@
                                 <tr>
                                   <td class="text-left">
                                     <div class="code-classic">
-                                      <pre><code><span class="pointer">Colors.DarkGray</span> </code></pre>
+                                      <pre><code><span class="type">Color</span>.<span class="pointer">darkGray</span> </code></pre>
                                     </div>
 
                                   </td>
                                   <td class="parameter-description">
                                     <div class="color-description" style="background:#404040"></div>
-                                  </td>
-                                </tr>
-                                <tr>
-                                  <td class="text-left">
-                                    <div class="code-classic">
-                                      <pre><code><span class="pointer">Colors.Black</span> </code></pre>
-                                    </div>
-
-                                  </td>
-                                  <td class="parameter-description">
-                                    <div class="color-description" style="background:#1a1a1a"></div>
                                   </td>
                                 </tr>
 
@@ -733,6 +723,59 @@
                             </table>
                           </div>
 
+                          <br>
+                          <div class="table-responsive">
+                            <p class="lead"> <code>iColor</code> also extends <code>Color</code> to add several custom initializers to the class, including <b>initialize by hex #</b>, and <b>initialize by integers</b> from 0-255. </p>
+                            <table class="table table-borderless">
+                              <thead>
+                                <tr>
+                                  <th scope="col">Initializer</th>
+                                  <th scope="col">Description</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td class="text-left">
+                                    <div class="code-classic">
+                                      <pre><code><span class="type">Color</span>.<span class="key">init</span>?(_ hex: <span class="type">String</span>, opacity: <span class="type">Double</span> = <span class="number">1.0</span>) -> <span class="type">Color</span></code></pre>
+                                    </div>
+
+                                  </td>
+                                  <td class="parameter-description">
+                                    Creates a new <code>Color</code> 🎨 object from a <b>hex value</b> (e.g. "#18B5DF"), represented as a <code>String</code>. Opacity is inputted as a <code>Double</code> from 0.0 to 1.0.
+                                  </td>
+                                </tr>
+
+                                <tr>
+                                  <td class="text-left">
+                                    <div class="code-classic">
+                                      <pre><code><span class="type">Color</span>.<span class="key">init</span>?(_ hex: <span class="type">String</span>, opacity: <span class="type">Int</span> = <span class="number">100</span>) -> <span class="type">Color</span></code></pre>
+                                    </div>
+
+                                  </td>
+                                  <td class="parameter-description">
+                                    Creates a new <code>Color</code> 🎨 object from a <b>hex value</b> (e.g. "#18B5DF"), represented as a <code>String</code>. Opacity is inputted as an <code>Int</code>eger from 0 to 100.
+                                  </td>
+                                </tr>
+
+                                <tr>
+                                  <td class="text-left">
+                                    <div class="code-classic">
+                                      <pre><code><span class="type">Color</span>.<span class="key">init</span>(_ colorSpace: <span class="type">Color</span>.<span class="type">RGBColorSpace</span> = .<span class="method">sRGB</span>, red: <span class="type">Int</span>, green: <span class="type">Int</span>, blue: <span class="type">Int</span>, opacity: <span class="type">Int</span> = <span class="number">100</span>)</code></pre>
+                                    </div>
+
+                                  </td>
+                                  <td class="parameter-description">
+                                    Creates a new <code>Color</code> object from <code>Int</code>eger RGB values ranging from 0 to 255.
+                                  </td>
+                                </tr>
+
+
+                              </tbody>
+                            </table>
+                          </div>
+
+
                           </div>
 
 
@@ -740,7 +783,7 @@
 
                           <div class="instructions-block mt-5">
                             <h2> Community </h2>
-                            <p class="lead"> Meet the developers behind <code class="inline-code">iColors</code>. </p>
+                            <p class="lead"> Meet the developers behind <code class="inline-code">iColor</code>. </p>
                             <div class="row"  style="margin-left:10pt;">
 
                               <div class="person text-center">
@@ -762,7 +805,7 @@
                               </div>
                               <div class="input-group">
 
-                                <input type="text" class="form-control code-font" aria-label="Input group example" aria-describedby="btnGroupAddon" value="https://github.com/iSwiftUIHome/iColors.git" readonly id="downloadURLSide">
+                                <input type="text" class="form-control code-font" aria-label="Input group example" aria-describedby="btnGroupAddon" value="https://github.com/iSwiftUIHome/iColor.git" readonly id="downloadURLSide">
                                 <div class="input-group-prepend copy-button">
                                   <div class="input-group-text" id="btnGroupAddon" onclick="CopyToClipboard('downloadURLSide')">
                                     <svg id="downloadURLSideclipboard" width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-clipboard" fill="currentColor" xmlns="http://www.w3.org/2000/svg">

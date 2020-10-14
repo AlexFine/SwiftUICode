@@ -121,8 +121,8 @@
                                   <pre><code class="swift language-swift"><span class="key">import</span> SwiftUI
 <span class="key">import</span> iActivityIndicator
 
-<span class="key">struct</span> <span class="pointer">ContentView</span>: <span class="type">View</span> {
-  <span class="key">var</span> body: <span class="key">some</span> <span class="type">View</span> {
+<span class="key">struct</span> <span class="declaration">ContentView</span>: <span class="type">View</span> {
+  <span class="key">var</span> <span class="variable">body</span>: <span class="key">some</span> <span class="type">View</span> {
       <span class="pointer">iActivityIndicator</span>()
   }
 }</code></pre>
@@ -143,18 +143,18 @@
 
 
                                 <a href="iPages.html" style="text-decoration:none;"><h1 class="title library-header"><code>iPages</code></h1>
-                                  <p class="lead library-subtitle"> Quickly implement swipable views.</p>
+                                  <p class="lead library-subtitle"> Quickly implement swipable page views.</p>
                                 </a>
                                 <div class="code-block mt-3">
                                   <pre><code class="swift language-swift"><span class="key">import</span> SwiftUI
 <span class="key">import</span> iPages
 <span class="key">import</span> iGraphics
 
-<span class="key">struct</span> <span class="pointer">ContentView</span>: <span class="type">View</span> {
-    <span class="type">@State</span> <span class="key">var</span> <span class="enum">currentPage</span>: <span class="type">Int</span> = <span class="number">0</span>
+<span class="key">struct</span> <span class="declaration">ContentView</span>: <span class="type">View</span> {
+    @<span class="type">State</span> <span class="key">var</span> <span class="variable">currentPage</span>: <span class="type">Int</span> = <span class="number">0</span>
 
-    <span class="key">var</span> body: <span class="key">some</span> <span class="type">View</span> {
-        <span class="pointer">iPages</span>([<span class="pointer">iGraphicsView.all</span>], currentPage: <span class="enum">$currentPage</span>)
+    <span class="key">var</span> <span class="variable">body</span>: <span class="key">some</span> <span class="type">View</span> {
+        <span class="pointer">iPages</span>(<span class="pointer">iGraphicsView</span>.<span class="enum">all</span>, currentPage: <span class="enum">$currentPage</span>)
     }
 }</code></pre>
                           </div>
@@ -179,9 +179,9 @@
 <span class="key">import</span> LineChart
 
 <span class="key">struct</span> <span class="pointer">ContentView</span>: <span class="type">View</span> {
-  <span class="key">var</span> body: <span class="key">some</span> <span class="type">View</span> {
-      <span class="pointer">LineChart</span>(data: [<span class="number">8</span>,<span class="number">32</span>,<span class="number">11</span>,<span class="number">23</span>,<span class="number">40</span>,<span class="number">28</span>,<span class="number">15</span>,<span class="number">20</span>,<span class="number">30</span>,<span class="number">25</span>])
-  }
+    <span class="key">var</span> <span class="variable">body</span>: <span class="key">some</span> <span class="type">View</span> {
+        <span class="pointer">LineChart</span>(data: [<span class="number">8</span>,<span class="number">32</span>,<span class="number">11</span>,<span class="number">23</span>,<span class="number">40</span>,<span class="number">28</span>,<span class="number">15</span>,<span class="number">20</span>,<span class="number">30</span>,<span class="number">25</span>])
+    }
 }</code></pre>
                       </div>
 
@@ -194,21 +194,21 @@
 
                               <div class="row">
                                 <div class="col-md-4 text-right">
-                                  <a href="iColors.html"><img class="img-fluid rounded-lg bg-img-city example-gif" id="imgRotateColors" src="assets/img/colordemo3.png" /></a>
+                                  <a href="iColor.html"><img class="img-fluid rounded-lg bg-img-city example-gif" id="imgRotateColors" src="assets/img/colordemo3.png" /></a>
                                 </div>
                                 <div class="col-md-8  mt-3">
 
-                                  <a href="iColors.html" style="text-decoration:none;"><h1 class="title library-header"><code>iColors</code></h1>
+                                  <a href="iColor.html" style="text-decoration:none;"><h1 class="title library-header"><code>iColor</code></h1>
                                     <p class="lead library-subtitle"> Quickly add modern colors to your app.</p>
                                   </a>
                                   <div class="code-block mt-3">
                                   <pre><code class="swift language-swift"><span class="key">import</span> SwiftUI
-<span class="key">import</span> iColors
+<span class="key">import</span> iColor
 
 <span class="key">struct</span> <span class="pointer">ContentView</span>: <span class="type">View</span> {
-    <span class="key">var</span> body: <span class="key">some</span> <span class="type">View</span> {
-        <span class="type">Rectangle()</span><span class="method">
-            .fill</span>(<span class="pointer">Colors.NeonBlue</span>)
+    <span class="key">var</span> <span class="variable">body</span>: <span class="key">some</span> <span class="type">View</span> {
+        <span class="type">Rectangle</span>()<span class="method">
+            .fill</span>(<span class="type">Color</span>.<span class="enum">neonBlue</span>)
     }
 }</code></pre>
                         </div>
@@ -228,19 +228,19 @@
                                 <div class="col-md-8  mt-3">
 
                                   <a href="iPhoneNumberTextField.html" style="text-decoration:none;"><h1 class="title library-header"><code>iPhoneNumberTextField</code></h1>
-                                    <p class="lead library-subtitle"> Quickly implement a textfield designed for phone number.</p>
+                                    <p class="lead library-subtitle"> Quickly implement a text field designed for phone number.</p>
                                   </a>
                                   <div class="code-block mt-3">
                                     <pre><code class="swift language-swift"><span class="key">import</span> SwiftUI
 <span class="key">import</span> iPhoneNumberTextField
 
-<span class="key">struct</span> <span class="pointer">ContentView</span>: <span class="type">View</span> {
-    <span class="type">@State</span> <span class="key">var</span> text: <span class="type">String</span> = <span class="string">""</span>
-    <span class="type">@State</span> <span class="key">var</span> isEditing: <span class="type">Bool</span> = <span class="key">false</span>
+<span class="key">struct</span> <span class="declaration">ContentView</span>: <span class="type">View</span> {
+    @<span class="type">State</span> <span class="key">var</span> <span class="variable">number</span>: <span class="type">String</span> = <span class="string">""</span>
+    @<span class="type">State</span> <span class="key">var</span> <span class="variable">isEditing</span>: <span class="type">Bool</span> = <span class="key">false</span>
 
     <span class="key">var</span> body: <span class="key">some</span> <span class="type">View</span> {
-        <span class="pointer">iPhoneNumberTextField</span>(<span class="string">"Placeholder"</span>,
-                              text: <span class="enum">$text</span>,
+        <span class="pointer">iPhoneNumberTextField</span>(<span class="string">"Phone"</span>,
+                              text: <span class="enum">$number</span>,
                               isEditing: <span class="enum">$isEditing</span>)
     }
 }</code></pre>
@@ -266,8 +266,8 @@
                                     <pre><code class="swift language-swift"><span class="key">import</span> SwiftUI
 <span class="key">import</span> iGraphics
 
-<span class="key">struct</span> <span class="pointer">ContentView</span>: <span class="type">View</span> {
-    <span class="key">var</span> body: <span class="key">some</span> <span class="type">View</span> {
+<span class="key">struct</span> <span class="declaration">ContentView</span>: <span class="type">View</span> {
+    <span class="key">var</span> <span class="variable">body</span>: <span class="key">some</span> <span class="type">View</span> {
         <span class="pointer">iGraphicsBox</span>()
     }
 }</code></pre>
@@ -286,18 +286,20 @@
                                 <div class="col-md-8  mt-3">
 
                                   <a href="iTextField.html" style="text-decoration:none;"><h1 class="title library-header"><code>iTextField</code></h1>
-                                    <p class="lead library-subtitle"> Quickly implement a textfield with all the UIKit capabilities in SwiftUI.</p>
+                                    <p class="lead library-subtitle"> Quickly implement a text field with all UIKit capabilities, entirely in SwiftUI.</p>
                                   </a>
                                   <div class="code-block mt-3">
                                     <pre><code class="swift language-swift"><span class="key">import</span> SwiftUI
 <span class="key">import</span> iTextField
 
-<span class="key">struct</span> <span class="pointer">ContentView</span>: <span class="type">View</span> {
-    <span class="type">@State</span> <span class="key">var</span> text: <span class="type">String</span> = <span class="string">""</span>
-    <span class="type">@State</span> <span class="key">var</span> isEditing: <span class="type">Bool</span> = <span class="key">false</span>
+<span class="key">struct</span> <span class="declaration">ContentView</span>: <span class="type">View</span> {
+    <span class="type">@State</span> <span class="key">var</span> <span class="variable">text</span>: <span class="type">String</span> = <span class="string">""</span>
+    <span class="type">@State</span> <span class="key">var</span> <span class="variable">isEditing</span>: <span class="type">Bool</span> = <span class="key">false</span>
 
-    <span class="key">var</span> body: <span class="key">some</span> <span class="type">View</span> {
-        <span class="pointer">iTextField</span>(<span class="string">"Placeholder"</span>, text: <span class="enum">$text</span>, isEditing: <span class="enum">$isEditing</span>)
+    <span class="key">var</span> <span class="variable">body</span>: <span class="key">some</span> <span class="type">View</span> {
+        <span class="pointer">iTextField</span>(<span class="string">"Placeholder"</span>,
+                   text: <span class="enum">$text</span>,
+                   isEditing: <span class="enum">$isEditing</span>)
     }
 }</code></pre>
                         </div>
@@ -314,14 +316,14 @@
                                 <div class="col-md-8  mt-3">
 
                                   <a href="iPaymentsButton.html" style="text-decoration:none;"><h1 class="title library-header"><code>iPaymentButton</code></h1>
-                                    <p class="lead library-subtitle"> Quickly implement & easily customize Apple's required payment button.</p>
+                                    <p class="lead library-subtitle"> Quickly implement & easily customize Apple's payment button.</p>
                                   </a>
                                   <div class="code-block mt-3">
                                     <pre><code class="swift language-swift"><span class="key">import</span> SwiftUI
 <span class="key">import</span> iPaymentButton
 
-<span class="key">struct</span> <span class="pointer">ContentView</span>: <span class="type">View</span> {
-    <span class="key">var</span> body: <span class="key">some</span> <span class="type">View</span> {
+<span class="key">struct</span> <span class="declaration">ContentView</span>: <span class="type">View</span> {
+    <span class="key">var</span> <span class="variable">body</span>: <span class="key">some</span> <span class="type">View</span> {
         <span class="pointer">iPaymentButton</span>(action: {
             <span class="comment">// Add your custom payment code here </span>
         })
@@ -349,8 +351,8 @@
                                     <pre><code class="swift language-swift"><span class="key">import</span> SwiftUI
 <span class="key">import</span> iDummyCursor
 
-<span class="key">struct</span> <span class="pointer">ContentView</span>: <span class="type">View</span> {
-    <span class="key">var</span> body: <span class="key">some</span> <span class="type">View</span> {
+<span class="key">struct</span> <span class="declaration">ContentView</span>: <span class="type">View</span> {
+    <span class="key">var</span> <span class="variable">body</span>: <span class="key">some</span> <span class="type">View</span> {
         <span class="pointer">iDummyCursor</span>()
     }
 }</code></pre>

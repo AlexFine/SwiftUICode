@@ -75,7 +75,7 @@
 
                             <h1 class="title header text-center" id="getStarted"><code> iGraphics  </code></h1>
 
-                            <p class="lead text-center" style="font-size:20pt; font-weight:500;" id="headertext"> Quickly add familiar default graphics to your app. </p>
+                            <p class="lead text-center" style="font-size:20pt; font-weight:500;" id="headertext"> Quickly add familiar default graphics to your app. 🖼 📄 🔲 🆒 </p>
 
                             <div class="exampleBlock mt-5">
 
@@ -297,8 +297,9 @@
 
 <span class="key">struct</span> <span class="pointer">ContentView</span>: <span class="type">View</span> {
     <span class="key">var</span> body: <span class="key">some</span> <span class="type">View</span> {
-        <span class="type">ScrollView</span>{
-            <span class="pointer">iGraphicsBox</span>(<span class="enum">.photo</span>).<span class="method">stack</span>(<span class="number">10</span>)
+        <span class="type">ScrollView</span> {
+            <span class="pointer">iGraphicsBox</span>(<span class="enum">.photo</span>)
+                .<span class="method">stack</span>(<span class="number">10</span>)
         }
     }
 }</code></pre>
@@ -334,7 +335,7 @@
 
 <span class="key">struct</span> <span class="pointer">ContentView</span>: <span class="type">View</span> {
     <span class="key">var</span> body: <span class="key">some</span> <span class="type">View</span> {
-        <span class="type">ScrollView</span>(<span class="type">.horizontal</span>){
+        <span class="type">ScrollView</span>(<span class="type">.horizontal</span>) {
             <span class="type">HStack</span> {
                 <span class="pointer">iGraphicsView</span>(<span class="enum">.first</span>)
                 <span class="pointer">iGraphicsView</span>(<span class="enum">.second</span>)
@@ -354,14 +355,14 @@
 
                           <div class="instructions-block mt-5" id="customizeSection">
                             <h1 class="title header header-sm"> Customize </h1>
-                            <p class="lead"> The <code>iGraphics</code> package has multiple built in structs. Each struct has a set of initializers that remain consistent across all structs. </p>
+                            <p class="lead"> The <code>iGraphics</code> package has several built-in <code>View</code> structures. Each struct has a set of initializers that remain consistent across all structs. </p>
 <br>
                           <div class="table-responsive">
                             <p class="lead"> Use our exhaustive input list to customize your colors. </p>
                             <table class="table table-borderless">
                               <thead>
                                 <tr>
-                                  <th scope="col">Parameter</th>
+                                  <th scope="col">Poperty, Initializer, or Modifier</th>
                                   <th scope="col">Description</th>
                                 </tr>
                               </thead>
@@ -369,37 +370,120 @@
                                 <tr>
                                   <td class="text-left">
                                     <div class="code-classic">
-                                      <pre><code><span class="pointer">iGraphicsBox</span>(<span class="key">_</span> style: <span class="enum">.photo</span>) </code></pre>
+                                      <pre><code><span class="pointer">iGraphicsBox</span>.<span class="key">init</span>(<span class="key">_</span> style: <span class="type">Style</span> = <span class="enum">.photo</span>) </code></pre>
                                     </div>
 
                                   </td>
                                   <td class="parameter-description">
-                                    <code>iGraphicsBox</code>'s are light gray boxes meant to resemble common UI components. The struct takes one of four style parameters: <code><span class="enum">photo</span></code>, <code><span class="enum">caption</span></code>, <code><span class="enum">paragraph</span></code> or <code><span class="enum">card</span></code>.
-                                  </td>
-                                </tr>
-
-
-                                <tr>
-                                  <td class="text-left">
-                                    <div class="code-classic">
-                                      <pre><code><span class="pointer">iGraphicsView</span>(<span class="key">_</span> style: <span class="enum">.first</span>) </code></pre>
-                                    </div>
-
-                                  </td>
-                                  <td class="parameter-description">
-                                    <code>iGraphicsView</code> is a dummy combined image and text view. The struct takes one of three style parameters: <code><span class="enum">first</span></code>, <code><span class="enum">second</span></code> or <code><span class="enum">third</span></code>.
+                                    <code>iGraphicsBox</code>'s are light gray boxes meant to resemble common UI components 👀. The struct takes one of four style parameters: 1️⃣ <code><span class="enum">photo</span></code>, 2️⃣ <code><span class="enum">caption</span></code>, 3️⃣ <code><span class="enum">paragraph</span></code>, or 4️⃣ <code><span class="enum">card</span></code>.
                                   </td>
                                 </tr>
 
                                 <tr>
                                   <td class="text-left">
                                     <div class="code-classic">
-                                      <pre><code><span class="pointer">iGraphicsText</span>(<span class="key">_</span> style: <span class="enum">.first</span>) </code></pre>
+                                      <pre><code>.<span class="enum">flip</span>() -> <span class="pointer">iGraphicsBox</span> </code></pre>
                                     </div>
 
                                   </td>
                                   <td class="parameter-description">
-                                    <code>iGraphicsText</code> are short sentences from the Think Different Apple ad. The struct takes one of three style parameters: <code><span class="enum">first</span></code>, <code><span class="enum">second</span></code> or <code><span class="enum">third</span></code>.
+                                    Flips the of <code>iGraphicsBox</code> across its horizontal axis, 👈👉 so the image is on the right and the text is on the left. Applies only to the <code>Style.photo</code> style, since the others are symmetrical.
+                                  </td>
+                                </tr>
+
+                                <tr>
+                                  <td class="text-left">
+                                    <div class="code-classic">
+                                      <pre><code>.<span class="enum">textSize</span>(<span class="key">_</span> size: <span class="type">CGFloat</span>) -> <span class="pointer">iGraphicsBox</span> </code></pre>
+                                    </div>
+
+                                  </td>
+                                  <td class="parameter-description">
+                                    Modifies the <b>text size</b> 📃 that the boxes of words are meant to simulate. ▪️◾️◼️⬛️
+                                  </td>
+                                </tr>
+
+                                <tr>
+                                  <td class="text-left">
+                                    <div class="code-classic">
+                                      <pre><code>.<span class="enum">photoSize</span>(<span class="key">_</span> size: <span class="type">CGFloat</span>) -> <span class="pointer">iGraphicsBox</span> </code></pre>
+                                    </div>
+
+                                  </td>
+                                  <td class="parameter-description">
+                                    Modifies the <b>photo size</b> 🖼 that the boxes are meant to simulate. ▫️◽️◻️⬜️
+                                  </td>
+                                </tr>
+
+                                <tr>
+                                  <td class="text-left">
+                                    <div class="code-classic">
+                                      <pre><code>.<span class="enum">stack</span>(<span class="key">_</span> number: <span class="type">Int</span>, alternating: <span class="type">Bool</span> = <span class="key">false</span>) -> <span class="key">some</span> <span class="type">View</span> </code></pre>
+                                    </div>
+
+                                  </td>
+                                  <td class="parameter-description">
+                                    Modifies how many graphics boxes are <b>stacked</b> on top of each other 🥞📚. Allows you to easily stack simulated graphics without worrying about spacing and without creating your own <code>VStack</code> object. Will stack based on the style specificied in the constructor.
+                                  </td>
+                                </tr>
+
+                                <tr>
+                                  <td class="text-left">
+                                    <div class="code-classic">
+                                      <pre><code>.<span class="enum">stack</span>(<span class="key">_</span> styles: [<span class="pointer">Style</span>], alternating: <span class="type">Bool</span> = <span class="key">false</span>) -> <span class="key">some</span> <span class="type">View</span> </code></pre>
+                                    </div>
+
+                                  </td>
+                                  <td class="parameter-description">
+                                    Modifies how many graphics boxes are stacked on top of each other 🔢🥞. Allows you to easily stack simulated graphics without worrying about spacing creating your own <code>VStack</code> object. Will stack based on the styles specificied in the <code>styles</code> parameter.
+                                  </td>
+                                </tr>
+
+                                <tr>
+                                  <td class="text-left">
+                                    <div class="code-classic">
+                                      <pre><code><span class="pointer">iGraphicsText</span>.<span class="key">init</span>(<span class="key">_</span> style: <span class="enum">.first</span>) </code></pre>
+                                    </div>
+
+                                  </td>
+                                  <td class="parameter-description">
+                                    Creates great-looking dummy text 📖📃 object to be used for placeholding with specified style.
+                                  </td>
+                                </tr>
+
+                                <tr>
+                                  <td class="text-left">
+                                    <div class="code-classic">
+                                      <pre><code><span class="pointer">iGraphicsImage</span>.<span class="key">init</span>(<span class="key">_</span> style: <span class="enum">.first</span>) </code></pre>
+                                    </div>
+
+                                  </td>
+                                  <td class="parameter-description">
+                                    Creates a <code>iGraphicsImage</code> from a specified style of image. <code>iGraphicsImage</code> is a great-looking dummy <b>image</b> view 🖼 that displays as a square, and can show a number of different images.
+                                  </td>
+                                </tr>
+
+                                <tr>
+                                  <td class="text-left">
+                                    <div class="code-classic">
+                                      <pre><code><span class="pointer">iGraphicsView</span>.<span class="key">init</span>(<span class="key">_</span> style: <span class="enum">.first</span>) </code></pre>
+                                    </div>
+
+                                  </td>
+                                  <td class="parameter-description">
+                                    Creates a new <code>iGraphicsView</code> from a specified style of image. <code>iGraphicsView</code> is a great-looking dummy <b>combined image 🏙 and text 📜</b> view. Comes in several different styles created from a sequence. Ideal for display in a page view.
+                                  </td>
+                                </tr>
+
+                                <tr>
+                                  <td class="text-left">
+                                    <div class="code-classic">
+                                      <pre><code><span class="pointer">iGraphicsView</span>.<span class="enum">all</span>: [<span class="pointer">iGraphicsView</span>] </code></pre>
+                                    </div>
+
+                                  </td>
+                                  <td class="parameter-description">
+                                    Easily access an array to all the <code>iGraphicsView</code> views, in order, to be used, for example, in a page view.
                                   </td>
                                 </tr>
 

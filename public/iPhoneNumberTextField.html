@@ -73,7 +73,7 @@
                           <div class="col-lg-9">
                             <h1 class="title header text-center" id="getStarted"><code> iPhoneNumberTextField  </code></h1>
 
-                            <p class="lead text-center" style="font-size:20pt; font-weight:500;" id="headertext">Quickly implement a textfield designed for phone number.</p>
+                            <p class="lead text-center" style="font-size:20pt; font-weight:500;" id="headertext">Quickly implement a text field designed for phone numbers. 📱🔢</p>
 
                             <div class="exampleBlock mt-5">
 
@@ -228,8 +228,9 @@
     <span class="type">@State</span> <span class="key">var</span> isEditing: <span class="type">Bool</span> = <span class="key">false</span>
 
     <span class="key">var</span> body: <span class="key">some</span> <span class="type">View</span> {
-        <span class="pointer">iPhoneNumberTextField</span>(<span class="string">"Placeholder"</span>, text: <span class="enum">$text</span>, isEditing: <span class="enum">$isEditing</span>)
-            <span class="method">.style()</span>
+        <span class="pointer">iPhoneNumberTextField</span>(<span class="string">"Placeholder"</span>,
+                              text: <span class="enum">$text</span>,
+                              isEditing: <span class="enum">$isEditing</span>)
     }
 }</code></pre>
                             </div>
@@ -293,18 +294,17 @@
 <span class="key">import</span> iGraphics
 
 <span class="key">struct</span> <span class="pointer">ContentView</span>: <span class="type">View</span> {
-  <span class="type">@State</span> <span class="key">var</span> text: <span class="type">String</span> = <span class="string">""</span>
-  <span class="type">@State</span> <span class="key">var</span> isEditing: <span class="type">Bool</span> = <span class="key">false</span>
+    <span class="type">@State</span> <span class="key">var</span> text: <span class="type">String</span> = <span class="string">""</span>
+    <span class="type">@State</span> <span class="key">var</span> isEditing: <span class="type">Bool</span> = <span class="key">false</span>
 
-  <span class="key">var</span> body: <span class="key">some</span> <span class="type">View</span> {
-      <span class="pointer">iPhoneNumberTextField</span>(<span class="string">"Placeholder"</span>, text: <span class="enum">$text</span>, isEditing: <span class="enum">$isEditing</span>)
-          <span class="method">.style()</span>
+    <span class="key">var</span> body: <span class="key">some</span> <span class="type">View</span> {
+        <span class="pointer">iPhoneNumberTextField</span>(<span class="string">"Placeholder"</span>,
+                              text: <span class="enum">$text</span>,
+                              isEditing: <span class="enum">$isEditing</span>)
+            <span class="method">.style()</span>
 
-      <span class="type">Button</span>(action: {
-          <span class="enum">isEditing</span>.<span class="type">toggle()</span>
-      }, label: {
-          <span class="pointer">iGraphicsBox</span>(<span class="enum">.paragraph</span>)
-      })
+        <span class="type">Button</span>(action: { <span class="enum">isEditing</span>.<span class="type">toggle()</span> },
+               label: { <span class="pointer">iGraphicsBox</span>(<span class="enum">.paragraph</span>) })
   }
 }</code></pre>
                         </div>
@@ -322,7 +322,7 @@
 
                           <div class="instructions-block mt-5" id="customizeSection">
                             <h1 class="title header header-sm"> Customize </h1>
-                            <p class="lead"> <code>iPhoneNumberTextField</code> has three required parameters: a placeholder, a <code>text</code> state, and an <code>isEditing</code> state. <code class="inline-code">iPhoneNumberTextField</code> supports a variety of modifiers. </p>
+                            <p class="lead"> <code>iPhoneNumberTextField</code> has three required parameters: 1️⃣ a placeholder, 2️⃣ a <code>text</code> binding, and 3️⃣ an <code>isEditing</code> binding. <code class="inline-code">iPhoneNumberTextField</code>also supports a variety of modifiers. </p>
 
                             <p class="lead"> <b>Example:</b> Change the foreground color, accent color, and text alignment with the following code block: </p>
                             <div class="code-block" id="demo5">
@@ -362,7 +362,7 @@
 
                                   </td>
                                   <td class="parameter-description">
-                                    Modifies the text field’s font from a UIFont object.
+                                    Modifies the text field’s font from a <code>UIFont</code> object. 🔠🔡
                                   </td>
                                 </tr>
 
@@ -374,7 +374,7 @@
 
                                   </td>
                                   <td class="parameter-description">
-                                    Modifies the text color of the phone number text field.
+                                    Modifies the <b>text color</b> 🎨 of the phone number text field.
                                   </td>
                                 </tr>
 
@@ -386,7 +386,7 @@
 
                                   </td>
                                   <td class="parameter-description">
-                                    Modifies the cursor color of the phone number text field.
+                                    Modifies the <b>cursor color</b> 🌈 of the phone number text field 🖱💬
                                   </td>
                                 </tr>
 
@@ -398,7 +398,7 @@
 
                                   </td>
                                   <td class="parameter-description">
-                                    Modifies the text alignment of a phone number text field.
+                                    Modifies the <b>text alignment</b> of a phone number text field. ⬅️↔️➡️
                                   </td>
                                 </tr>
 
@@ -410,7 +410,7 @@
 
                                   </td>
                                   <td class="parameter-description">
-                                    Modifies the clear-on-begin-editing setting of a phone number text field.
+                                    Modifies the <b>clear-on-begin-editing</b> setting of a phone number text field. ❌▶️
                                   </td>
                                 </tr>
 
@@ -422,7 +422,7 @@
 
                                   </td>
                                   <td class="parameter-description">
-                                    Modifies whether the phone number text field is disabled.
+                                    Modifies whether the phone number text field is <b>disabled</b>. ✋
                                   </td>
                                 </tr>
 
@@ -434,7 +434,7 @@
 
                                   </td>
                                   <td class="parameter-description">
-                                    Modifies the function called when text editing begins.
+                                    Modifies the function called when text editing <b>begins</b>. ▶️
                                   </td>
                                 </tr>
 
@@ -446,7 +446,7 @@
 
                                   </td>
                                   <td class="parameter-description">
-                                    Modifies the function called when the user makes any changes to the text in the text field.
+                                    Modifies the function called when the user makes any <b>changes</b> to the text in the text field. 💬
                                   </td>
                                 </tr>
 
@@ -458,7 +458,7 @@
 
                                   </td>
                                   <td class="parameter-description">
-                                    Modifies the function called when text editing ends.
+                                    Modifies the function called when text editing <b>ends</b>. 🔚
                                   </td>
                                 </tr>
 
@@ -501,12 +501,12 @@
                                 <tr>
                                   <td class="text-left">
                                     <div class="code-classic">
-                                      <pre><code><span class="method">.style</span>(accentColor: <span class="type">Color?</span> = <span class="pointer">Colors.NeonPurple</span>) -> <span class="key">some</span> <span class="type">View</span></code></pre>
+                                      <pre><code><span class="method">.style</span>(accentColor: <span class="type">Color?</span> = .<span class="pointer">neonPurple</span>) -> <span class="key">some</span> <span class="type">View</span></code></pre>
                                     </div>
 
                                   </td>
                                   <td class="parameter-description">
-                                    The cursor color. We use the built in <code>iColors</code> package for custom colors.
+                                    The cursor color. We use the custom <code>iColor</code> package for custom colors.
                                   </td>
                                 </tr>
 

@@ -399,18 +399,25 @@ li {
   /* box-shadow: 0 0 3rem rgba(0,0,0,0.17); */
 }
 
-
-code .key{color:#AA0C91}
-code .type{color:#704d99}
+/* var, body, let */
+code .key{color:#9B2393; font-weight:1000}
+/* State, View */
+code .type{color:#3900A0} 
+/* string */
 code .string{color:#C41A16}
+/* numbers */
 code .number{color:#1C00CF}
-code .comment{color:#007400}
-code .method{color:#2E0D6E}
+/* comments */
+code .comment{color:#267507}
+/* .modifier */
+code .method{color:#6C36A9}
 code .preprocessor{color:#643820}
-code .key{color:#AA0C91}
-/* code .pointer{color:#3F6E74} */
-code .pointer{color:#004d1a}
-code .enum{color:#197480};
+/* MyStruct() */
+code .pointer{color:#1C464A} 
+/* .num, $text */
+code .enum{color:#326D74}
+code .declaration{color:#0B4F79}
+code .variable{color:#0F68A0};
 
 
 .pckg-btn {

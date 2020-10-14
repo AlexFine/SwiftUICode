@@ -73,7 +73,7 @@
                           <div class="col-lg-9">
                             <h1 class="title header text-center" id="getStarted"><code> iTextField  </code></h1>
 
-                            <p class="lead text-center" style="font-size:20pt; font-weight:500;" id="headertext">Quickly implement a textfield with all the UIKit capabilities in SwiftUI.</p>
+                            <p class="lead text-center" style="font-size:20pt; font-weight:500;" id="headertext">Quickly implement a textfield with all the UIKit capabilities 💪 in SwiftUI. 😲</p>
 
                             <div class="exampleBlock mt-5">
 
@@ -228,7 +228,9 @@
     <span class="type">@State</span> <span class="key">var</span> isEditing: <span class="type">Bool</span> = <span class="key">false</span>
 
     <span class="key">var</span> body: <span class="key">some</span> <span class="type">View</span> {
-        <span class="pointer">iTextField</span>(<span class="string">"Placeholder"</span>, text: <span class="enum">$text</span>, isEditing: <span class="enum">$isEditing</span>)
+        <span class="pointer">iTextField</span>(<span class="string">"Placeholder"</span>,
+                   text: <span class="enum">$text</span>,
+                   isEditing: <span class="enum">$isEditing</span>)
     }
 }</code></pre>
                             </div>
@@ -291,19 +293,19 @@
 <span class="key">import</span> iTextField
 
 <span class="key">struct</span> <span class="pointer">ContentView</span>: <span class="type">View</span> {
-  <span class="type">@State</span> <span class="key">var</span> text: <span class="type">String</span> = <span class="string">""</span>
-  <span class="type">@State</span> <span class="key">var</span> isEditing: <span class="type">Bool</span> = <span class="key">false</span>
+    <span class="type">@State</span> <span class="key">var</span> text: <span class="type">String</span> = <span class="string">""</span>
+    <span class="type">@State</span> <span class="key">var</span> isEditing: <span class="type">Bool</span> = <span class="key">false</span>
 
-  <span class="key">var</span> body: <span class="key">some</span> <span class="type">View</span> {
-      <span class="pointer">iTextField</span>(<span class="string">"Placeholder"</span>, text: <span class="enum">$text</span>, isEditing: <span class="enum">$isEditing</span>)
-                <span class="method">.accentColor</span>(<span class="type">Color.purple</span>)
-                <span class="method">.fontFromUIFont</span>(<span class="type">UIFont</span>(name: <span class="string">"Avenir"</span>, size: <span class="number">40</span>))
-                <span class="method">.keyboardType</span>(<span class="type">.URL</span>)
-                <span class="method">.returnKeyType</span>(<span class="type">.done</span>)
-                <span class="method">.disableAutocorrection</span>(<span class="key">true</span>)
-                <span class="method">.autocapitalization</span>(<span class="type">.none</span>)
-                <span class="type">.padding()</span>
-      }
+    <span class="key">var</span> body: <span class="key">some</span> <span class="type">View</span> {
+        <span class="pointer">iTextField</span>(<span class="string">"Placeholder"</span>, text: <span class="enum">$text</span>, isEditing: <span class="enum">$isEditing</span>)
+            <span class="method">.accentColor</span>(<span class="type">.purple</span>)
+            <span class="method">.fontFromUIFont</span>(<span class="type">UIFont</span>(name: <span class="string">"Avenir"</span>, size: <span class="number">40</span>))
+            <span class="method">.keyboardType</span>(<span class="type">.URL</span>)
+            <span class="method">.returnKeyType</span>(<span class="type">.done</span>)
+            <span class="method">.disableAutocorrection</span>(<span class="key">true</span>)
+            <span class="method">.autocapitalization</span>(<span class="type">.none</span>)
+            <span class="type">.padding()</span>
+    }
 }</code></pre>
                         </div>
                                 </div>
@@ -320,7 +322,7 @@
 
                           <div class="instructions-block mt-5" id="customizeSection">
                             <h1 class="title header header-sm"> Customize </h1>
-                            <p class="lead"> <code>iTextField</code> has three required parameters: a placeholder, a <code>text</code> state, and an <code>isEditing</code> state. <code class="inline-code">iTextField</code> supports a variety of modifiers. </p>
+                            <p class="lead"> <code>iTextField</code> has three required parameters: 1️⃣ a placeholder, 2️⃣ a <code>text</code> state, and 3️⃣ an <code>isEditing</code> state. <code class="inline-code">iTextField</code> also supports a variety of modifiers. </p>
 
                             <p class="lead"> <b>Example:</b> Change the foreground color, accent color, and text alignment with the following code block: </p>
                             <div class="code-block" id="demo5">
@@ -335,8 +337,8 @@
                                 </svg>
                               </div>
           <pre><code class="swift language-swift"><span class="pointer">iTextField</span>(<span class="string">"Placeholder"</span>, text: <span class="enum">$text</span>, isEditing: <span class="enum">$isEditing</span>)
-    <span class="method">.foregroundColor</span>(<span class="type">Color.Purple</span>)
-    <span class="method">.accentColor</span>(<span class="type">Color.Green</span>)
+    <span class="method">.foregroundColor</span>(<span class="type">.purple</span>)
+    <span class="method">.accentColor</span>(<span class="type">.green</span>)
     <span class="method">.multilineTextAlignment</span>(<span class="type">.leading</span>)
 </code></pre>
 </div>
@@ -360,7 +362,7 @@
 
                                   </td>
                                   <td class="parameter-description">
-                                    Modifies the text field’s font from a UIFont object.
+                                    Modifies the text field’s <b>font</b> from a <code>UIFont</code> object. 🔠🔡
                                   </td>
                                 </tr>
 
@@ -372,7 +374,7 @@
 
                                   </td>
                                   <td class="parameter-description">
-                                    Modifies the text color of the text field.
+                                    Modifies the <b>text color</b> 🎨 of the text field.
                                   </td>
                                 </tr>
 
@@ -384,7 +386,7 @@
 
                                   </td>
                                   <td class="parameter-description">
-                                    Modifies the cursor color of the text field.
+                                    Modifies the <b>cursor color</b> 🌈 of the text field 🖱💬
                                   </td>
                                 </tr>
 
@@ -396,7 +398,7 @@
 
                                   </td>
                                   <td class="parameter-description">
-                                    Text alignment of a text field.
+                                    Modifies the <b>text alignment</b> of a text field. ⬅️↔️➡️
                                   </td>
                                 </tr>
 
@@ -408,7 +410,7 @@
 
                                   </td>
                                   <td class="parameter-description">
-                                    Content type.
+                                    Modifies the <b>content type</b> of a text field. 📧☎️📬
                                   </td>
                                 </tr>
 
@@ -420,7 +422,7 @@
 
                                   </td>
                                   <td class="parameter-description">
-                                    Autocorrection settings.
+                                    Modifies the text field’s <b>autocorrection</b> settings. 💬
                                   </td>
                                 </tr>
 
@@ -432,7 +434,7 @@
 
                                   </td>
                                   <td class="parameter-description">
-                                    Keyboard type.
+                                    Modifies the text field’s <b>keyboard type</b>. 📩🕸🧒
                                   </td>
                                 </tr>
 
@@ -444,7 +446,7 @@
 
                                   </td>
                                   <td class="parameter-description">
-                                    Autocapitalization style.
+                                    Modifies the text field’s <b>autocapitalization</b> style. 🔡🔠
                                   </td>
                                 </tr>
 
@@ -456,7 +458,7 @@
 
                                   </td>
                                   <td class="parameter-description">
-                                    Text field’s return key type.
+                                    Modifies the text field’s <b>return key</b> type. 🆗✅
                                   </td>
                                 </tr>
 
@@ -468,7 +470,7 @@
 
                                   </td>
                                   <td class="parameter-description">
-                                    The text field’s secure entry settings.
+                                    Modifies the text field’s <b>secure entry</b> settings. 🔒🚨
                                   </td>
                                 </tr>
 
@@ -483,7 +485,7 @@
 
                                   </td>
                                   <td class="parameter-description">
-                                    Modifies the clear-on-begin-editing setting of a text field.
+                                    Modifies the <b>clear-on-begin-editing</b> setting of a  text field. ❌▶️
                                   </td>
                                 </tr>
 
@@ -495,7 +497,7 @@
 
                                   </td>
                                   <td class="parameter-description">
-                                    Modifies whether the text field is disabled.
+                                    Modifies whether the text field is <b>disabled</b>. ✋
                                   </td>
                                 </tr>
 
@@ -507,7 +509,7 @@
 
                                   </td>
                                   <td class="parameter-description">
-                                    Modifies the function called when text editing begins.
+                                    Modifies the function called when text editing <b>begins</b>. ▶️
                                   </td>
                                 </tr>
 
@@ -519,7 +521,7 @@
 
                                   </td>
                                   <td class="parameter-description">
-                                    Modifies the function called when the user makes any changes to the text in the text field.
+                                    Modifies the function called when the user makes any <b>changes</b> to the text in the text field. 💬
                                   </td>
                                 </tr>
 
@@ -531,7 +533,7 @@
 
                                   </td>
                                   <td class="parameter-description">
-                                    Modifies the function called when text editing ends.
+                                    Modifies the function called when text editing <b>ends</b>. 🔚
                                   </td>
                                 </tr>
 

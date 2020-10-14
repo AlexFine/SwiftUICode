@@ -76,7 +76,7 @@
 
                             <h1 class="title header text-center" id="getStarted"><code> iPages  </code></h1>
 
-                            <p class="lead text-center" style="font-size:20pt; font-weight:500;" id="headertext">Quickly implement swipable views.</p>
+                            <p class="lead text-center" style="font-size:20pt; font-weight:500;" id="headertext">Quickly implement swipable page views. 📝</p>
 
                             <div class="exampleBlock mt-5">
 
@@ -231,7 +231,9 @@
     <span class="type">@State</span> <span class="key">var</span> <span class="enum">currentPage</span>: <span class="type">Int</span> = <span class="number">0</span>
 
     <span class="key">var</span> body: <span class="key">some</span> <span class="type">View</span> {
-        <span class="pointer">iPages</span>([<span class="pointer">iGraphics()</span>, <span class="pointer">iGraphics()</span>], currentPage: <span class="enum">$currentPage</span>)
+        <span class="pointer">iPages</span>([<span class="pointer">iGraphicsView(.first)</span>,
+                <span class="pointer">iGraphicsView(.second)</span>],
+               currentPage: <span class="enum">$currentPage</span>)
     }
 }</code></pre>
                             </div>
@@ -345,9 +347,9 @@
     <span class="key">var</span> body: <span class="key">some</span> <span class="type">View</span> {
         <span class="pointer">iPages</span>([<span class="pointer">iGraphicsBox</span>(<span class="enum">.photo</span>).<span class="type">stack</span>(<span class="number">3</span>),
                 <span class="pointer">iGraphicsBox</span>(<span class="enum">.card</span>).<span class="type">stack</span>(<span class="number">2</span>)],
-                currentPage: <span class="enum">$currentPage</span>)
-        <span class="method">.hideDots</span>(<span class="key">true</span>)
-        <span class="method">.wrapsInfinitely</span>(<span class="key">true</span>)
+               currentPage: <span class="enum">$currentPage</span>)
+            <span class="method">.hideDots</span>(<span class="key">true</span>)
+            <span class="method">.wrapsInfinitely</span>(<span class="key">true</span>)
     }
 }</code></pre>
                         </div>
@@ -366,7 +368,7 @@
 
                           <div class="instructions-block mt-5" id="customizeSection">
                             <h1 class="title header header-sm"> Customize </h1>
-                            <p class="lead"> <code>iPages</code> has two required parameters: an array of views, and a state variable to track the current page. <code class="inline-code">iPages</code> supports a variety of custom modifiers. All customizations are built into our modifiers.  </p>
+                            <p class="lead"> <code>iPages</code> has two required parameters: 1️⃣ an array of views, and 2️⃣ a state variable to track the current page. <code class="inline-code">iPages</code> supports a variety of custom modifiers. All customizations are built into our modifiers.  </p>
 
                             <p class="lead"> <b>Example:</b> Change the dot colors, enable infinite wrap & hide dots for single page views with the following code block: </p>
                             <div class="code-block" id="demo5">
@@ -406,7 +408,7 @@
 
                                   </td>
                                   <td class="parameter-description">
-                                    Modifies whether or not the page view should include the standard page control dots.
+                                    Modifies whether or not the page view should include the standard page control <b>dots</b>. (••••)
                                   </td>
                                 </tr>
 
@@ -418,7 +420,7 @@
 
                                   </td>
                                   <td class="parameter-description">
-                                    Modifies whether or not the page view should restart at the beginning when swiping past the end.
+                                    Modifies whether or not the page view should <b>restart at the beginning</b> 🔁 when swiping past the end (and vise-versa)
                                   </td>
                                 </tr>
 
@@ -430,7 +432,7 @@
 
                                   </td>
                                   <td class="parameter-description">
-                                    Modifies whether the page dots are hidden when there is only one page.
+                                    Modifies whether the page dots are hidden when there is only one page. 1️⃣⤵️
                                   </td>
                                 </tr>
 
@@ -442,7 +444,7 @@
 
                                   </td>
                                   <td class="parameter-description">
-                                    Modifies tint colors to be used for the page dots.
+                                    Modifies <b>tint colors</b> 🟡🟢🔴🟣 to be used for the page dots.
                                   </td>
                                 </tr>
 
@@ -454,7 +456,7 @@
 
                                   </td>
                                   <td class="parameter-description">
-                                    Modifies the background style of the page dots.
+                                    Modifies the <b>background style</b> ⚪️🔘  of the page dots.
                                   </td>
                                 </tr>
 
@@ -466,7 +468,7 @@
 
                                   </td>
                                   <td class="parameter-description">
-                                    Modifies the continuous interaction settings of the dots.
+                                    Modifies the continuous interaction settings of the dots. 🔄
                                   </td>
                                 </tr>
 

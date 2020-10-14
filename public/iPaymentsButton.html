@@ -76,7 +76,7 @@
 
                             <h1 class="title header text-center" id="getStarted"><code> iPaymentButton  </code></h1>
 
-                            <p class="lead text-center" style="font-size:20pt; font-weight:500;" id="headertext">Quickly implement & easily customize Apple's required payment button.</p>
+                            <p class="lead text-center" style="font-size:20pt; font-weight:500;" id="headertext">Quickly implement & easily customize Apple's required payment button. 💵</p>
 
                             <div class="exampleBlock mt-5">
 
@@ -272,7 +272,7 @@
 
                             <div class="exampleBlock">
                               <h2> Starter </h2>
-                              <p class="lead"> Use our built in <code>ApplePayDemo()</code> to demo a purchase experience.</p>
+                              <p class="lead"> Use our built-in <code>applePayDemo()</code> to demo a purchase experience.</p>
                               <div class="row">
                                 <div class="col-md-4 text-right">
                                   <img class="img-fluid rounded-lg bg-img-city example-gif"  src="assets/img/iPaymentsButtonDemo1Dark.gif" />
@@ -294,10 +294,10 @@
 
 <span class="key">struct</span> <span class="pointer">ContentView</span>: <span class="type">View</span> {
     <span class="key">var</span> body: <span class="key">some</span> <span class="type">View</span> {
-        <span class="pointer">ShoppingApp()</span>
+        <span class="pointer">iPaymentButton</span>.<span class="pointer">ShoppingApp()</span>
 
         <span class="pointer">iPaymentButton</span>(action: {
-            <span class="pointer">ApplePayDemo()</span>
+            <span class="pointer">applePayDemo()</span>
             <span class="comment">// Add your custom payment code here </span>
         })
     }
@@ -339,10 +339,10 @@
 
 <span class="key">struct</span> <span class="pointer">ContentView</span>: <span class="type">View</span> {
     <span class="key">var</span> body: <span class="key">some</span> <span class="type">View</span> {
-        <span class="pointer">MediaApp()</span>
+        <span class="pointer">iPaymentButton</span>.<span class="pointer">MediaApp()</span>
 
         <span class="pointer">iPaymentButton</span>(type: <span class="type">.support</span>, style: <span class="type">.whiteOutline</span>, action: {
-            <span class="pointer">ApplePayDemo()</span>
+            <span class="pointer">applePayDemo()</span>
             <span class="comment">// Add your custom payment code here </span>
         })
     }
@@ -363,7 +363,7 @@
 
                           <div class="instructions-block mt-5" id="customizeSection">
                             <h1 class="title header header-sm"> Customize </h1>
-                            <p class="lead"> <code>iPaymentButton</code> has one required parameter: an action to execute on button click. <code class="inline-code">iPaymentButton</code> supports some custom initalizers and one custom modifier. </p>
+                            <p class="lead"> <code>iPaymentButton</code> has one required parameter: an action to execute on button tap. <code class="inline-code">iPaymentButton</code> supports several custom initalizers and one custom modifier. </p>
 
                             <p class="lead"> <b>Example:</b> Change the text, style and corner radius with the following code block: </p>
                             <div class="code-block" id="demo5">
@@ -377,7 +377,7 @@
                                   <path fill-rule="evenodd" d="M1.5 13A1.5 1.5 0 0 0 3 14.5h10a1.5 1.5 0 0 0 1.5-1.5V8a.5.5 0 0 0-1 0v5a.5.5 0 0 1-.5.5H3a.5.5 0 0 1-.5-.5V3a.5.5 0 0 1 .5-.5h8a.5.5 0 0 0 0-1H3A1.5 1.5 0 0 0 1.5 3v10z"/>
                                 </svg>
                               </div>
-          <pre><code class="swift language-swift"><span class="pointer">iPaymentButton</span>(type: <span class="type">.support</span>, style: <span class="type">.whiteOutline</span>, action: {})
+          <pre><code class="swift language-swift"><span class="pointer">iPaymentButton</span>(type: <span class="type">.support</span>, style: <span class="type">.whiteOutline</span>, action: { } )
     <span class="method">.cornerRadius</span>(<span class="number">25</span>)
 </code></pre>
 </div>
@@ -387,7 +387,7 @@
                             <table class="table table-borderless">
                               <thead>
                                 <tr>
-                                  <th scope="col">Modifier</th>
+                                  <th scope="col">Parameters & Modifiers</th>
                                   <th scope="col">Description</th>
                                 </tr>
                               </thead>
@@ -400,7 +400,7 @@
 
                                   </td>
                                   <td class="parameter-description">
-                                    The text written on the button.
+                                    The <b>text</b> written on the button. 🆒
                                   </td>
                                 </tr>
 
@@ -412,7 +412,19 @@
 
                                   </td>
                                   <td class="parameter-description">
-                                    The button style.
+                                    The <b>color</b> that the button should be. 🎨
+                                  </td>
+                                </tr>
+
+                                <tr>
+                                  <td class="text-left">
+                                    <div class="code-classic">
+                                      <pre><code>action: <span class="key">@escaping</span> () -> <span class="type">Void</span></code></pre>
+                                    </div>
+
+                                  </td>
+                                  <td class="parameter-description">
+                                    The <b>action</b> to be performed when the user taps the button. 🎬▶️
                                   </td>
                                 </tr>
 
@@ -424,7 +436,7 @@
 
                                   </td>
                                   <td class="parameter-description">
-                                    Modifies the corner radius of the payment button. The default is 4.0.
+                                    Modifies the <b>corner radius</b> of the payment button ⬛️⚫️. To remove the rounded courners, set this value to 0.0 0️⃣👌. The default value is set to 4.0 🍀. 
                                   </td>
                                 </tr>
 

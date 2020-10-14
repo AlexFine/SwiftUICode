@@ -226,9 +226,9 @@
 <span class="key">import</span> iActivityIndicator
 
 <span class="key">struct</span> <span class="pointer">ContentView</span>: <span class="type">View</span> {
-  <span class="key">var</span> body: <span class="key">some</span> <span class="type">View</span> {
-      <span class="pointer">iActivityIndicator</span>()
-  }
+    <span class="key">var</span> body: <span class="key">some</span> <span class="type">View</span> {
+        <span class="pointer">iActivityIndicator</span>()
+    }
 }</code></pre>
                             </div>
                                     </div>
@@ -342,7 +342,7 @@
 
 <span class="key">struct</span> <span class="pointer">ContentView</span>: <span class="type">View</span> {
     <span class="key">var</span> body: <span class="key">some</span> <span class="type">View</span> {
-        <span class="type">VStack</span>{
+        <span class="type">VStack</span> {
             <span class="pointer">iActivityIndicator</span>() <span class="comment">// Default </span>
 
             <span class="pointer">iActivityIndicator</span>()
@@ -389,7 +389,7 @@
 
 <span class="key">struct</span> <span class="pointer">ContentView</span>: <span class="type">View</span> {
     <span class="key">var</span> body: <span class="key">some</span> <span class="type">View</span> {
-        <span class="type">VStack</span>{
+        <span class="type">VStack</span> {
             <span class="pointer">iActivityIndicator</span>()
                 .<span class="method">style</span>(<span class="enum">.blinking</span>())
 
@@ -439,7 +439,7 @@
 
 <span class="key">struct</span> <span class="pointer">ContentView</span>: <span class="type">View</span> {
     <span class="key">var</span> body: <span class="key">some</span> <span class="type">View</span> {
-        <span class="type">VStack</span>{
+        <span class="type">VStack</span> {
             <span class="pointer">iActivityIndicator</span>()
                 .<span class="method">style</span>(<span class="enum">.bars</span>(opacityRange: <span class="number">1</span><span class="type">...</span><span class="number">1</span>))
 
@@ -488,7 +488,7 @@
 
 <span class="key">struct</span> <span class="pointer">ContentView</span>: <span class="type">View</span> {
     <span class="key">var</span> body: <span class="key">some</span> <span class="type">View</span> {
-        <span class="type">VStack</span>{
+        <span class="type">VStack</span> {
             <span class="pointer">iActivityIndicator</span>()
                 .<span class="method">style</span>(<span class="enum">.rotatingShapes</span>())
 
@@ -528,9 +528,7 @@
                                 </svg>
                               </div>
           <pre><code class="swift language-swift"><span class="pointer">iActivityIndicator</span>()
-    .<span class="method">style</span>(<span class="enum">.arcs</span>(count: <span class="number">10</span>,
-                 width: <span class="number">5</span>,
-                 spacing: <span class="number">2</span>))</code></pre>
+    .<span class="method">style</span>(<span class="enum">.arcs</span>(count: <span class="number">10</span>, width: <span class="number">5</span>, spacing: <span class="number">2</span>))</code></pre>
 </div>
 <br>
                           <div class="table-responsive">

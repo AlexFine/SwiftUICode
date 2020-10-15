@@ -294,10 +294,10 @@
 
 <span class="key">struct</span> <span class="pointer">ContentView</span>: <span class="type">View</span> {
     <span class="key">var</span> body: <span class="key">some</span> <span class="type">View</span> {
-        <span class="pointer">iPaymentButton</span>.<span class="pointer">ShoppingApp()</span>
+        <span class="pointer">iGraphicsBox()</span>.<span class="type">stack</span>(<span class="number">3</span>)
 
         <span class="pointer">iPaymentButton</span>(action: {
-            <span class="pointer">applePayDemo()</span>
+            <span class="pointer">iPaymentButton.applePayDemo()</span>
             <span class="comment">// Add your custom payment code here </span>
         })
     }
@@ -339,10 +339,10 @@
 
 <span class="key">struct</span> <span class="pointer">ContentView</span>: <span class="type">View</span> {
     <span class="key">var</span> body: <span class="key">some</span> <span class="type">View</span> {
-        <span class="pointer">iPaymentButton</span>.<span class="pointer">MediaApp()</span>
+        <span class="pointer">iGraphicsView(<span class="enum">.first</span>)</span>
 
         <span class="pointer">iPaymentButton</span>(type: <span class="type">.support</span>, style: <span class="type">.whiteOutline</span>, action: {
-            <span class="pointer">applePayDemo()</span>
+            <span class="pointer">iPaymentButton.applePayDemo()</span>
             <span class="comment">// Add your custom payment code here </span>
         })
     }
@@ -436,7 +436,7 @@
 
                                   </td>
                                   <td class="parameter-description">
-                                    Modifies the <b>corner radius</b> of the payment button ⬛️⚫️. To remove the rounded courners, set this value to 0.0 0️⃣👌. The default value is set to 4.0 🍀. 
+                                    Modifies the <b>corner radius</b> of the payment button ⬛️⚫️. To remove the rounded courners, set this value to 0.0 0️⃣👌. The default value is set to 4.0 🍀.
                                   </td>
                                 </tr>
 

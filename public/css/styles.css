@@ -72,6 +72,7 @@
   --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
+
 *,
 *::before,
 *::after {
@@ -403,7 +404,7 @@ li {
 /* var, body, let */
 code .key{color:#9B2393; font-weight:1000}
 /* State, View */
-code .type{color:#3900A0} 
+code .type{color:#3900A0}
 /* string */
 code .string{color:#C41A16}
 /* numbers */
@@ -414,7 +415,7 @@ code .comment{color:#267507}
 code .method{color:#6C36A9}
 code .preprocessor{color:#643820}
 /* MyStruct() */
-code .pointer{color:#1C464A} 
+code .pointer{color:#1C464A}
 /* .num, $text */
 code .enum{color:#326D74}
 code .declaration{color:#0B4F79}

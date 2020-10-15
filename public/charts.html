@@ -358,7 +358,7 @@
 
                             <div class="exampleBlock">
                               <h2> Dark Theme </h2>
-                              <p class="lead"> Change the cursor color with the built in <code>iColors</code> library.<br>
+                              <p class="lead"> Change the cursor color with the built in <code>iColor</code> library.<br>
                                 Enable fullscreen to cover the safe areas with your background color.
                                 <br>Change the font to your company's brand.
                                   </p>
@@ -381,7 +381,7 @@
                                     </div>
                                   <pre><code class="swift language-swift"><span class="key">import</span> SwiftUI
 <span class="key">import</span> iLineChart
-<span class="key">import</span> iColors
+<span class="key">import</span> iColor
 
 <span class="key">struct</span> <span class="pointer">ContentView</span>: <span class="type">View</span> {
     <span class="key">var</span> <span class="pointer">data</span>:[<span class="type">Double</span>] = <span class="pointer">ExampleData.stockData</span>
@@ -392,8 +392,8 @@
             title: <span class="string">"My Dark Themed App"</span>,
             subtitle: <span class="string">"Sleek. Simple."</span>,
             style: .<span class="enum">dark</span>,
-            titleColor: <span class="pointer">Colors.NeonRed</span>,
-            cursorColor: <span class="pointer">Colors.Black</span>,
+            titleColor: <span class="pointer">Color.NeonRed</span>,
+            cursorColor: <span class="pointer">Color.Black</span>,
             titleFont: .<span class="type">system</span>(size: <span class="number">14</span>, weight: .<span class="enum">regular</span>, design: .<span class="enum">monospaced</span>),
             subtitleFont: .<span class="type">system</span>(size: <span class="number">24</span>, weight: .<span class="enum">bold</span>, design: .<span class="enum">monospaced</span>),
             fullScreen: <span class="key">true</span>
@@ -565,12 +565,12 @@
                                 <tr>
                                   <td class="text-left">
                                     <div class="code-classic">
-                                      <pre><code>cursorColor: <span class="type">Color </span> = <span class="pointer"> Colors.NeonPink </span> </span> </code></pre>
+                                      <pre><code>cursorColor: <span class="type">Color </span> = <span class="pointer"> Color.NeonPink </span> </span> </code></pre>
                                     </div>
 
                                   </td>
                                   <td class="parameter-description">
-                                    When a user clicks on the graph, this parameters controls their cursor color. Use the internal <code> <span class="pointer">Colors</span></code> struct to quickly access good colors.
+                                    When a user clicks on the graph, this parameters controls their cursor color. Use the internal <code> <span class="pointer">Color</span></code> struct to quickly access good colors.
                                   </td>
                                 </tr>
 

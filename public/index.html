@@ -154,7 +154,9 @@
     @<span class="type">State</span> <span class="key">var</span> <span class="variable">currentPage</span>: <span class="type">Int</span> = <span class="number">0</span>
 
     <span class="key">var</span> <span class="variable">body</span>: <span class="key">some</span> <span class="type">View</span> {
-        <span class="pointer">iPages</span>(<span class="pointer">iGraphicsView</span>.<span class="enum">all</span>, currentPage: <span class="enum">$currentPage</span>)
+        <span class="pointer">iPages</span>(currentPage: <span class="enum">$currentPage</span>) {
+            <span class="pointer">iGraphicsView</span>.<span class="enum">all</span> 
+        }
     }
 }</code></pre>
                           </div>

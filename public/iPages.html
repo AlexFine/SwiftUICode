@@ -231,9 +231,10 @@
     <span class="type">@State</span> <span class="key">var</span> <span class="enum">currentPage</span>: <span class="type">Int</span> = <span class="number">0</span>
 
     <span class="key">var</span> body: <span class="key">some</span> <span class="type">View</span> {
-        <span class="pointer">iPages</span>([<span class="pointer">iGraphicsView(.first)</span>,
-                <span class="pointer">iGraphicsView(.second)</span>],
-               currentPage: <span class="enum">$currentPage</span>)
+        <span class="pointer">iPages</span>(currentPage: <span class="enum">$currentPage</span>) {
+            <span class="pointer">iGraphicsView(.first)</span>
+            <span class="pointer">iGraphicsView(.second)</span>
+        }
     }
 }</code></pre>
                             </div>
@@ -300,10 +301,11 @@
     <span class="type">@State</span> <span class="key">var</span> <span class="enum">currentPage</span>: <span class="type">Int</span> = <span class="number">0</span>
 
     <span class="key">var</span> body: <span class="key">some</span> <span class="type">View</span> {
-        <span class="pointer">iPages</span>([<span class="pointer">iGraphicsView</span>(<span class="enum">.first</span>),
-                <span class="pointer">iGraphicsView</span>(<span class="enum">.second</span>),
-                <span class="pointer">iGraphicsView</span>(<span class="enum">.third</span>)],
-               currentPage: <span class="enum">$currentPage</span>)
+        <span class="pointer">iPages</span>(currentPage: <span class="enum">$currentPage</span>) {
+            <span class="pointer">iGraphicsView</span>(<span class="enum">.first</span>)
+            <span class="pointer">iGraphicsView</span>(<span class="enum">.second</span>)
+            <span class="pointer">iGraphicsView</span>(<span class="enum">.third</span>)
+        }
     }
 }</code></pre>
                         </div>
@@ -346,11 +348,14 @@
     <span class="type">@State</span> <span class="key">var</span> <span class="enum">currentPage</span>: <span class="type">Int</span> = <span class="number">0</span>
 
     <span class="key">var</span> body: <span class="key">some</span> <span class="type">View</span> {
-        <span class="pointer">iPages</span>([<span class="pointer">iGraphicsBox</span>(<span class="enum">.photo</span>).<span class="type">stack</span>(<span class="number">3</span>),
-                <span class="pointer">iGraphicsBox</span>(<span class="enum">.card</span>).<span class="type">stack</span>(<span class="number">2</span>)],
-               currentPage: <span class="enum">$currentPage</span>)
-            <span class="method">.hideDots</span>(<span class="key">true</span>)
-            <span class="method">.wrapsInfinitely</span>(<span class="key">true</span>)
+        <span class="pointer">iPages</span>(currentPage: <span class="enum">$currentPage</span>) {
+            <span class="pointer">iGraphicsBox</span>(<span class="enum">.photo</span>)
+                .<span class="type">stack</span>(<span class="number">3</span>)
+            <span class="pointer">iGraphicsBox</span>(<span class="enum">.card</span>)
+                .<span class="type">stack</span>(<span class="number">2</span>)
+        }
+        <span class="method">.hideDots</span>(<span class="key">true</span>)
+        <span class="method">.wrapsInfinitely</span>(<span class="key">true</span>)
     }
 }</code></pre>
                         </div>
@@ -369,7 +374,7 @@
 
                           <div class="instructions-block mt-5" id="customizeSection">
                             <h1 class="title header header-sm"> Customize </h1>
-                            <p class="lead"> <code>iPages</code> has two required parameters: 1️⃣ an array of views, and 2️⃣ a state variable to track the current page. <code class="inline-code">iPages</code> supports a variety of custom modifiers. All customizations are built into our modifiers.  </p>
+                            <p class="lead"> <code>iPages</code> has two required parameters: 1️⃣ a state variable to track the current page, and 2️⃣ a trailing view builder of ordered views . <code class="inline-code">iPages</code> supports a variety of custom modifiers. All customizations are built into our modifiers.  </p>
 
                             <p class="lead"> <b>Example:</b> Change the dot colors, enable infinite wrap & hide dots for single page views with the following code block: </p>
                             <div class="code-block" id="demo5">
@@ -383,10 +388,12 @@
                                   <path fill-rule="evenodd" d="M1.5 13A1.5 1.5 0 0 0 3 14.5h10a1.5 1.5 0 0 0 1.5-1.5V8a.5.5 0 0 0-1 0v5a.5.5 0 0 1-.5.5H3a.5.5 0 0 1-.5-.5V3a.5.5 0 0 1 .5-.5h8a.5.5 0 0 0 0-1H3A1.5 1.5 0 0 0 1.5 3v10z"/>
                                 </svg>
                               </div>
-          <pre><code class="swift language-swift"><span class="pointer">iPages</span>([], <span class="enum">$currentPage</span>)
-    <span class="method">.dotsTintColors</span>(currentPage: <span class="type">Color.black</span>, otherPages: <span class="type">Color.lightGray</span>)
-    <span class="method">.wrapsInfinitely</span>(<span class="key">true</span>)
-    <span class="method">.dotsHideForSinglePage</span>(<span class="key">true</span>)
+          <pre><code class="swift language-swift"><span class="pointer">iPages</span>(<span class="enum">$currentPage</span>) {
+    <span class="type">EmptyView</span>()
+}
+<span class="method">.dotsTintColors</span>(currentPage: <span class="type">Color</span>, otherPages: <span class="type">Color</span>)
+<span class="method">.wrapsInfinitely</span>(<span class="key">true</span>)
+<span class="method">.dotsHideForSinglePage</span>(<span class="key">true</span>)
 
 </code></pre>
 </div>

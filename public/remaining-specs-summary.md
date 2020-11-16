@@ -15,8 +15,9 @@ var body: some View {
 
 3. There are several lingering formatting problems between the Contacts app and `iPhoneNumberField`. For example, with the number +44023456789012
 
-1	2
-
+1 | 2
+:-------------------------:|:-------------------------:
+![](./assets/img/specs/1.png) | ![](./assets/img/specs/2.png)
 This probably pops up in many places, and may be a quick fix. I remember reading in the `PhoneNumberKit` docs that there is a difference between international and local formatting. So it might be that. But in either case, the formatting should work exactly like the "add phone number" field in the Contacts app. The app is available in the simulator for testing.
 
 4. Try formatting this number in the contacts app: +16198675309.
@@ -43,7 +44,9 @@ var body: some View {
 
 7. There should be an additional `.style(_:)` modifier that defaults the text field style just like these images.
 
-6	7	8
+6 | 7 | 8
+:-------------------------:|:-------------------------:|:-------------------------:
+![](./assets/img/specs/6.png) | ![](./assets/img/specs/7.png) | ![](./assets/img/specs/8.jpeg)
 
 The `.style(_:)` modifier should work in both light and dark mode as shown. It should also take an optional parameter `withBackground:` `Bool` that defaults to `false`, but when set to `true`, shows the background as indicated in the images.
 

@@ -49,6 +49,10 @@ var body: some View {
 |:-------------------------:|
 | ![](./assets/img/specs/6.png) |
 
+| 7 |
+|:-------------------------:|
+| ![](./assets/img/specs/7.png) |
+
 The `.style(_:)` modifier should work in both light and dark mode as shown. It should also take an optional parameter `withBackground:` `Bool` that defaults to `false`, but when set to `true`, shows the background as indicated in the images.
 
 The `.style(_:)` modifier should also style the flag sheet as shown.

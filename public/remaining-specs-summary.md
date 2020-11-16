@@ -18,6 +18,7 @@ var body: some View {
 1 | 2
 :-------------------------:|:-------------------------:
 ![](./assets/img/specs/1.png) | ![](./assets/img/specs/2.png)
+
 This probably pops up in many places, and may be a quick fix. I remember reading in the `PhoneNumberKit` docs that there is a difference between international and local formatting. So it might be that. But in either case, the formatting should work exactly like the "add phone number" field in the Contacts app. The app is available in the simulator for testing.
 
 4. Try formatting this number in the contacts app: +16198675309.

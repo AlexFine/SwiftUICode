@@ -45,9 +45,9 @@ var body: some View {
 
 7. There should be an additional `.style(_:)` modifier that defaults the text field style just like these images.
 
-6 | 7 | 8
-:-------------------------:|:-------------------------:|:-------------------------:
-![](./assets/img/specs/6.png) | ![](./assets/img/specs/7.png) | ![](./assets/img/specs/8.jpeg)
+| 6 |
+|:-------------------------:|
+| ![](./assets/img/specs/6.png) |
 
 The `.style(_:)` modifier should work in both light and dark mode as shown. It should also take an optional parameter `withBackground:` `Bool` that defaults to `false`, but when set to `true`, shows the background as indicated in the images.
 

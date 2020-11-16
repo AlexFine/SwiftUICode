@@ -21,7 +21,9 @@ This probably pops up in many places, and may be a quick fix. I remember reading
 
 4. Try formatting this number in the contacts app: +16198675309.
 
-3	4	5
+3 | 4 | 5
+:-------------------------:|:-------------------------:|:-------------------------:
+![](./assets/img/specs/3.png) | ![](./assets/img/specs/4.png) | ![](./assets/img/specs/5.png)
 
 Notice how the parentheses appear right away, at first with 2 spaces, then 1, then none. The cursor remains in the proper place between the parentheses. This is a very important use case for American numbers, and pops up again in examples such as +44 numbers that begin with a 0, as shown above. When the user deletes, it works as expected, always deleting a number rather than a space or a parenthesis.
 

@@ -43,7 +43,7 @@ var body: some View {
 
 6. The `.keyboardType(_:)` modifier should be deprecated just like the `.textContentType(_:)` modifier.
 
-7. There should be an additional `.style(_:)` modifier that defaults the text field style just like these images. (Notice the shadow in the focused text field in the middle of figure 7.)
+7. There should be an additional `.style(_:)` modifier that defaults the text field style just like these images. (Notice the shadow is missing from the left photo of figure 7, but present in the focused text field in the middle of figure 7.)
 
 | 6 |
 |:-------------------------:|
